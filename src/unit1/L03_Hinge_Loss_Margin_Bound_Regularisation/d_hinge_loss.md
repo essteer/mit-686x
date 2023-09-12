@@ -20,7 +20,7 @@ We know that we get a positive value from the loss function when the prediction 
 We also know that if a point lies exactly on the MB, e.g. a positive example on the positive MB, then the agreement value _z_ = 1:
 
 - if on the correct side of the DB, the agreement value = 1, since 1\*1 = 1;
-- if on the incorrect side of the DB, the agreement value = 1, since -1\*-1 = 1.
+- if on the incorrect side of the DB, the agreement value = -1, since 1\*-1 = -1.
 
 - If the example lies on the correct side of the DB, but beyond the MB, then the value of z (agreement) will be > 1.
 
