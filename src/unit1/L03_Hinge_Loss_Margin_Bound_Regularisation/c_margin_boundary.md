@@ -48,8 +48,9 @@ We still need to understand the distance from the MBs to the DB, and how we can 
 Again, our DB is all x that satisfy `θ•x + θ`<sub>`0`</sub>` = 0`.
 
 We can divide the equation by the norm of `θ`, `∥θ∥`, and it still defines the same decision boundary:
+7
 
-- `(θ•x)/∥θ∥ + θ`<sub>`0`</sub>`∥θ∥ = 0`
+- `(θ•x)/∥θ∥ + θ`<sub>`0`</sub>`/∥θ∥ = 0`
 
 As a result, **the norm of θ, ∥θ∥, is a free parameter that we have not yet used**.
 
