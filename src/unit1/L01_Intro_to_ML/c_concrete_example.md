@@ -27,11 +27,11 @@ For example, asking these questions of a film:
 
 Could result in the feature vector:
 
-`x^(1) = [0, 0, 1, 1, 0]^T`
+`x`<sup>`(1)`</sup>` = [0, 0, 1, 1, 0]`<sup>`T`</sup>
 
 For a film directed by Werner Herzog starring de Niro, that is neither a comedy nor an action film, and is not produced by Pixar.
 
-Then we might have `x^(2) = [1, 0, 0, 0, 1]`, and so on.
+Then we might have `x`<sup>`(2)`</sup>` = [1, 0, 0, 0, 1]`, and so on.
 
 This feature vector can be applied to all of the unseen films, with the goal of determining which films fit with the given feature vectors we have expressed a preference for.
 

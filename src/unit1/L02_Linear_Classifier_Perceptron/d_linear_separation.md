@@ -24,8 +24,8 @@ It also illustrates that linear classifiers are a relatively small subset of pos
 
 **Definition**
 
-Training examples `S_n = {(x^(i), y^(i)), i=1,...,n}` are linearly separable if there exists a parameter vector ^ϴ and offset parameter ^ϴ_0 such that:
+Training examples `S`<sub>`n`</sub>` = {(x`<sup>`(i)`</sup>`, y`<sup>`(i)`</sup>`), i=1,⋯,n}` are linearly separable if there exists a parameter vector ^ϴ and offset parameter ^ϴ<sub>0</sub> such that:
 
-- `y(i)(^ϴ • x^(i) + ^ϴ_0) > 0` for all i=1,...,n.
+- `y`<sup>`(i)`</sup>`(^ϴ • x`<sup>`(i)`</sup>` + ^ϴ`<sub>`0`</sub>`) > 0` for all i=1,⋯,n.
 
-Given ϴ and ϴ_0, a linear classifier `h: X -> {-1, 0, +1}` is a function that outputs +1 if ϴ•x+ϴ_0 is positive, 0 if it is zero, and -1 if it is negative. In other words, h(x) = sign(ϴ•x+ϴ_0).
+Given ϴ and ϴ<sub>0</sub>, a linear classifier `h: X -> {-1, 0, +1}` is a function that outputs +1 if ϴ•x+ϴ<sub>0</sub> is positive, 0 if it is zero, and -1 if it is negative. In other words, h(x) = sign(ϴ•x+ϴ<sub>0</sub>).

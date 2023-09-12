@@ -12,14 +12,14 @@ Given a point _x_ in the space, the classifier _h_ outputs _h(x) = 1_ or _h(x) =
 
 We can plot our film preferences in 2-dimensional space using an x,y graph, where positive values represent a +1 (liked a film) and negative values represent a -1 (disliked a film).
 
-Our four films in the training set would be plotted as e.g. x^(1)y^(1).
+Our four films in the training set would be plotted as e.g. x<sup>(1)</sup>y<sup>(1)</sup>.
 
-The training set as a whole is depicted as a set, S_n, where \_n denotes the number of instances in the set.
+The training set as a whole is depicted as a set, S<sub>n</sub>, where <sub>n</sub> denotes the number of instances in the set.
 
-For this example, it becomes S_4 because we have four films in the training set (n = 4).
+For this example, it becomes S<sub>4</sub> because we have four films in the training set (n = 4).
 
-- S_n is is a collection of pairs in those vectors, (x^i, y^i) where x represents the feature vector, and y is the corresponding label.
-- `S_4 = (x^i, y^i) i=1, i=2, ..., i=n in R^2 {-1, 1}`.
+- S<sub>4</sub> is is a collection of pairs in those vectors, (x<sup>(i)</sup>,y<sup>(i)</sup>) where x represents the feature vector, and y is the corresponding label.
+- `S`<sub>`4`</sub>` = (x`<sup>`(i)`</sup>`,y`<sup>`(i)`</sup>`) i=1, i=2, ..., i=n in ℝ`<sup>`2`</sup>` {-1, 1}`.
 
 Each example in the **test set** is also a pair of feature vector and label, but **we don't know the label**.
 
@@ -29,15 +29,15 @@ The task is to correctly determine those unknown labels.
 
 On the basis of our training set:
 
-`S_4 = {(x^i, y^i) i=1, ..., n}`
+`S`<sub>`4`</sub>` = {(x`<sup>`(i)`</sup>`, y`<sup>`(i)`</sup>`) i=1,⋯,n}`
 
-The model needs to map each point in the space _x ∈ R^2_, to a corresponding label of +1/-1, _y ∈ {-1, 1}_.
+The model needs to map each point in the space _x ∈ ℝ<sup>2</sup>_, to a corresponding label of +1/-1, _y ∈ {-1, 1}_.
 
 **Classifier**
 
 We are then in need of a classifier, mapping from points to corresponding labels.
 
-`h: X -> {-1, 1}` (where X is R^2)
+`h: χ -> {-1, 1}` (where χ is ℝ<sup>2</sup>)
 
 Then for a given point, we would have, e.g. _h(x) = 1_.
 
@@ -49,31 +49,31 @@ We need to evaluate how good our classifier is in terms of the amount of error a
 
 Training error, E, is the error of the model.
 
-E_n denotes the training error for the size of the training set, e.g. for our film model we would have E_4 because n=4.
+E<sub>n</sub> denotes the training error for the size of the training set, e.g. for our film model we would have E<sub>4</sub> because n=4.
 
 We then apply this to a particular classifier, h, for our training set:
 
-E_n(h)
+E<sub>n</sub>(h)
 
 To do this, we take the classifier, h, and apply it to the i-th training example to get the +1/-1 label.
 
-E_n(h) = h(x^(i))
+E<sub>n</sub>(h) = h(x<sup>(i)</sup>)
 
-And compare that with the given label for that example, y^(i).
+And compare that with the given label for that example, y<sup>(i)</sup>.
 
-h(x^(i)) != y^(i)
+h(x<sup>(i)</sup>) != y<sup>(i)</sup>
 
 If the expected label is not the same as the actual label, then the above statement is true and there is a discrepancy.
 
 (In notation we use double brackets `[[]]` to denote a function that takes a truth value inside and returns 1 or 0, accordingly.)
 
-`[[h(x^(i)) != y^(i)]]` = 1 if error, else 0.
+`[[h(x`<sup>`(i)`</sup>`) != y`<sup>`(i)`</sup>`]] = 1 if error, else 0`.
 
 We want the error over the whole training set, so we sum this error over all training examples:
 
-`n_Σ_i=1 [[h(x^(i)) != y^(i)]]`, and take a fraction 1/n of this.
+`n_Σ_i=1 [[h(x`<sup>`(i)`</sup>`) != y`<sup>`(i)`</sup>`]]`, and take a fraction 1/n of this.
 
-**Example**: for a training set of 6, if 3 are labeled correctly and 3 are labeled incorrectly, we have E_6(h) = (3*1 + 3*0)/6 = 3/6 = 0.5.
+**Example**: for a training set of 6, if 3 are labeled correctly and 3 are labeled incorrectly, we have E<sub>6</sub>(h) = (3*1 + 3*0)/6 = 3/6 = 0.5.
 
 (In this example, this outcome is no better than randomly guessing by chance.)
 
@@ -81,7 +81,7 @@ We want the error over the whole training set, so we sum this error over all tra
 
 We can then use our training error to consider how good the choice of classifier was for the given training set.
 
-We may then have a classifier _h_ that correctly labels all of the data in the training set, i.e., E_n(h) = 0.
+We may then have a classifier _h_ that correctly labels all of the data in the training set, i.e., E<sub>n</sub>(h) = 0.
 
 But this does not mean this classifier with a training error of zero, will correctly label all of the data in our test set.
 

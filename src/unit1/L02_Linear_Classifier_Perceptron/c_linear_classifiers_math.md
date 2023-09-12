@@ -14,18 +14,18 @@ The dividing line of the decision boundary is not arbitrarily placed in 2-dimens
 
 The equation for this line would be the set of all points that satisfy the equation for a line through the origin.
 
-To define this, we need to introduce parameters ϴ_1, which multiplies the x_1 coordinate, and ϴ_2, which multiplies the x_2 coordinate.
+To define this, we need to introduce parameters ϴ<sub>1</sub>, which multiplies the x<sub>1</sub> coordinate, and ϴ<sub>2</sub>, which multiplies the x<sub>2</sub> coordinate.
 
-`ϴ_1x_1 +  ϴ_2x_2 = 0`
+`ϴ`<sub>`1`</sub>`x`<sub>`1`</sub>` +  ϴ`<sub>`2`</sub>`x`<sub>`2`</sub>` = 0`
 
-We fix the parameters for ϴ_1 and ϴ_2; all points that satisfiy the equation:
+We fix the parameters for ϴ<sub>1</sub> and ϴ<sub>2</sub>; all points that satisfiy the equation:
 
-- `{X: ϴ_1x_1 + ϴ_2x_2 = 0}`, X being a vector, all of the x's are points along the line fixed by ϴ_1 and ϴ_2.
+- `{X: ϴ`<sub>`1`</sub>`x`<sub>`1`</sub>` + ϴ`<sub>`2`</sub>`x`<sub>`2`</sub>` = 0}`, X being a vector, all of the x's are points along the line fixed by ϴ<sub>1</sub> and ϴ<sub>2</sub>.
 
 This can be written as:
 
-`ϴ = [ϴ_1, ϴ_2]`
-`X = [x_1, x_2]`
+`ϴ = [ϴ`<sub>`1`</sub>`, ϴ`<sub>`2`</sub>`]`
+`X = [x`<sub>`1`</sub>`, x`<sub>`2`</sub>`]`
 
 The decision boundary can be written as all X for which the inner product (dot product) between ϴ and X = 0:
 
@@ -58,9 +58,9 @@ Each choice of ϴ defines one classifier; a different choice of ϴ gives us a di
   - `h(x; ϴ) = sign(ϴ • x)`
   - the label that it returns is the sign of the linear function ϴ • x.
 
-- In general, ϴ lives in the set of R^d, as does x:
-  - `ϴ ∈ R^d`
-  - so `{h(x; ϴ) = sign(ϴ • x) ϴ ∈ R^d}` gives us our set of linear classifiers through the origin.
+- In general, ϴ lives in the set of ℝ^d, as does x:
+  - `ϴ ∈ ℝ`<sup>`d`<sup>`
+  - so `{h(x; ϴ) = sign(ϴ • x) ϴ ∈ ℝ`<sup>`d`<sup>`}` gives us our set of linear classifiers through the origin.
 
 This includes each of the different linear classifiers we can obtain through adjusting the value of ϴ.
 
@@ -75,13 +75,13 @@ The association between the classifiers and the parameter vector ϴ is not uniqu
 
 **Linear classifiers**
 
-We can then apply the same logic to linear classifiers that do not cross through the origin, in which case we include the offset ϴ_0, a scalar parameter:
+We can then apply the same logic to linear classifiers that do not cross through the origin, in which case we include the offset ϴ<sub>0</sub>, a scalar parameter:
 
-- `{X: ϴ • x + ϴ_0 = 0}`, this is now the decision boundary.
-- It is ϴ_0 that controls the location of the boundary, where it is in relation to the origin.
+- `{X: ϴ • x + ϴ`<sub>`0`</sub>` = 0}`, this is now the decision boundary.
+- It is ϴ<sub>0</sub> that controls the location of the boundary, where it is in relation to the origin.
 - ϴ controls the orientation of that boundary, and is orthogonal to the boundary.
 
 Now:
 
-- `h(x; ϴ, ϴ_0) = sign(ϴ • x + ϴ_0)`
-- with the set of linear classifiers given by `{h(x; ϴ, ϴ_0) = sign(ϴ • x), ϴ ∈ R^d, ϴ_0 ∈ R}`
+- `h(x; ϴ, ϴ`<sub>`0`</sub>`) = sign(ϴ • x + ϴ`<sub>`0`</sub>`)`
+- with the set of linear classifiers given by `{h(x; ϴ, ϴ`<sub>`0`</sub>`) = sign(ϴ • x), ϴ ∈ ℝ`<sup>`d`</sup>`, ϴ`<sub>`0`</sub>` ∈ ℝ}`

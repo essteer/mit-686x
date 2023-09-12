@@ -1,26 +1,26 @@
 # Review of Basic Concepts
 
-- **Feature vectors, labels**: -`x ∈ R^d`, `y ∈ {-1, 1}`.
+- **Feature vectors, labels**: -`x ∈ ℝ`<sup>`d`</sup>; `y ∈ {-1, 1}`.
 
-- **Training set**: -`S_n = {(x^(i), y^(i)) i=1, ..., n}`, task given to the algorithm.
+- **Training set**: -`S`<sub>`n`</sub>`` = {(x`<sup>`(i)`</sup>`, y`<sup>`(i)`</sup>`) i=1,⋯,n}`, task given to the algorithm.
 
 - **Classifier**:
 
-  - `h: R^d -> {-1, 1}`, e.g. `h(x) = 1`
-  - A mapping of any point in R^d to +1/-1, divides the space into two halves so that we can observe shaded areas on the plane that relate to e.g., the positive set of results on the plane:
+  - `h: ℝ`<sup>`d`</sup>` -> {-1, 1}`, e.g. `h(x) = 1`
+  - A mapping of any point in ℝ<sup>d</sup> to +1/-1, divides the space into two halves so that we can observe shaded areas on the plane that relate to e.g., the positive set of results on the plane:
 
-    - `X+ = {x ∈ R^d: h(x) = 1}` (positive half)
-    - `X- = {x ∈ R^d: h(x) = -1}` (negative half)
-    - These together comprise the R^d space.
+    - `X+ = {x ∈ ℝ`<sup>`d`</sup>`: h(x) = 1}` (positive half)
+    - `X- = {x ∈ ℝ`<sup>`d`</sup>`: h(x) = -1}` (negative half)
+    - These together comprise the R<sup>d</sup> space.
 
 **Two ways to evaluate the classifier**:
 
 - **Training error**, which we have access to:
 
-  - `E_n(h) = 1/n n_Σ_i=1 [[h(x^(i)) != y^(i)]]`
+  - `E`<sub>`n`</sub>`(h) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [[h(x`<sup>`(i)`</sup>`) != y`<sup>`(i)`</sup>`]]`
   - = 1 if error
   - = 0 otherwise
-  - A classifier that correctly identified all of the training set labels, would have E_n(h) = 0.
+  - A classifier that correctly identified all of the training set labels, would have E<sub>n</sub>(h) = 0.
 
 - **Test error**, which we want to minimise the most:
 
@@ -37,4 +37,4 @@ We can affect generalisation by limiting the choices that we have, at the time o
 
 **Training set example**
 
-`x = [x_1, x_2] ∈ R^d, d = 2`
+`x = [x_1, x_2] ∈ ℝ`<sup>`d`</sup>`, d = 2`

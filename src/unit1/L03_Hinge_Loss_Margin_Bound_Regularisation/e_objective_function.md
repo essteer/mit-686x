@@ -4,7 +4,7 @@ Combining the hinge loss and regularisation terms (see d_hinge_loss.md), we arri
 
 **Objective function**
 
-J(θ, θ<sub>0</sub>) = 1/n Σ<sup>n</sup>(<sub>i=1</sub>) Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>)) + λ/2∥θ∥<sup>2</sup>
+J(θ, θ<sub>0</sub>) = 1/n Σ<sup>n</sup><sub>i=1</sub> Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>)) + λ/2∥θ∥<sup>2</sup>
 
 The two parts are:
 
