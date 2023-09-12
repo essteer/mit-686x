@@ -9,6 +9,7 @@ List of mathematical notation used throughout this repo, for ease of access.
 - Dot product: •
 - Element of: ∈
 - Epsilon: ε
+- Gamma: γ
 - Infinity: ∞
 - Lambda: λ
 - Nabla: ∇

@@ -2,7 +2,7 @@
 
 In ML, there are points (data points) in the data sets we work with, and which we want to be able to describe in terms of how they relate in n-dimensional space.
 
-If _x = (3, 2, 2)_, then x belongs in R^3, denoted as _∈ R^3_.
+If _x = (3, 2, 2)_, then x belongs in R^3, denoted as _∈ ℝ^3_.
 
 _x_ can also be written as a vector starting from origin _(0, 0, 0)_; we view x as a displacement from _(0, 0, 0)_.
 
@@ -21,6 +21,6 @@ y = `[1; 1; 1]` (3x1 matrix)
 _x•y = 3•1 + 2•1 + 2•1_
 _x•y = 7_
 
-2. **Geometric definition**: _x•y = |x||y|cosϴ_
+2. **Geometric definition**: _x•y = |x||y|cosθ_
 
 I.e., the magnitude / norm of x, times magnitude / norm of y, times the cosine of the angle between them.

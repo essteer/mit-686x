@@ -2,11 +2,11 @@
 
 Planes and other low-dimensional subspaces of higher n-dimensional space.
 
-_x = `[x1; x2; x3]` ∈ R^3_ (3x1 matrix)
+_x = `[x1; x2; x3]` ∈ ℝ^3_ (3x1 matrix)
 
-We refer to x as living in R^3.
+We refer to x as living in ℝ^3.
 
-We may be interested in points in relation to x, for example, in R^3, a plane would be all of the points that fit on a slice.
+We may be interested in points in relation to x, for example, in ℝ^3, a plane would be all of the points that fit on a slice.
 
 In 2D, we may have a line.
 
@@ -26,22 +26,22 @@ How do we define what the line is?
 
 If we have a plane in e.g., in 3D, we define the plane as having a "**normal**": there is a vector taken to be perpendicular to all other points on the plane.
 
-- We call the vector of the normal theta **ϴ**.
+- We call the vector of the normal theta **θ**.
 
 Additionally, this plane has an offset _0'_ from the origin, _0_.
 
 We want to find all lines, all points, which fall on this plane.
 
-If we take another point, _x_, it will only be on this plane if its vector is perpendicular to theta _ϴ_.
+If we take another point, _x_, it will only be on this plane if its vector is perpendicular to theta _θ_.
 
-_(x - x^)•ϴ = 0_
-_x•ϴ - x^•ϴ = 0_
+_(x - x^)•θ = 0_
+_x•θ - x^•θ = 0_
 
-_((- x^•ϴ) is always a constant)_
+_((- x^•θ) is always a constant)_
 
 We can define the plane as all of the points that satisfy:
 
-_x•ϴ + ϴ0 = 0_ (_ϴ0_ is an offset equivalent to _-x^•ϴ_)
+_x•θ + θ0 = 0_ (_θ0_ is an offset equivalent to _-x^•θ_)
 
 This is the definition of the plane.
 

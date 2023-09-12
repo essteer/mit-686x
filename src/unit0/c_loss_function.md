@@ -2,11 +2,11 @@
 
 **Loss function**: a way to value how far our model is from the data we have.
 
-_y^ = ϴ1x + ϴ2_
+_y^ = θ1x + θ2_
 
 - x is an input value
-- ϴ1 and ϴ2 are parameters
-- We want to "learn" ϴ1 and ϴ2, to predict y.
+- θ1 and θ2 are parameters
+- We want to "learn" θ1 and θ2, to predict y.
 
 **Error measurement**
 
@@ -16,7 +16,7 @@ _y^ - yi_
 
 Our loss function will be simply the vertical distance between y^i and yi:
 
-_L(xiyiϴ)_ = _(1/n n Σ i=1) |y^ - y|_ = _1/n Σ |ϴ1x + ϴ2 - y|_
+_L(xiyiθ)_ = _(1/n n Σ i=1) |y^ - y|_ = _1/n Σ |θ1x + θ2 - y|_
 
 We want to minimise the loss function; at that point, our model best describes the data.
 
@@ -29,8 +29,8 @@ The most common means to achieve it is to use an iterative algorithm, **gradient
 - Given a point, we compute the gradient - the derivative of the function for that point.
 - We want to move against the direction of the gradient.
 
-New value for ϴ = old value - some gamma (γ) times the gradient (∇ϴ) of the loss function:
-_ϴ^ = ϴ - γ ∇ϴ L(x1yiϴ)_
+New value for θ = old value - some gamma (γ) times the gradient (∇θ) of the loss function:
+_θ^ = θ - γ ∇θ L(x1yiθ)_
 
 The gamma (γ) is the learning rate.
 
@@ -40,9 +40,9 @@ The gamma (γ) is the learning rate.
 ## Example with Chain Rule
 
 We have a model which is:
-_y^ = 1 / (1 + e^-(ϴ1x + ϴ2))_
+_y^ = 1 / (1 + e^-(θ1x + θ2))_
 
-- We want to derive it in terms of ϴ1.
+- We want to derive it in terms of θ1.
 
 The **chain rule** tells us that if we have a function we would like to derive according to x, _dy / dx_:
 
@@ -50,29 +50,29 @@ _dy/dx_ = _dy/dz • dz/dx_
 
 Applied to our model:
 
-_dy^/dϴ1_ = _dy^/dz • dz/dϴ1_
+_dy^/dθ1_ = _dy^/dz • dz/dθ1_
 
 What is the _z_ of _dz_?
 
-1. We define it to be the _z = ϴ1x + ϴ2_ part of the equation.
+1. We define it to be the _z = θ1x + θ2_ part of the equation.
 
 - We now have a linear function.
 
 2. Our model takes in _x_, to which we apply a linear transformation to get _z_.
 3. We then apply our sigmoid function to _z_ to get our prediction, _y^_.
 
-4. We then just need to solve _dy^/dϴ1_ = _dy^/dz • dz/dϴ1_ to a derivative.
+4. We then just need to solve _dy^/dθ1_ = _dy^/dz • dz/dθ1_ to a derivative.
 
-- _dz/dϴ1_ = _x_
+- _dz/dθ1_ = _x_
 - _dy^/dz_ = _d/dz_ _1/(1+e^-z)_ (sigmoid function)
 - = _e^-z / (1 + e^z)^2_ (the derivative)
 
 Applying the chain rule:
 
-_dy^/dϴ1_ = _x • e^-z / (1 + e^z)^2_
+_dy^/dθ1_ = _x • e^-z / (1 + e^z)^2_
 
-- Plug in our value of _z = ϴ1x + ϴ2_ to get the derivative.
+- Plug in our value of _z = θ1x + θ2_ to get the derivative.
 
-For _ϴ2_:
+For _θ2_:
 
-- _dy^/dϴ2_ = _e^-z / (1 + e^z)^2_
+- _dy^/dθ2_ = _e^-z / (1 + e^z)^2_
