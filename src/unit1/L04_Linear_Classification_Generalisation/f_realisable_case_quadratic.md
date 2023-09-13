@@ -8,10 +8,10 @@ SVM finds the maximum margin linear separator by solving the quadratic problem t
 
 In the realisable case, if we disallow any margin violations, then the quadratic program we must solve is:
 
-- Find `θ, θ<sub>0</sub>`
-- that minimise `1/2 ∥θ∥<sup>2</sup>`
+- Find `θ, θ`<sub>`0`</sub>
+- that minimise `1/2 ∥θ∥`<sup>`2`</sup>
 - subject to:
-  - `(y`<sup>`(i)`</sup>`(θ•x`<sup>`(i)`</sup>` + θ<sub>0</sub>) >= 1`
+  - `(y`<sup>`(i)`</sup>`(θ•x`<sup>`(i)`</sup>` + θ`<sub>`0`</sub>`) >= 1`
   - `i = 1, ⋯, n`
 
 (>=1 since we want all training examples to have 0 hinge loss, i.e. no margin violations.)
