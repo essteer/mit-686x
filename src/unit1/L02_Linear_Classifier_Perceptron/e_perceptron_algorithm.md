@@ -41,7 +41,7 @@ We start with a parameteter vector ϴ = 0, and go through the i-th examples of t
 
 If there is an error, then we update the parameters to correct for that error.
 
-At the point at which the perceptron algorithm updates the parameter vector, `ϴ = ϴ + y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>``:
+At the point at which the perceptron algorithm updates the parameter vector, `ϴ = ϴ + y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>:
 
 - The new value of ϴ is set as the old ϴ, plus the scalar label y<sup>(i)</sup> multiplied by the vector training example.
 
@@ -81,12 +81,12 @@ Theoretically, if a linear classifier solution for the training set exists, the 
 
 If we take an arbitrary x, where:
 
-`   ϴ•x+ϴ`<sub>`0`</sub>``
+`ϴ•x+ϴ`<sub>`0`</sub>
 
 We can write this slightly differently, as if it were a linear classifier through origin, but taking slightly different examples.
 
-`   ϴ•x+ϴ`<sub>`0`</sub>` = [ϴ, ϴ`<sub>`0`</sub>`]` with ϴ<sub>0</sub> as the last coordinate, and then write down the example, with 1 as the last coordinate:
+`ϴ•x+ϴ`<sub>`0`</sub>` = [ϴ, ϴ`<sub>`0`</sub>`]` with ϴ<sub>0</sub> as the last coordinate, and then write down the example, with 1 as the last coordinate:
 
-`   ϴ•x+ϴ`<sub>`0`</sub>` = [ϴ, ϴ`<sub>`0`</sub>`][x, 1]`
+`ϴ•x+ϴ`<sub>`0`</sub>` = [ϴ, ϴ`<sub>`0`</sub>`][x, 1]`
 
 Effectively, we can think of the linear classifier with offset parameter, as a linear classifier through origin, that is just operating on slightly different examples.
