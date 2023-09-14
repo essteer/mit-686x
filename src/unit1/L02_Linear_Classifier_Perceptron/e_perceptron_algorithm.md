@@ -33,7 +33,7 @@ This initial iteration of the perceptron algorithm takes in a training set, and 
 ϴ = 0 (vector)
 
 If `y`<sup>`(i)`</sup>`(ϴ•x`<sup>`(i)`</sup>`) <= 0`,
-then `ϴ = ϴ + y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>``.
+then `ϴ = ϴ + y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>.
 
 I.e., if there are any classifiers through the origin that correctly separate the data, the algorithm will find a solution.
 
@@ -43,9 +43,9 @@ If there is an error, then we update the parameters to correct for that error.
 
 At the point at which the perceptron algorithm updates the parameter vector, `ϴ = ϴ + y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>``:
 
-- The new value of ϴ is set as the old ϴ, plus the scalar label y`<sup>`(i)`</sup>` multiplied by the vector training example.
+- The new value of ϴ is set as the old ϴ, plus the scalar label y<sup>(i)</sup> multiplied by the vector training example.
 
-`y`<sup>`(i)`</sup>` (0 + y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>`) • x`<sup>`(i)`</sup>` = ∥x`<sup>`(i)`</sup>`∥`<sup>`2`</sup>` > 0`
+y<sup>(i)</sup> (0 + y<sup>(i)</sup>x<sup>(i)</sup>) • x<sup>(i)</sup> = ∥x<sup>(i)</sup>∥<sup>2</sup> > 0
 
 ϴ in the above expression is initially set to 0, which always results in error and thus an incrementation via the perceptron algorithm.
 
