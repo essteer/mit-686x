@@ -2,31 +2,31 @@
 
 We defined training error for any classifier, as a fraction of training examples that are misclassified.
 
-- `E`<sub>`n`</sub>`(h) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sup>` [[h(x`<sup>`(i)`</sup>`) != y`<sup>`(i)`</sup>`]]`
+- `E`<sub>`n`</sub>`(h) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [[h(x`<sup>`(i)`</sup>`) != y`<sup>`(i)`</sup>`]]`
 
 **Training error for linear classifier through the origin**
 
 For linear classifiers through the origin, we can write this slightly differently, since each classifier is characterised by a parameter vector ϴ, we can review simply whether the sign agrees with the linear prediction:
 
-- `E`<sub>`n`</sub>`(ϴ) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sup>` [[y`<sup>`(i)`</sup>` ϴ•x`<sup>`(i)`</sup>` <= 0]]`
+- `E`<sub>`n`</sub>`(ϴ) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [[y`<sup>`(i)`</sup>` ϴ•x`<sup>`(i)`</sup>` <= 0]]`
 - If this <= 0, then a linear classifier that is the sign of the dot product ϴ•x<sup>(i)</sup> would be different than the given label.
 - When it is exactly 0, i.e. it lies precisely on the decision boundary, we count it as an error, since we cannot be confident which way to classify that point.
 
 **Training error for general linear classifier**
 
-- `E`<sub>`n`</sub>`(ϴ, ϴ`<sub>`0`</sub>`) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sup>` [[y`<sup>`(i)`</sup>` (ϴ•x`<sup>`(i)`</sup>`+ϴ`<sub>`0`</sub>`) <= 0]]`
+- `E`<sub>`n`</sub>`(ϴ, ϴ`<sub>`0`</sub>`) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [[y`<sup>`(i)`</sup>` (ϴ•x`<sup>`(i)`</sup>`+ϴ`<sub>`0`</sub>`) <= 0]]`
 
 - It is an error, if it is <=0.
 
 **Perceptron learning algorithm - initial version**
 
-`procedure PERCEPTRON({(x`<sup>`(i)`</sup>`,y`<sup>`(i)`</sup>`), i=1,⋯,n}, T)`
-`   ϴ = 0 (vector)`
-`   for t=1, ..., T do`
-`       for i=1, ..., n do`
-`           if y`<sup>`(i)`</sup>`(0) (ϴ•x`<sup>`(i)`</sup>`) <= 0 then`
-`               ϴ = ϴ + y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>``
-` return ϴ`
+- procedure PERCEPTRON({(x<sup>(i)</sup>,y<sup>(i)</sup>), i=1,⋯,n}, T)
+  - ϴ = 0 (vector)
+  - for t=1, ..., T do
+    - for i=1, ..., n do
+      - if y<sup>(i)</sup>(0) (ϴ•x<sup>(i)</sup>) <= 0 then
+      - ϴ = ϴ + y<sup>(i)</sup>x<sup>(i)</sup>
+  - return ϴ
 
 This initial iteration of the perceptron algorithm takes in a training set, and finds the parameter vector ϴ.
 
