@@ -3,5 +3,4 @@ venv/
 .vscode/
 __pychache__/
 homework*
-project0/
-project1/
+project*

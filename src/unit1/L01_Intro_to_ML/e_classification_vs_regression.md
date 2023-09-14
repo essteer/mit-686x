@@ -10,11 +10,11 @@ h([news article]) = politics -> h: χ -> {sports, politics, other}
 
 **Regression**
 
-h([house]) = $1,345,222 -> h: χ -> ℝ
+h([ house ]) = $1,345,222 -> h: χ -> ℝ
 
 **Structured prediction**
 
-h([image]) = [description] -> h: χ -> {[English sentences]}
+h([ image ]) = [ description ] -> h: χ -> {[English sentences]}
 
 ## Types of machine learning
 

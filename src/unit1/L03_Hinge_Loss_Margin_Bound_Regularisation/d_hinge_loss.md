@@ -44,6 +44,6 @@ Maximising `1/∥θ∥` is the same as minimising `∥θ∥` (the norm of θ), w
 
 We write this as:
 
-- max `1/∥θ∥` min `1/2∥θ∥`<sup>`2`</sup>
+- max `1/∥θ∥` min `1/2∥θ∥^2`
 
 We can regularise the solutions by trying to penalise large values of ∥θ∥ and ∥θ∥<sup>2</sup>.

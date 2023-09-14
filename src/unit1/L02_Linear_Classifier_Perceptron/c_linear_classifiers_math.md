@@ -16,16 +16,16 @@ The equation for this line would be the set of all points that satisfy the equat
 
 To define this, we need to introduce parameters ϴ<sub>1</sub>, which multiplies the x<sub>1</sub> coordinate, and ϴ<sub>2</sub>, which multiplies the x<sub>2</sub> coordinate.
 
-`ϴ`<sub>`1`</sub>`x`<sub>`1`</sub>` +  ϴ`<sub>`2`</sub>`x`<sub>`2`</sub>` = 0`
+`ϴ1x1 +  ϴ2x2 = 0`
 
 We fix the parameters for ϴ<sub>1</sub> and ϴ<sub>2</sub>; all points that satisfiy the equation:
 
-- `{X: ϴ`<sub>`1`</sub>`x`<sub>`1`</sub>` + ϴ`<sub>`2`</sub>`x`<sub>`2`</sub>` = 0}`, X being a vector, all of the x's are points along the line fixed by ϴ<sub>1</sub> and ϴ<sub>2</sub>.
+- `{X: ϴ1x1 + ϴ2x2 = 0}`, X being a vector, all of the x's are points along the line fixed by ϴ<sub>1</sub> and ϴ<sub>2</sub>.
 
 This can be written as:
 
-`ϴ = [ϴ`<sub>`1`</sub>`, ϴ`<sub>`2`</sub>`]`
-`X = [x`<sub>`1`</sub>`, x`<sub>`2`</sub>`]`
+`ϴ = [ϴ1, ϴ2]`
+`X = [x1, x2]`
 
 The decision boundary can be written as all X for which the inner product (dot product) between ϴ and X = 0:
 
@@ -59,8 +59,8 @@ Each choice of ϴ defines one classifier; a different choice of ϴ gives us a di
   - the label that it returns is the sign of the linear function ϴ • x.
 
 - In general, ϴ lives in the set of ℝ^d, as does x:
-  - `ϴ ∈ ℝ`<sup>`d`<sup>`
-  - so `{h(x; ϴ) = sign(ϴ • x) ϴ ∈ ℝ`<sup>`d`<sup>`}` gives us our set of linear classifiers through the origin.
+  - `ϴ ∈ ℝ^d`
+  - so `{h(x; ϴ) = sign(ϴ • x) ϴ ∈ ℝ^d}` gives us our set of linear classifiers through the origin.
 
 This includes each of the different linear classifiers we can obtain through adjusting the value of ϴ.
 
@@ -77,11 +77,11 @@ The association between the classifiers and the parameter vector ϴ is not uniqu
 
 We can then apply the same logic to linear classifiers that do not cross through the origin, in which case we include the offset ϴ<sub>0</sub>, a scalar parameter:
 
-- `{X: ϴ • x + ϴ`<sub>`0`</sub>` = 0}`, this is now the decision boundary.
+- `{X: ϴ • x + ϴ0 = 0}`, this is now the decision boundary.
 - It is ϴ<sub>0</sub> that controls the location of the boundary, where it is in relation to the origin.
 - ϴ controls the orientation of that boundary, and is orthogonal to the boundary.
 
 Now:
 
-- `h(x; ϴ, ϴ`<sub>`0`</sub>`) = sign(ϴ • x + ϴ`<sub>`0`</sub>`)`
-- with the set of linear classifiers given by `{h(x; ϴ, ϴ`<sub>`0`</sub>`) = sign(ϴ • x), ϴ ∈ ℝ`<sup>`d`</sup>`, ϴ`<sub>`0`</sub>` ∈ ℝ}`
+- `h(x; ϴ, ϴ0) = sign(ϴ • x + ϴ0)`
+- with the set of linear classifiers given by `{h(x; ϴ, ϴ0) = sign(ϴ • x), ϴ ∈ ℝ^d, ϴ0 ∈ ℝ}`

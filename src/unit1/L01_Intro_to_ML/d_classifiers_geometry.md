@@ -19,7 +19,7 @@ The training set as a whole is depicted as a set, S<sub>n</sub>, where <sub>n</s
 For this example, it becomes S<sub>4</sub> because we have four films in the training set (n = 4).
 
 - S<sub>4</sub> is is a collection of pairs in those vectors, (x<sup>(i)</sup>,y<sup>(i)</sup>) where x represents the feature vector, and y is the corresponding label.
-- `S`<sub>`4`</sub>` = (x`<sup>`(i)`</sup>`,y`<sup>`(i)`</sup>`) i=1, i=2, ..., i=n in ℝ`<sup>`2`</sup>` {-1, 1}`.
+- `S`<sub>`4`</sub>` = (x^(i), y^(i)) i=1, i=2, ..., i=n in ℝ^2 {-1, 1}`.
 
 Each example in the **test set** is also a pair of feature vector and label, but **we don't know the label**.
 
@@ -29,7 +29,7 @@ The task is to correctly determine those unknown labels.
 
 On the basis of our training set:
 
-`S`<sub>`4`</sub>` = {(x`<sup>`(i)`</sup>`, y`<sup>`(i)`</sup>`) i=1,⋯,n}`
+`S`<sub>`4`</sub>` = {(x^(i), y^(i)) i=1,⋯,n}`
 
 The model needs to map each point in the space _x ∈ ℝ<sup>2</sup>_, to a corresponding label of +1/-1, _y ∈ {-1, 1}_.
 
@@ -67,11 +67,11 @@ If the expected label is not the same as the actual label, then the above statem
 
 (In notation we use double brackets `[[]]` to denote a function that takes a truth value inside and returns 1 or 0, accordingly.)
 
-`[[h(x`<sup>`(i)`</sup>`) != y`<sup>`(i)`</sup>`]] = 1 if error, else 0`.
+`[[h(x^(i)) != y^(i)]] = 1 if error, else 0`.
 
 We want the error over the whole training set, so we sum this error over all training examples:
 
-`n_Σ_i=1 [[h(x`<sup>`(i)`</sup>`) != y`<sup>`(i)`</sup>`]]`, and take a fraction 1/n of this.
+`Σ^n_i=1 [[h(x^(i)) != y^(i)]]`, and take a fraction 1/n of this.
 
 **Example**: for a training set of 6, if 3 are labeled correctly and 3 are labeled incorrectly, we have E<sub>6</sub>(h) = (3*1 + 3*0)/6 = 3/6 = 0.5.
 

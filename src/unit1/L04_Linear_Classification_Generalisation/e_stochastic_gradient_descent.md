@@ -1,18 +1,18 @@
 # Stochastic Gradient Descent
 
-`J(θ, θ`<sub>`0`</sub>`) =`
+`J(θ, θ0) =`
 
-`1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` Loss`<sub>`h`</sub>`(y`<sup>`(i)`</sup>`(θ•x`<sup>`(i)`</sup>` + θ`<sub>`0`</sub>`)) + λ/2∥θ∥`<sup>`2`</sup>
+`1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` Loss`<sub>`h`</sub>`(y^(i)(θ•x^(i) + θ0)) + λ/2∥θ∥^2`
 
 An average of the training losses, plus the regularisation term.
 
 We can write the regularisation term **inside the average**, since it doesn't depend on the training examples, so any average over the regularisation term will return the same thing.
 
-`J(θ, θ`<sub>`0`</sub>`) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [Loss`<sub>`h`</sub>`(y`<sup>`(i)`</sup>`(θ•x`<sup>`(i)`</sup>` + θ`<sub>`0`</sub>`)) + λ/2∥θ∥`<sup>`2`</sup>`]`
+`J(θ, θ0) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [Loss`<sub>`h`</sub>`(y^(i)(θ•x^(i) + θ0)) + λ/2∥θ∥^2]`
 
 We can then further simplify the expression by omitting the offset parameter, θ<sub>0</sub>:
 
-`J(θ) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [Loss`<sub>`h`</sub>`(y`<sup>`(i)`</sup>`(θ•x`<sup>`(i)`</sup>`)) + λ/2∥θ∥`<sup>`2`</sup>`]`
+`J(θ) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [Loss`<sub>`h`</sub>`(y^(i)(θ•x^(i))) + λ/2∥θ∥^2]`
 
 We now have an average of simpler objective functions:
 
@@ -50,7 +50,7 @@ Put another way, we want the sum of the learning rate to go to infinity, if we s
 
 But we need to reduce the variance from the stochasticity we introduced, so have the parameters be square summable:
 
-- `Σ`<sup>`∞`</sup><sub>`t=1`</sub>` η`<sup>`2`</sup><sub>`t`</sub>` < ∞`
+- `Σ`<sup>`∞`</sup><sub>`t=1`</sub>` η^2`<sub>`t`</sub>` < ∞`
 
 So that the squared values of those parameters are finite.
 
@@ -62,23 +62,23 @@ For example:
 
 Returning to our objective function without the offset parameter, and with the regularisation term within the average loss summation:
 
-`J(θ) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [Loss`<sub>`h`</sub>`(y`<sup>`(i)`</sup>`(θ•x`<sup>`(i)`</sup>`)) + λ/2∥θ∥`<sup>`2`</sup>`]`
+`J(θ) = 1/n Σ`<sup>`n`</sup><sub>`i=1`</sub>` [Loss`<sub>`h`</sub>`(y^(i)(θ•x^(i))) + λ/2∥θ∥^2]`
 
 Our update with SGD is to sample i at random, then take the old parameter value θ and nudge it in the direction of the gradient with respect to the parameters of the hinge loss of that particular training example plus their regularisation:
 
-- `θ ← θ - η∇`<sub>`θ`</sub>` [Loss`<sub>`h`</sub>`(y`<sup>`(i)`</sup>`θ•x`<sup>`(i)`</sup>`) + λ/2∥θ∥`<sup>`2`</sup>`]`
+- `θ ← θ - η∇`<sub>`θ`</sub>` [Loss`<sub>`h`</sub>`(y^(i)θ•x^(i)) + λ/2∥θ∥^2]`
 
 To see what this amounts to, take the gradient with respect to both of the terms here:
 
-- `θ ← θ - η∇ [ {0, loss=0; -y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>`, loss>0} + λθ]`
+- `θ ← θ - η∇ [ {0, loss=0; -y^(i)x^(i), loss>0} + λθ]`
 
 When the loss is 0, then the gradient is also 0 as a vector, and nothing will come out of that gradient - (θ - η∇ will be equal to θ)
 
-When the loss is nonzero (!= 0), then the hinge loss is actually 1 minus its argument `(y`<sup>`(i)`</sup>`(θ•x`<sup>`(i)`</sup>`)`, which is just a linear function of θ:
+When the loss is nonzero (!= 0), then the hinge loss is actually 1 minus its argument `(y^(i)(θ•x^(i))`, which is just a linear function of θ:
 
 - minus because of the `1 -`,
-- label = `y`<sup>`(i)`</sup>, a scalar
-- multiplied by `x`<sup>`(i)`</sup>, a vector
+- label = `y^(i)`, a scalar
+- multiplied by `x^(i)`, a vector
 
 We then have the regularisation term, which is just λ multiplied by the parameter vector θ itself.
 
