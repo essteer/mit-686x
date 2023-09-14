@@ -22,8 +22,8 @@ For linear classifiers through the origin, we can write this slightly differentl
 
 - procedure PERCEPTRON({(x<sup>(i)</sup>,y<sup>(i)</sup>), i=1,⋯,n}, T)
   - ϴ = 0 (vector)
-  - for t=1, ..., T do
-    - for i=1, ..., n do
+  - for t=1, ⋯, T do
+    - for i=1, ⋯, n do
       - if y<sup>(i)</sup>(0) (ϴ•x<sup>(i)</sup>) <= 0 then
       - ϴ = ϴ + y<sup>(i)</sup>x<sup>(i)</sup>
   - return ϴ
@@ -70,14 +70,14 @@ Theoretically, if a linear classifier solution for the training set exists, the 
 
 **Perceptron algorithm with offset ϴ<sub>0</sub>**
 
-`procedure PERCEPTRON({(x`<sup>`(i)`</sup>`,y`<sup>`(i)`</sup>`), i=1,⋯,n}, T)`
-`   ϴ = 0 (vector), ϴ`<sub>`0`</sub>` (scalar)`
-`       for t=1, ..., T do`
-`           for i=1, ..., n do`
-`               if y`<sup>`(i)`</sup>`(0) (ϴ•x`<sup>`(i)`</sup>`) <= 0 then`
-`                   ϴ = ϴ + y`<sup>`(i)`</sup>`x`<sup>`(i)`</sup>``
-`                   ϴ`<sub>`0`</sub>` = ϴ`<sub>`0`</sub>` + y`<sup>`(i)`</sup>``
-`   return ϴ, ϴ`<sub>`0`</sub>`
+- procedure PERCEPTRON({(x<sup>(i)</sup>,y<sup>(i)</sup>), i=1,⋯,n}, T)
+  - ϴ = 0 (vector), ϴ<sub>0</sub> (scalar)
+  - for t=1, ⋯, T do
+    - for i=1, ⋯, n do
+      - if y<sup>(i)</sup>(0) (ϴ•x<sup>(i)</sup>) <= 0 then
+        - ϴ = ϴ + y<sup>(i)</sup>x<sup>(i)</sup>
+        - ϴ<sub>0</sub> = ϴ<sub>0</sub> + y<sup>(i)</sup>
+  - return ϴ, ϴ<sub>0</sub>
 
 If we take an arbitrary x, where:
 
