@@ -85,7 +85,7 @@ We can quantify the distance that it lies from the DB:
 - Dividing this by the magnitude/norm, we get a measure of distance from the DB.
 - Since with the negative MB our linear function is negative, and we are multiplying it by a negative point (y<sup>(i)</sup>), the result is (-1 \* -1) a positive distance 1/∥θ∥
 
-- I.e., when exactly on the negative MB, both y<sup>(i)</sup> and (θ•x<sup>(i)</sup> + θ<sub>0) in the numerator are equal to -1, so we have -1 x -1 = +1.
+- I.e., when exactly on the negative MB, both y<sup>(i)</sup> and (θ•x<sup>(i)</sup> + θ<sub>0</sub?>) in the numerator are equal to -1, so we have -1 x -1 = +1.
 
 `γi(θ,θ0)` gives us the signed distance, because it measures the distance of a point from the DB, but also the side of the DB on which it lies:
 

@@ -20,7 +20,10 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Integral: ∫
 - Lambda: λ
 - Left arrow: ←
+- Logical and: ∧
+- Logical or: ∨
 - Nabla: ∇
+- Negation: ¬
 - Objective function (linear classification): J(θ, θ<sub>0</sub>) = 1/n Σ<sup>n</sup><sub>i=1</sub> Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>)) + λ/2∥θ∥<sup>2</sup>
 - Parallel (use for magnitude / norm): ∥
 - Partial derivative: ∂
