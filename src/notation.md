@@ -14,6 +14,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Elipsis (vertical): ⋮
 - Epsilon: ε
 - Eta: η
+- Euclidian space: 𝔼
 - Gamma: γ
 - Gradient descent: θ ← θ - η∇J(θ)
 - Hinge loss: Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>))
