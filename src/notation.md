@@ -20,6 +20,8 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Hinge loss: Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>))
 - Infinity: ∞
 - Integral: ∫
+- K tilde: K̃
+- Kernel function: K(x, x')
 - Lambda: λ
 - Left arrow: ←
 - Logical and: ∧
