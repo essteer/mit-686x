@@ -31,14 +31,18 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Parallel (use for magnitude / norm): ∥
 - Partial derivative: ∂
 - Perpendicular: ⊥
+- Phi (small letter): φ
+- Phi (symbol): ϕ
 - Pi: π
 - PI: Π
 - Plus minus: ±
 - Regularisation: λ/2∥θ∥<sup>2</sup>
 - Right arrow: →
+- RIght arrow (long): ⟹
 - Set of real numbers: ℝ
 - Sigma: σ
 - SIGMA: Σ
+- Square root: √
 - Therefore: ∴
 - Theta: θ
 - THETA: Θ
