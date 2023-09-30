@@ -56,7 +56,7 @@ X = UV<sup>T</sup>
 
 In the case of rank 1:
 
-X<sub>ai</sub> = U<sub>a</sub>V<sub>i</sub>
+X<sub>ai</sub> = u<sub>a</sub>v<sub>i</sub>
 
 I.e., a multiplication of the a-th coordinate of vector U, and the i-th coordinate of vector V.
 
