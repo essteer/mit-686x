@@ -1,9 +1,11 @@
-venv/
-.env
-.vscode/
 homework*
 project*
 drafts/
+
+# Datasets
+Datasets/
+.gz
+.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -14,6 +16,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+venv/
 env/
 build/
 develop-eggs/
@@ -65,3 +68,9 @@ target/
 
 # Non-code files
 .pdf
+
+# IDE
+.vscode/
+
+# Private
+.env
