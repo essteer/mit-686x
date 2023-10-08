@@ -5,6 +5,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Alpha: α
 - Chi: χ
 - CHI: Χ
+- Circle: ◯
 - Decision boundary: θ•x + θ<sub>0</sub> = 0
 - Delta: δ
 - DELTA: Δ
@@ -42,6 +43,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Plus minus: ±
 - Regularisation: λ/2∥θ∥<sup>2</sup>
 - Right arrow: →
+- Right arrow (long): ⟶
 - Right arrow (long double): ⟹
 - Set of real numbers: ℝ
 - Sigma: σ
