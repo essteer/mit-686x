@@ -6,6 +6,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Chi: χ
 - CHI: Χ
 - Circle: ◯
+- Circled dot: ⊙
 - Decision boundary: θ•x + θ<sub>0</sub> = 0
 - Delta: δ
 - DELTA: Δ
