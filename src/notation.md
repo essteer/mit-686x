@@ -12,6 +12,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - DELTA: Δ
 - Dot product: •
 - Element of: ∈
+- Element of set of real numbers: ∈ℝ
 - Elipsis (midline): ⋯
 - Elipsis (vertical): ⋮
 - Epsilon: ε
@@ -34,6 +35,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Not element of: ∉
 - Not equal to: ≠
 - Objective function (linear classification): J(θ, θ<sub>0</sub>) = 1/n Σ<sup>n</sup><sub>i=1</sub> Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>)) + λ/2∥θ∥<sup>2</sup>
+- P hat: P̂
 - Parallel (use for magnitude / norm): ∥
 - Partial derivative: ∂
 - Perpendicular: ⊥
@@ -53,6 +55,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Therefore: ∴
 - Theta: θ
 - THETA: Θ
+- w tilde: w̃
 - x-hat: x̂
 - y-hat: ŷ
 - z-hat: ẑ
