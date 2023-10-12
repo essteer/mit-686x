@@ -20,13 +20,13 @@ Then, we apply a stochastic gradient descent algorithm by nudging those paramete
 
 The weights are update as follows:
 
-w<sup>l</sup><sub>ij<sub> ← w<sup>l</sup><sub>ij<sub> - η
+w<sup>l</sup><sub>ij</sub> ← w<sup>l</sup><sub>ij</sub> - η
 
 **Example**
 
 Here we use the example of a very deep, chain-like NN, with just one unit per hidden layer:
 
-x ◯ w<sub>1</sub>⟶ z<sub>1</sub>◯f<sub>1</sub> w<sub>2</sub>⟶ z<sub>2</sub>◯f<sub>2</sub> ⟶ ◯
+x ◯ w<sub>1</sub> ⟶ z<sub>1</sub> ◯ f<sub>1</sub> w<sub>2</sub> ⟶ z<sub>2</sub> ◯ f<sub>2</sub> ⟶ ◯
 
 Where x ∈ ℝ, and this network continues on to an output f<sub>L</sub> ∈ ℝ:
 
