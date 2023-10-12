@@ -16,7 +16,7 @@ We take a derivative of that loss with respect to each of the parameters.
 
 Then, we apply a stochastic gradient descent algorithm by nudging those parameters in the reverse direction to the gradient.
 
-- dLoss(y, f(x; w)) / dw<sup>l</sup><sub>ij<sub>
+- dLoss( y, f( x; w ) ) / dw<sup>l</sup><sub>ij</sub>
 
 The weights are update as follows:
 
@@ -30,19 +30,21 @@ x ◯ w<sub>1</sub> ⟶ z<sub>1</sub> ◯ f<sub>1</sub> w<sub>2</sub> ⟶ z<sub>
 
 Where x ∈ ℝ, and this network continues on to an output f<sub>L</sub> ∈ ℝ:
 
-w<sub>L</sub>⟶ z<sub>L</sub>◯f<sub>L</sub> ⟶
+w<sub>L</sub> ⟶ z<sub>L</sub> ◯ f<sub>L</sub> ⟶
 
-z<sub>1</sub> = xw<sub>1</sub>, an aggregate input of the signal from before, leaving out offset for simplicity.
+z<sub>1</sub> = x w<sub>1</sub>, an aggregate input of the signal from before, leaving out offset for simplicity.
 
-f<sub>1</sub> = tanh(xw<sub>1</sub>), the activation function.
-⋮
-f<sub>L</sub> = tanh(f<sub>L-1</sub>w<sub>L</sub>)
+f<sub>1</sub> = tanh(x w<sub>1</sub>), the activation function.
+
+and so on, to:
+
+f<sub>L</sub> = tanh( f<sub>L-1</sub> w<sub>L</sub> )
 
 (Typically the final unit could be linear, but we retain the same form here for simplicity.)
 
 Given y, we must evaluate the loss between the desired output, and the network prediction.
 
-Loss(y, f<sub>L</sub>)
+Loss ( y, f<sub>L</sub> )
 
 The network output is a function of all of the weights in the model, plus the input x.
 
