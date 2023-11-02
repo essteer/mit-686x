@@ -3,6 +3,7 @@
 List of mathematical notation and formulas used throughout this repo, for ease of access.
 
 - Alpha: α
+- Approximately: ≈
 - Chi: χ
 - CHI: Χ
 - Circle: ◯
@@ -15,6 +16,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Element of set of real numbers: ∈ℝ
 - Elipsis (midline): ⋯
 - Elipsis (vertical): ⋮
+- Empty set: ∅
 - Epsilon: ε
 - Eta: η
 - Euclidian space: 𝔼
@@ -22,6 +24,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Gradient descent: θ ← θ - η∇J(θ)
 - Hinge loss: Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>))
 - Infinity: ∞
+- Intersection: ∩
 - Integral: ∫
 - K tilde: K̃
 - Kernel function: K(x, x')
@@ -55,6 +58,7 @@ List of mathematical notation and formulas used throughout this repo, for ease o
 - Therefore: ∴
 - Theta: θ
 - THETA: Θ
+- Union: ∪
 - w tilde: w̃
 - x-hat: x̂
 - y-hat: ŷ
