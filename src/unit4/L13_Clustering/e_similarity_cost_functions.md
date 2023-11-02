@@ -27,23 +27,19 @@ Therefore whenever a cluster is given, a representative must also be given in or
 
 This is expressed as:
 
-cost(C, z) = Σ<sub>i∈C</sub> dist(x<sup>(i)</sup>, z)
+cost(C, z) = Σ<sub>i∈C</sub> dist(x<sup>( i )</sup>, z)
 
-The specific distance measurement used could be cosine similarity or Euclidian square distance, for example.
+The specific distance measurement used could be cosine similarity or Euclidean square distance, for example.
 
 **Cosine similarity**
 
 Takes two vectors, and looks at the angle between those two vectors.
 
-cos ( x<sup>(i)</sup>, x<sup>(j)</sup>) = (x<sup>(i)</sup> • x<sup>(j)</sup>) / (∥x<sup>(i)</sup>∥ • ∥x<sup>(j)</sup>∥)
+cos ( x<sup>( i )</sup>, x<sup>( j )</sup>) = (x<sup>( i )</sup> • x<sup>( j )</sup>) / (∥x<sup>( i )</sup>∥ • ∥x<sup>( j )</sup>∥)
 
-\(cos ( x^(i), x^(j)) = (x^(i) • x^(j)) / (∥x^(i)∥ • ∥x^(j)∥)\)
+**Euclidean square distance**
 
-**Euclidian square distance**
-
-dist( x<sup>(i)</sup>, x<sup>(j)</sup> ) = ∥x<sup>(i)</sup> - x<sup>(j)</sup>∥<sup>2</sup>
-
-\( dist( x^(i), x^(j) ) = ∥x^(i) - x^(j)∥^2 \)
+dist( x<sup>( i )</sup>, x<sup>( j )</sup> ) = ∥x<sup>( i )</sup> - x<sup>( j )</sup>∥<sup>2</sup>
 
 **Comparison**
 
@@ -51,7 +47,7 @@ Cosine similarity is not sensitive to the magnitude of the vectors.
 
 In terms of the Google News application, if we chose the cosine for two vectors representing different stories, cosine similarity would not take note of how long the stories were.
 
-Euclidian square distance would be sensitive to the lengths of the stories.
+Euclidean square distance would be sensitive to the lengths of the stories.
 
 The question to consider is, what makes the match between the similarity measure and the algorithm? When is it important, and when is it not important?
 
@@ -59,6 +55,6 @@ The question to consider is, what makes the match between the similarity measure
 
 To get the cost, we need the representatives as well as the partitions.
 
-We use Euclidian square distance to go over every cluster, from cluster 1 to cluster K, and within each cluster we take the points that belong to that clusts, and compute the Euclidian square distance between those points and the representative of that cluster.
+We use Euclidean square distance to go over every cluster, from cluster 1 to cluster K, and within each cluster we take the points that belong to that clusts, and compute the Euclidean square distance between those points and the representative of that cluster.
 
-cost(C<sub>1</sub>, ⋯, C<sub>K</sub>, ⋯, z<sup>(1)</sup>, z<sup>(K)</sup>) = Σ<sub>j=1</sub><sup>K</sup> Σ<sub>C∈C<sub>j</sub></sub> ∥x<sup>(i)</sup> - x<sup>(j)</sup>∥<sup>2</sup>
+cost(C<sub>1</sub>, ⋯, C<sub>K</sub>, ⋯, z<sup>(1)</sup>, z<sup>(K)</sup>) = Σ<sub>j=1</sub><sup>K</sup> Σ<sub>i∈C<sub>j</sub></sub> ∥x<sup>( i )</sup> - z<sup>( j )</sup>∥<sup>2</sup>
