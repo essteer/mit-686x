@@ -1,65 +1,65 @@
 # Mathematical Notation
 
-List of mathematical notation and formulas used throughout this repo, for ease of access.
+Table of mathematical notation and formulas used throughout this repo, for ease of access.
 
-- Alpha: α
-- Approximately: ≈
-- Chi: χ
-- CHI: Χ
-- Circle: ◯
-- Circled dot: ⊙
-- Decision boundary: θ•x + θ<sub>0</sub> = 0
-- Delta: δ
-- DELTA: Δ
-- Dot product: •
-- Element of: ∈
-- Element of set of real numbers: ∈ℝ
-- Elipsis (midline): ⋯
-- Elipsis (vertical): ⋮
-- Empty set: ∅
-- Epsilon: ε
-- Eta: η
-- Euclidian space: 𝔼
-- Gamma: γ
-- Gradient descent: θ ← θ - η∇J(θ)
-- Hinge loss: Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>))
-- Infinity: ∞
-- Intersection: ∩
-- Integral: ∫
-- K tilde: K̃
-- Kernel function: K(x, x')
-- Lambda: λ
-- Left arrow: ←
-- Left arrow (long double): ⟸
-- Logical and: ∧
-- Logical or: ∨
-- Nabla: ∇
-- Negation: ¬
-- Not element of: ∉
-- Not equal to: ≠
-- Objective function (linear classification): J(θ, θ<sub>0</sub>) = 1/n Σ<sup>n</sup><sub>i=1</sub> Loss<sub>h</sub>(y<sup>(i)</sup>(θ•x<sup>(i)</sup> + θ<sub>0</sub>)) + λ/2∥θ∥<sup>2</sup>
-- P hat: P̂
-- Parallel (use for magnitude / norm): ∥
-- Partial derivative: ∂
-- Perpendicular: ⊥
-- Phi (small letter): φ
-- Phi (symbol): ϕ
-- Pi: π
-- PI: Π
-- Plus minus: ±
-- Regularisation: λ/2∥θ∥<sup>2</sup>
-- Right arrow: →
-- Right arrow (long): ⟶
-- Right arrow (long double): ⟹
-- Set of real numbers: ℝ
-- Sigma: σ
-- SIGMA: Σ
-- Square root: √
-- Therefore: ∴
-- Theta: θ
-- THETA: Θ
-- Union: ∪
-- w tilde: w̃
-- x-hat: x̂
-- y-hat: ŷ
-- z-hat: ẑ
+| Name / Description                  | Symbol / Equation       |
+| ----------------------------------- | ----------------------- |
+| Alpha                               | α                       |
+| Approximately                       | ≈                       |
+| Chi                                 | χ                       |
+| CHI                                 | Χ                       |
+| Circle                              | ◯                       |
+| Circled dot                         | ⊙                       |
+| Decision boundary                   | θ•x + θ<sub>0</sub> = 0 |
+| Delta                               | δ                       |
+| DELTA                               | Δ                       |
+| Dot product                         | •                       |
+| Element of                          | ∈                       |
+| Element of set of real numbers      | ∈ℝ                      |
+| Elipsis (midline)                   | ⋯                       |
+| Elipsis (vertical)                  | ⋮                       |
+| Empty set                           | ∅                       |
+| Epsilon                             | ε                       |
+| Eta                                 | η                       |
+| Euclidian space                     | 𝔼                       |
+| Gamma                               | γ                       |
+| Infinity                            | ∞                       |
+| Intersection                        | ∩                       |
+| Integral                            | ∫                       |
+| K tilde                             | K̃                       |
+| Kernel function                     | K(x, x')                |
+| Lambda                              | λ                       |
+| Left arrow                          | ←                       |
+| Left arrow (long double)            | ⟸                       |
+| Logical and                         | ∧                       |
+| Logical or                          | ∨                       |
+| Mu                                  | μ                       |
+| Nabla                               | ∇                       |
+| Negation                            | ¬                       |
+| Not element of                      | ∉                       |
+| Not equal to                        | ≠                       |
+| P hat                               | P̂                       |
+| Parallel (use for magnitude / norm) | ∥                       |
+| Partial derivative                  | ∂                       |
+| Perpendicular                       | ⊥                       |
+| Phi (small letter)                  | φ                       |
+| Phi (symbol)                        | ϕ                       |
+| Pi                                  | π                       |
+| PI                                  | Π                       |
+| Plus minus                          | ±                       |
+| Regularisation                      | λ/2∥θ∥<sup>2</sup>      |
+| Right arrow                         | →                       |
+| Right arrow (long)                  | ⟶                       |
+| Right arrow (long double)           | ⟹                       |
+| Set of real numbers                 | ℝ                       |
+| Sigma                               | σ                       |
+| SIGMA                               | Σ                       |
+| Square root                         | √                       |
+| Therefore                           | ∴                       |
+| Theta                               | θ                       |
+| THETA                               | Θ                       |
+| Union                               | ∪                       |
+| w tilde                             | w̃                       |
+| x-hat                               | x̂                       |
+| y-hat                               | ŷ                       |
+| z-hat                               | ẑ                       |
