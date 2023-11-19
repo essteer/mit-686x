@@ -22,6 +22,7 @@ Table of mathematical notation and formulas used throughout this repo, for ease 
 | Epsilon                             | ε                       |
 | Eta                                 | η                       |
 | Euclidian space                     | 𝔼                       |
+| For all                             | ∀                       |
 | Gamma                               | γ                       |
 | Infinity                            | ∞                       |
 | Intersection                        | ∩                       |
@@ -31,6 +32,7 @@ Table of mathematical notation and formulas used throughout this repo, for ease 
 | Lambda                              | λ                       |
 | Left arrow                          | ←                       |
 | Left arrow (long double)            | ⟸                       |
+| Less than or equal to               | ≤                       |
 | Logical and                         | ∧                       |
 | Logical or                          | ∨                       |
 | Mu                                  | μ                       |
