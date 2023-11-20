@@ -62,6 +62,8 @@ Table of mathematical notation and formulas used throughout this repo, for ease 
 | THETA                               | Θ                       |
 | Union                               | ∪                       |
 | w tilde                             | w̃                       |
+| p-hat                               | p̂                       |
+| x-bar                               | x̄                       |
 | x-hat                               | x̂                       |
 | y-hat                               | ŷ                       |
 | z-hat                               | ẑ                       |
