@@ -2,25 +2,28 @@
 
 In ML, there are points (data points) in the data sets we work with, and which we want to be able to describe in terms of how they relate in n-dimensional space.
 
-If _x = (3, 2, 2)_, then x belongs in R^3, denoted as _∈ ℝ^3_.
+If $x = (3, 2, 2)$, then $x$ belongs in $R^3$, denoted as $∈ ℝ^3$.
 
-_x_ can also be written as a vector starting from origin _(0, 0, 0)_; we view x as a displacement from _(0, 0, 0)_.
+$x$ can also be written as a vector starting from origin $(0, 0, 0)$; we view $x$ as a displacement from $(0, 0, 0)$.
 
-_xi_ would be the ith coordinate in this vector. E.g., _xi = x2 = 2_.
+$x_i$ would be the ith coordinate in this vector. E.g., $x_i = x_2 = 2$.
 
 **Magnitude / norm**
 
-The magnitude of _x = sqrt(3^2 + 2^2 + 2^2)_
+The magnitude of $x = sqrt(3^2 + 2^2 + 2^2)$
 
 Two definitions for a dot product, which are equivalent to each other and used interchangeably:
 
-1. **Algebraic definition**: _x•y = (n Σ i=1) xi•yi_, for example:
+**Algebraic definition**: $x•y = \sum_{i=1}^{n} x_i•y_i$, for example:
 
-x = `[3; 2; 2]` (3x1 matrix)
-y = `[1; 1; 1]` (3x1 matrix)
-_x•y = 3•1 + 2•1 + 2•1_
-_x•y = 7_
+$x = [3; 2; 2]$ (3x1 matrix)
 
-2. **Geometric definition**: _x•y = |x||y|cosθ_
+$y = [1; 1; 1]$ (3x1 matrix)
 
-I.e., the magnitude / norm of x, times magnitude / norm of y, times the cosine of the angle between them.
+$x•y = 3•1 + 2•1 + 2•1$
+
+$x•y = 7$
+
+**Geometric definition**: $x•y = |x||y|cosθ$
+
+I.e., the magnitude / norm of $x$, times magnitude / norm of $y$, times the cosine of the angle between them.

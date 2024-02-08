@@ -2,21 +2,21 @@
 
 **Loss function**: a way to value how far our model is from the data we have.
 
-_y^ = θ1x + θ2_
+$ŷ = \theta_1x + \theta_2$
 
-- x is an input value
-- θ1 and θ2 are parameters
-- We want to "learn" θ1 and θ2, to predict y.
+- $x$ is an input value
+- $\theta_1$ and $\theta_2$ are parameters
+- We want to "learn" $\theta_1$ and $\theta_2$, to predict $y$.
 
 **Error measurement**
 
-One way to measure error is to take the vertical distance between our prediction for y^, and the true value for y observed.
+One way to measure error is to take the vertical distance between our prediction for $ŷ$, and the true value for $y$ observed.
 
-_y^ - yi_
+$ŷ - y_i$
 
-Our loss function will be simply the vertical distance between y^i and yi:
+Our loss function will be simply the vertical distance between $ŷ_i$ and $y_i$:
 
-_L(xiyiθ)_ = _(1/n n Σ i=1) |y^ - y|_ = _1/n Σ |θ1x + θ2 - y|_
+$L(x_iy_iθ) = \frac{1}{n} \sum_{i=1}^{n} |ŷ - y| = \frac{1}{n} Σ |\theta_1x + \theta_2 - y|$
 
 We want to minimise the loss function; at that point, our model best describes the data.
 
@@ -29,10 +29,10 @@ The most common means to achieve it is to use an iterative algorithm, **gradient
 - Given a point, we compute the gradient - the derivative of the function for that point.
 - We want to move against the direction of the gradient.
 
-New value for θ = old value - some gamma (γ) times the gradient (∇θ) of the loss function:
-_θ^ = θ - γ ∇θ L(x1yiθ)_
+New value for $θ$ = old value - some gamma ($γ$) times the gradient ($∇_θ$) of the loss function:
+$θ' = θ - γ ∇_θ L(x_1y_iθ)$
 
-The gamma (γ) is the learning rate.
+The gamma ($γ$) is the learning rate.
 
 - If gamma is high, we may dart around the curve.
 - If gamma is very small, we may converge slowly on the optimum - but could also be more prone to becoming stuck in a local minimum.
@@ -40,39 +40,35 @@ The gamma (γ) is the learning rate.
 ## Example with Chain Rule
 
 We have a model which is:
-_y^ = 1 / (1 + e^-(θ1x + θ2))_
+$ŷ = \frac{1}{1 + e^{-(\theta_1x + \theta_2)}}$
 
-- We want to derive it in terms of θ1.
+- We want to derive it in terms of $\theta_1$.
 
-The **chain rule** tells us that if we have a function we would like to derive according to x, _dy / dx_:
+The **chain rule** tells us that if we have a function we would like to derive according to $x$, $\frac{dy}{dx}$:
 
-_dy/dx_ = _dy/dz • dz/dx_
+$\frac{dy}{dx}$ = $\frac{dy}{dz} • \frac{dz}{dx}$
 
 Applied to our model:
 
-_dy^/dθ1_ = _dy^/dz • dz/dθ1_
+$\frac{dŷ}{d\theta_1} = \frac{dŷ}{dz} • \frac{dz}{d\theta_1}$
 
-What is the _z_ of _dz_?
+What is the $z$ of $dz$?
 
-1. We define it to be the _z = θ1x + θ2_ part of the equation.
+1. We define it to be the $z = \theta_1x + \theta_2$ part of the equation - and now have a linear function.
+2. Our model takes in $x$, to which we apply a linear transformation to get $z$.
+3. We then apply our sigmoid function to $z$ to get our prediction, $ŷ$.
+4. We then just need to solve $\frac{dŷ}{d\theta_1} = \frac{dŷ}{dz} • \frac{dz}{d\theta_1}$ to a derivative.
 
-- We now have a linear function.
-
-2. Our model takes in _x_, to which we apply a linear transformation to get _z_.
-3. We then apply our sigmoid function to _z_ to get our prediction, _y^_.
-
-4. We then just need to solve _dy^/dθ1_ = _dy^/dz • dz/dθ1_ to a derivative.
-
-- _dz/dθ1_ = _x_
-- _dy^/dz_ = _d/dz_ _1/(1+e^-z)_ (sigmoid function)
-- = _e^-z / (1 + e^z)^2_ (the derivative)
+- $\frac{dz}{d\theta_1} = x$
+- $\frac{dŷ}{dz} = \frac{d}{dz} \frac{1}{1+e^{-z}}$ (sigmoid function)
+- $= \frac{e^{-z}}{1 + e^{z^2}}$ (the derivative)
 
 Applying the chain rule:
 
-_dy^/dθ1_ = _x • e^-z / (1 + e^z)^2_
+$\frac{dŷ}{d\theta_1} = x • \frac{e^{-z}}{1 + e^{z^2}}$
 
-- Plug in our value of _z = θ1x + θ2_ to get the derivative.
+- Plug in our value of $z = \theta_1x + \theta_2$ to get the derivative.
 
-For _θ2_:
+For $\theta_2$:
 
-- _dy^/dθ2_ = _e^-z / (1 + e^z)^2_
+- $\frac{dŷ}{d\theta_2} = \frac{e^{-z}}{1 + e^{z^2}}$
