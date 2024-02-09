@@ -37,7 +37,7 @@ If we take another point, $x$, it will only be on this plane if its vector is pe
 $(x - x̂)•θ = 0$
 $x•θ - x̂•θ = 0$
 
-$((- x̂•θ) is always a constant)$
+($(- x̂•θ)$ is always a constant)
 
 We can define the plane as all of the points that satisfy:
 

@@ -13,7 +13,7 @@ We have a set of films already seen, and want to use our experience of those fil
 
 2. The task is then to recommend correctly out of n films, films that will be "liked".
 
-Note that the computer can understand the +1/-1 labels applied to the films, but cannot truly understand anything about the films themselves.
+Note that the computer can understand the $+1/-1$ labels applied to the films, but cannot truly understand anything about the films themselves.
 
 3. We therefore need to construct a **feature vector** to put the films into a form that the computer can understand.
 
@@ -27,11 +27,11 @@ For example, asking these questions of a film:
 
 Could result in the feature vector:
 
-`x^(1) = [0, 0, 1, 1, 0]^T`
+$x^{(1)} = [0, 0, 1, 1, 0]^T$
 
 For a film directed by Werner Herzog starring de Niro, that is neither a comedy nor an action film, and is not produced by Pixar.
 
-Then we might have `x^(2) = [1, 0, 0, 0, 1]`, and so on.
+Then we might have $x^{(2)} = [1, 0, 0, 0, 1]^T$, and so on.
 
 This feature vector can be applied to all of the unseen films, with the goal of determining which films fit with the given feature vectors we have expressed a preference for.
 

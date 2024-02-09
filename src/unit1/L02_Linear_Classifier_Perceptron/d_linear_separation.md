@@ -6,26 +6,10 @@ Perhaps this can be done via a linear classifier through the origin, but if not,
 
 But, there do exist datasets for which there is no linear classifier that can correctly label the points contained.
 
-For example:
-
-^ x2
-|
-| \+ \-
-|
-| \- \+
-|
-|\_\_\_\_\_\_> x1
-
-The + and - values here cannot be separated linearly.
-
-Thus this is not a linear classification problem.
-
-It also illustrates that linear classifiers are a relatively small subset of possible circumstances.
-
 **Definition**
 
-Training examples `S`<sub>`n`</sub>` = {(x^(i), y^(i)), i=1,⋯,n}` are linearly separable if there exists a parameter vector ^ϴ and offset parameter ^ϴ<sub>0</sub> such that:
+Training examples $S_n = \{(x^{(i)}, y^{(i)}), i=1,⋯,n\}$ are linearly separable if there exists a parameter vector $θ$ and offset parameter $θ_0$ such that:
 
-- `y^(i)(^ϴ • x^(i) + ^ϴ0) > 0` for all i=1,⋯,n.
+- $y^{(i)}(θ • x^{(i)} + θ_0) > 0$ for all $i=1,⋯,n$.
 
-Given ϴ and ϴ<sub>0</sub>, a linear classifier `h: X -> {-1, 0, +1}` is a function that outputs +1 if ϴ•x+ϴ<sub>0</sub> is positive, 0 if it is zero, and -1 if it is negative. In other words, h(x) = sign(ϴ•x+ϴ<sub>0</sub>).
+Given $θ$ and $θ_0$, a linear classifier $h: X ⟶ $\{-1, 0, +1\}$ is a function that outputs $+1$ if $θ•x+θ_0$ is positive, $0$ if it is zero, and $-1$ if it is negative. In other words, $h(x) = sign(θ•x+θ_0)$.
