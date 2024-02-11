@@ -12,4 +12,4 @@ Training examples $S_n = \{(x^{(i)}, y^{(i)}), i=1,⋯,n\}$ are linearly separab
 
 - $y^{(i)}(θ • x^{(i)} + θ_0) > 0$ for all $i=1,⋯,n$.
 
-Given $θ$ and $θ_0$, a linear classifier $h: X ⟶ $\{-1, 0, +1\}$ is a function that outputs $+1$ if $θ•x+θ_0$ is positive, $0$ if it is zero, and $-1$ if it is negative. In other words, $h(x) = sign(θ•x+θ_0)$.
+Given $θ$ and $θ_0$, a linear classifier $h: X ⟶ \{-1, 0, +1\}$ is a function that outputs $+1$ if $θ•x+θ_0$ is positive, $0$ if it is zero, and $-1$ if it is negative. In other words, $h(x) = sign(θ•x+θ_0)$.

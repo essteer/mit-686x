@@ -28,9 +28,9 @@ There are two aspects to this problem, when cast into an optimisation problem:
 
    - This counterweight is quantified in terms of a **loss function**.
 
-The objective function for selecting the parameters θ and θ<sub>0</sub>, is therefore a balance between:
+The objective function for selecting the parameters $θ$ and $θ_0$, is therefore a balance between:
 
 - loss (how the examples fit into our solution), and
 - regularisation (our preference for large-margin solutions).
 
-We want to find values of θ and θ<sub>0</sub> that minimise our objective function.
+We want to find values of $θ$ and $θ_0$ that minimise our objective function.

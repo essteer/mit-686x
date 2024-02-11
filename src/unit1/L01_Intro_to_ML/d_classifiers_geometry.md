@@ -73,7 +73,7 @@ We want the error over the whole training set, so we sum this error over all tra
 
 $Σ_{i=1}^n [[h(x^{(i)}) ~!= y^{(i)}]]$, and take a fraction $\frac{1}{n}$ of this.
 
-**Example**: for a training set of 6, if 3 are labeled correctly and 3 are labeled incorrectly, we have $E_6(h) = (3*1 + 3*0)/6 = \frac{3}{6} = 0.5$.
+Example: for a training set of 6, if 3 are labeled correctly and 3 are labeled incorrectly, we have $E_6(h) = \frac{3*1 + 3*0}{6} = \frac{3}{6} = 0.5$.
 
 (In this example, this outcome is no better than randomly guessing by chance.)
 

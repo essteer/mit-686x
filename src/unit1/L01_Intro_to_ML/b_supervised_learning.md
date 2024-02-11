@@ -26,7 +26,7 @@ To do this, we:
 - hypothesise a set of potential mappings, a large set that takes an image, and specify a category
 - the mapping is specified by parameters
 
-$h([image of mushroom]; ϴ)$
+$h([~image~of~mushroom~]; θ)$
 
 - a different value for the parameters will specify a different mapping
 - we want to find a parameter which, out of the set of possible parameters, agrees with our set of examples for classification the best (the closest fit)
@@ -35,7 +35,7 @@ For machine translation, we may have English sentences ("Is it real?") mapped to
 
 This would then work by taking a sentence as an input, along with adjustable parameters that specify different possible mappings, with each parameter value providing a possible answer.
 
-$h("Is it real?"; ϴ) = "Es real?"$
+$h('Is~it~real?'; θ) =~'Es~real?'$
 
 (That "possible" answer may or may not match the correct answer.)
 
