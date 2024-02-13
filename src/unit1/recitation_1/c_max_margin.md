@@ -1,48 +1,48 @@
 # Maximum Margin
 
-We saw that for the SVM, γ<sub>ref</sub> is just the support vector of the decision boundary (DB).
+We saw that for the SVM, $γ_{ref}$ is just the support vector of the decision boundary (DB).
 
-How can we write γ<sub>ref</sub> in terms of what we know, i.e., θ and θ<sub>0</sub>?
+How can we write $γ_{ref}$ in terms of what we know, i.e., $θ$ and $θ_0$?
 
-**θ as a scalable constant**
+**$θ$ as a scalable constant**
 
-First, observe that we can scale θ by any constant without changing our DB.
+First, observe that we can scale $θ$ by any constant without changing our DB.
 
-This is because θ describes the orientation of this normal vector, so if scaled by any constant, it will only change the magnitude, but not the orientation - therefore, the DB will not change.
+This is because $θ$ describes the orientation of this normal vector, so if scaled by any constant, it will only change the magnitude, but not the orientation - therefore, the DB will not change.
 
-We therefore have some flexibility to alter θ.
+We therefore have some flexibility to alter $θ$.
 
-**γ<sub>ref</sub>**
+**$γ_{ref}$**
 
-γ<sub>ref</sub> is the margin, the distance between the DB and the point closest to the DB.
+$γ_{ref}$ is the margin, the distance between the DB and the point closest to the DB.
 
-- Call this point i=m:
-- γ<sub>ref</sub> = y<sup>m</sup>(θ•x<sup>m</sup> + θ<sub>0</sub>) / ∥θ∥
+- Call this point $i=m$:
+- $γ_{ref} = \frac{y^m(θ•x^m + θ_0)}{∥θ∥}$
 
-Since we can scale θ to any value, we follow convention and set θ such that:
+Since we can scale $θ$ to any value, we follow convention and set $θ$ such that:
 
-- y<sup>m</sup>(θ•x<sup>m</sup> + θ<sub>0</sub>) = 1
+- $y^m(θ•x^m + θ_0) = 1$
 
-In this case, we can write γ<sub>ref</sub> as:
+In this case, we can write $γ_{ref}$ as:
 
-- γ<sub>ref</sub> = 1 / ∥θ∥
+- $γ_{ref} = \frac{1}{∥θ∥}$
 
-Thereby rewriting γ<sub>ref</sub> in terms of something we know, i.e., θ.
+Thereby rewriting $γ_{ref}$ in terms of something we know, i.e., $θ$.
 
-**Plugging γ<sub>ref</sub> into the objective function**
+**Plugging $γ_{ref}$ into the objective function**
 
-We can now plug our value of γ<sub>ref</sub> into the objective function, and simplify.
+We can now plug our value of $γ_{ref}$ into the objective function, and simplify.
 
-J = 1/n Σ<sup>n</sup><sub>i=1</sub> L<sub>h</sub> (y<sup>(i)</sup> (θ•x<sup>(i)</sup> + θ<sub>0</sub>)) + α∥θ∥<sup>2</sup>
+$J = \frac{1}{n} Σ_{i=1}^n L_h(y^{(i)} (θ•x^{(i)} + θ_0)) + α∥θ∥^2$
 
-So we have our loss term, which is a function of θ, θ<sub>0</sub>, x<sub>data</sub>, and y<sub>data</sub>:
+So we have our loss term, which is a function of $θ$, $θ_0$, $x_data$, and $y_data$:
 
-- 1/n Σ<sup>n</sup><sub>i=1</sub> L<sub>h</sub> (y<sup>(i)</sup> (θ•x<sup>(i)</sup> + θ<sub>0</sub>))
+- $\frac{1}{n} Σ_{i=1}^n L_h(y^{(i)} (θ•x^{(i)} + θ_0))$
 
-And our regularisation term, which is a function of θ alone, R(θ):
+And our regularisation term, which is a function of $θ$ alone, $R(θ)$:
 
-- ∥θ∥<sup>2</sup>
+- $∥θ∥^2$
 
-The **hyperparameter α** is then balancing these terms.
+The **hyperparameter $α$** is then balancing these terms.
 
 Different values of α will affect the performance of the model.
