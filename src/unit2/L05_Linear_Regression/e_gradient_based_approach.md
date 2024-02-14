@@ -2,27 +2,23 @@
 
 The empirical risk function is differentiable everywhere.
 
-R<sub>n</sub>(θ) = 1/n Σ<sup>n</sup><sub>i=1</sub> (y<sup>(i)</sup> - θx<sup>(i)</sup>)<sup>2</sup> / 2
+$R_n(θ) = \frac{1}{n} Σ_{i=1}^n \frac{(y^{(i)} - θx^{(i)})^2}{2}$
 
-R<sub>n'</sub> (θ) = 1/n' Σ<sup>n+n'</sup><sub>i=n+1</sub> (y<sup>(i)</sup> - θx<sup>i</sup>)<sup>2</sup> / 2
+$R_n' (θ) = \frac{1}{n'} Σ_{i=n+1}^{n+n'} \frac{(y^{(i)} - θx^i)^2}{2}$
 
 We randomly select one example, then look at the direction of the gradient.
 
 Since we are trying to minimise, we will slightly nudge the parameters in the correct direction (the correct direction being determined by the gradient).
 
-∇<sub>θ</sub> (y<sup>(i)</sup> - θ•x<sup>(i)</sup>)<sup>2</sup> / 2
-
-= (y<sup>(i)</sup> - θ•x<sup>(i)</sup>) ∇<sub>θ</sub> (y<sup>(i)</sup> - θ•x<sup>(i)</sup>)
-
-= - (y<sup>(i)</sup> - θ•x<sup>(i)</sup>) • x<sup>(i)
+$∇_θ \frac{(y^{(i)} - θ•x^{(i)})^2}{2} = (y^{(i)} - θ•x^{(i)}) ∇_θ (y^{(i)} - θ•x^{(i)}) = - (y^{(i)} - θ•x^{(i)}) • x^{(i)}$
 
 **Algorithm**
 
-1. initialise θ = 0
-2. randomly pick some example i from 1 to n (i = {1, ⋯, n})
-3. update theta θ = θ + η (y<sup>(i)</sup> - θ•x<sup>(i)</sup>) • x<sup>(i)
+1. initialise $θ = 0$
+2. randomly pick some example $i$ from $1$ to $n$ $(i = \{1, ⋯, n\})$
+3. update theta $θ = θ + η (y^{(i)} - θ•x^{(i)}) • x^{(i)}$
 
-where η<sub>k</sub> = 1 / (1 + k)
+where $η_k = \frac{1}{1 + k}$
 
 **Note 1**
 
@@ -37,6 +33,6 @@ If the values are close, we correct less.
 
 The algorithm is to an extent self-correcting.
 
-For example, if our prediction was smaller than the true value y, then the update expression would be positive and we would be pushing in the positive direction of point x.
+For example, if our prediction was smaller than the true value $y$, then the update expression would be positive and we would be pushing in the positive direction of point $x$.
 
-y<sup>(i)</sup> > x<sup>(i)</sup>
+$y^{(i)} > x^{(i)}$

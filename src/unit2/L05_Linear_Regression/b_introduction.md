@@ -8,9 +8,9 @@ The examples were feature vectors associated with labels.
 
 There were n examples, and the goal of the classifier was to learn the mapping between the feature vectors.
 
-S<sub>n</sub> = { ( x<sup>(i)</sup>, y<sup>(i)</sup>) | i=1, ⋯, n }
+$S_n = \{ ( x^{(i)}, y^{(i)}) | i=1, ⋯, n \}$
 
-x<sup>(i)</sup> ∈ ℝ<sup>d</sup>, y<sup>(i)</sup> ∈ { -1, +1 }
+$x^{(i)} ∈~ℝ^d, y^{(i)} ∈~\{ -1, +1 \}$
 
 Example use: decision over whether to buy or sell a stock. Perhaps the price of a stock is tracked every minute, regarding whether it rises or falls in price. The model has access to historic data in terms of d days of data, and uses this to recommend a buy or sell action (+1 or -1) based on the current situation.
 
@@ -24,7 +24,7 @@ The setup is similar to that of classification, we are provided with n examples 
 
 Instead of assuming that y comes from +1 or -1, we now assume that:
 
-y<sup>(i)</sup> ∈ ℝ
+$y^{(i)} ∈ ℝ$
 
 We then must learn how to map feature vectors into those continuous values.
 
@@ -32,23 +32,23 @@ We then must learn how to map feature vectors into those continuous values.
 
 What is the significance of it being "linear" regression?
 
-We can write, for example a function f that takes x, and has parameter values such as θ and θ<sub>0</sub>:
+We can write, for example a function $f$ that takes $x$, and has parameter values such as $θ$ and $θ_0$:
 
-f(x; θ, θ<sub>0</sub>)
+$f(x; θ, θ_0)$
 
-We then add in linear weighting of the x coordinates.
+We then add in linear weighting of the $x$ coordinates.
 
 This can be written explicitly as:
 
-f(x; θ, θ<sub>0</sub>) = Σ<sup>d</sup><sub>i=1</sub>θ<sub>i</sub>x<sub>i</sub> + θ<sub>0</sub>
+$f(x; θ, θ_0) = Σ_{i=1}^d θ_ix_i + θ_0$
 
-So, we sum all of the coordinates from 1 to d, weigh them by the corresponding parameters, and add an offset θ<sub>0</sub>.
+So, we sum all of the coordinates from $1$ to $d$, weigh them by the corresponding parameters, and add an offset $θ_0$.
 
 This can also be written compactly as:
 
-f(x; θ, θ<sub>0</sub>) = θx + θ<sub>0</sub>
+$f(x; θ, θ_0) = θx + θ_0$
 
-As before, we make the assumption that θ<sub>0</sub> = 0.
+As before, we make the assumption that $θ_0 = 0$.
 
 **Question**
 
@@ -62,7 +62,7 @@ For now, assume that appropriate feature vectors have been provided.
 
 **Finding the appropriate linear regression**
 
-How can we know whether our function is doing the right thing? There are many θ, how do we know which one is correct?
+How can we know whether our function is doing the right thing? There are many $θ$, how do we know which one is correct?
 
 We need an appropriate objective that can quantify the extent of our mistakes.
 

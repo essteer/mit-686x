@@ -12,15 +12,15 @@ It becomes only worthwhile to move the parameters if there is a strong pattern s
 
 **Ridge regression**
 
-With ridge regression, in addition to n, we add lambda to our objective function.
+With ridge regression, in addition to $n$, we add lambda to our objective function.
 
 We want the loss to capture how well we fit the training examples, which is what our empirical risk component tells us.
 
 But now we want to add a new component, the relative contribution of which will be determined by the parameter lambda:
 
-J<sub>λ,n</sub>(θ) = λ/2∥θ∥<sup>2</sup> + R<sub>n</sub>(θ)
+$J_{λ,n}(θ) = \frac{λ}{2∥θ∥^2} + R_n(θ)$
 
-The two parts are in balance: R<sub>n</sub>(θ) wants to find thetas that match the training set; λ/2∥θ∥<sup>2</sup> wants to keep the thetas closer to zero.
+The two parts are in balance: $R_n(θ)$ wants to find thetas that match the training set; $\frac{λ}{2∥θ∥^2}$ wants to keep the thetas closer to zero.
 
 There must then be significant reason for the function to deviate from the origin.
 
@@ -30,24 +30,22 @@ A lower lambda relaxes the constraint on deviating from the origin.
 
 So we arrive at:
 
-J<sub>λ,n</sub>(θ) = λ/2∥θ∥<sup>2</sup> + R<sub>n</sub>(θ)
+$J_{λ,n}(θ) = \frac{λ}{2∥θ∥^2} + R_n(θ)$
 
 Another way to write this is:
 
-J<sub>λ,n</sub>(θ) = λ/2∥θ∥<sup>2</sup> + 1/n Σ<sup>n</sup><sub>i=1</sub> (y<sup>(i)</sup> - θ•x<sup>(i)</sup>)<sup>2</sup> / 2
+$J_{λ,n}(θ) = \frac{λ}{2∥θ∥^2} + \frac{1}{n} Σ_{i=1}^n \frac{(y^{(i)} - θ•x^{(i)})^2}{2}$
 
 A benefit of expressing it in this form, is that the gradient based approach and closed form solution can be easily adjusted to fit this expression.
 
 **For the gradient based approach**
 
-∇<sub>θ</sub> (λ/2∥θ∥<sup>2</sup> + (y<sup>(i)</sup> - θ•x<sup>(i)</sup>)<sup>2</sup> / 2)
-
-= λθ - (y<sup>(i)</sup> - θ•x<sup>(i)</sup>)x<sup>(i)</sup>
+$∇_θ (\frac{λ}{2∥θ∥^2} + \frac{(y^{(i)} - θ•x^{(i)})^2}{2}) = λθ - (y^{(i)} - θ•x^{(i)})x^{(i)}$
 
 Algorithm:
 
-1. Initialise thetas to 0
-2. Randomly select a point i from 1 to n (i = {1, ⋯, n})
+1. Initialise thetas to $0$
+2. Randomly select a point $i$ from $1$ to $n$ $(i = {1, ⋯, n})$
 
 Now we want to nudge the parameters against the direction of the gradient of that point.
 
@@ -55,8 +53,8 @@ We update theta against the direction of the gradient, hence we subtract in the 
 
 The gradient tells us only the direction, but not how large the step is, so as before we use a learning rate parameter to determine the size of the step.
 
-3. Update theta: θ = θ - η(λθ - (y<sup>(i)</sup> - θ•x<sup>(i)</sup>)x<sup>(i)</sup>)
+3. Update theta: $θ = θ - η(λθ - (y^{(i)} - θ•x^{(i)})x^{(i)})$
 
 It is possible to stop at (3), but we can simplify it further.
 
-= (1 - ηλ)θ + η(y<sup>(i)</sup> - θ•x<sup>(i)</sup>)x<sup>(i)</sup>
+$= (1 - ηλ)θ + η(y^{(i)} - θ•x^{(i)})x^{(i)}$

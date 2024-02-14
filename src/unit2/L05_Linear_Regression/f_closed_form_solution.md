@@ -2,56 +2,56 @@
 
 For most machine learning algorithms, there is no closed form solution, but in the case of our linear regression with empirical risk function, there is.
 
-R<sub>n</sub>(θ) = 1/n Σ<sup>n</sup><sub>i=1</sub> (y<sup>(i)</sup> - θ•x<sup>(i)</sup>)<sup>2</sup> / 2
+$R_n(θ) = \frac{1}{n} Σ_{i=1}^n \frac{(y^{(i)} - θ•x^{(i)})^2}{2}$
 
-∇<sub>θ</sub>R<sub>n</sub>(θ)<sub>|θ=θ^</sub> = 1/n Σ<sup>n</sup><sub>i=1</sub> ∇<sub>θ</sub> ((y<sup>(i)</sup> - θ•x<sup>(i)</sup>)<sup>2</sup> / 2)<sub>|θ=θ^</sub>
+$∇^{*}θR_n(θ)*|θ=\hat{θ} = \frac{1}{n} Σ*{i=1}^n ∇*θ ((y^{(i)} - θ•x^{(i)})^2 / 2)\_|θ=\hat{θ}$
 
-= - 1/n Σ<sup>n</sup><sub>i=1</sub> (y<sup>(i)</sup> - θ•x<sup>(i)</sup>)x<sup>(i)</sup>
+$= - \frac{1}{n} Σ_{i=1}^n (y^{(i)} - θ•x^{(i)})x^{(i)}$
 
 We then take the sum, and break it into two parts:
 
-= - 1/n Σ<sup>n</sup><sub>i=1</sub> y<sup>(i)</sup>x<sup>(i)</sup>
+$= - \frac{1}{n} Σ_{i=1}^n y^{(i)}x^{(i)}$
 
-This is a vector of dimensionality d, which we denote as b
+This is a vector of dimensionality $d$, which we denote as $b$
 
-- 1/n Σ<sup>n</sup><sub>i=1</sub> θ^•x<sup>(i)</sup>x<sup>(i)</sup>
+$- \frac{1}{n} Σ_{i=1}^n \hat{θ}•x^{(i)}x^{(i)}$
 
 Since the result of a dot product is a number, we can move this around as:
 
-1/n Σ<sup>n</sup><sub>i=1</sub> x<sup>(i)</sup> θ^•x<sup>(i)</sup>
+$\frac{1}{n} Σ_{i=1}^n x^{(i)} \hat{θ}•x^{(i)}$
 
 Putting it together:
 
-= - b + 1/n Σ<sup>n</sup><sub>i=1</sub> x<sup>(i)</sup> θ^•x<sup>(i)</sup>
+$= - b + \frac{1}{n} Σ_{i=1}^n x^{(i)} \hat{θ}•x^{(i)}$
 
-Because θ^•x<sup>(i)</sup> is a scalar, when we take a transpose of it, it is equal to itself.
+Because $\hat{θ}•x^{(i)}$ is a scalar, when we take a transpose of it, it is equal to itself.
 
-= - b + 1/n Σ<sup>n</sup><sub>i=1</sub> x<sup>(i)</sup> (x<sup>(i)</sup>)<sup>T</sup>θ^
+$= - b + \frac{1}{n} Σ_{i=1}^n x^{(i)} (x^{(i)})^T\hat{θ}$
 
-Since each x is a vector of dimension d, we get a matrix of dimension d x d, which we denote as A:
+Since each $x$ is a vector of dimension $d$, we get a matrix of dimension $d$ x $d$, which we denote as $A$:
 
-= - b + Aθ^ = 0
+$= - b + A\hat{θ} = 0$
 
-∴ Aθ^ = b, which is what we seek to solve.
+∴ $A\hat{θ} = b$, which is what we seek to solve.
 
 If our matrix is invertible, then in this case we can write:
 
-θ^ = A<sup>-1</sup>b
+$\hat{θ} = \hat{A}-1b$
 
 **Two caveats**
 
-1. We do not always know that A is invertible, so we cannot always perform this operation.
+1. We do not always know that $A$ is invertible, so we cannot always perform this operation.
 
-It is only invertible if x<sup>(1)</sup>, ⋯, x<sup>(n)</sup> span ℝ<sup>d</sup>.
+It is only invertible if $x^{(1)}, ⋯, x^{(n)}$ spans $ℝ^d$.
 
-This happens if the number of training examples, n, is substantially larger than the dimensionality of the feature vector d.
+This happens if the number of training examples, $n$, is substantially larger than the dimensionality of the feature vector $d$.
 
 If we don't have enough training examples from a big dataset, we can't do this operation.
 
 2. Even if we can do the operation, the second issue is the cost associated with it.
 
-The operation is in the order of d<sup>3</sup>:
+The operation is in the order of $d^3$:
 
-O(d<sup>3</sup>)
+$O(d^3)$
 
 So the cost is significant.
