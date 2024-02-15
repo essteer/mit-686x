@@ -28,7 +28,7 @@ Because $\hat{θ}•x^{(i)}$ is a scalar, when we take a transpose of it, it is 
 
 $= - b + \frac{1}{n} Σ_{i=1}^n x^{(i)} (x^{(i)})^T\hat{θ}$
 
-Since each $x$ is a vector of dimension $d$, we get a matrix of dimension $d$ x $d$, which we denote as $A$:
+Since each $x$ is a vector of dimension $d$, we get a matrix of dimension $d \times d$, which we denote as $A$:
 
 $= - b + A\hat{θ} = 0$
 

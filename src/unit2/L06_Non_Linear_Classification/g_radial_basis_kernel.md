@@ -2,9 +2,9 @@
 
 Feature vectors can be infinite dimensional, which means that they have unlimited expressive power.
 
-K(x, x') = exp(-(1/2) ∥ x - x' ∥<sup>2</sup>)
+$K(x, x^{\prime}) = \exp(-\frac{1}{2} ∥ x - x^{\prime} ∥^2)$
 
-The radial basis kernel has a Gaussian 'bump' centred at x. Similarity decreases the further the kernel moves from x, and approaches 0 as it moves away.
+The radial basis kernel has a Gaussian 'bump' centred at $x$. Similarity decreases the further the kernel moves from $x$, and approaches $0$ as it moves away.
 
 The radial basis kernel involves polynomial features up to infinite order, and is infinitely powerful.
 
