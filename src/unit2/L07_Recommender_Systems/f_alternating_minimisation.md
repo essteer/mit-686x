@@ -1,103 +1,87 @@
 # Alternating Minimisation
 
-We now can rewrite our objective function, in terms of U and V.
+We now can rewrite our objective function, in terms of $U$ and $V$.
 
-X<sub>ai</sub> = u<sub>a</sub>v<sub>i</sub>; rank of matrix X = 1
+$X_{ai} = u_av_i$; rank of matrix $X = 1$.
 
-Now for the objective, we compare the values that are present in matrix Y with our estimation.
+Now for the objective, we compare the values that are present in matrix $Y$ with our estimation.
 
-- Instead of writing the estimation as X<sub>ai</sub>, we directly express it in terms of u<sub>a</sub>v<sub>i</sub>.
-- The regularisation term also controls directly in terms of u<sub>a</sub> and v<sub>i</sub>, instead of X<sub>ai</sub>.
+- Instead of writing the estimation as $X_{ai}$, we directly express it in terms of $u_av_i$.
+- The regularisation term also controls directly in terms of $u_a$ and $v_i$, instead of $X_{ai}$.
 
-J(u, v) = Σ<sub>(a,i)∈D</sub> (Y<sub>ai</sub> - u<sub>a</sub>v<sub>i</sub>)<sup>2</sup> + λ/2 Σ<sup>n</sup><sub>a=1</sub> u<sub>a</sub><sup>2</sup> + λ/2 Σ<sup>m</sup><sub>i=1</sub> v<sub>i</sub><sup>2</sup>
+$J(u, v) = Σ_{(a,i)∈D} (Y_{ai} - u_av_i)^2 + \frac{\lambda}{2} Σ_{a=1}^n u_a^2 + \frac{\lambda}{2} Σ_{i=1}^m v_i^2$
 
-Note that we are estimating a function that depends on two elements: on u's, and on v's.
+Note that we are estimating a function that depends on two elements: on $u$'s, and on $v$'s.
 
 Due to having two variables, the estimation becomes more complex than in the naive approach.
 
 **Alternation**
 
-To find the optimal values of U and V, we first fix e.g. V and find the optimal U*, then fix that U* and find the optimal V\*.
+To find the optimal values of $U$ and $V$, we first fix e.g. $V$ and find the optimal $U^{*}$, then fix that $U^{*}$ and find the optimal $V^{*}$.
 
-We must then continue to alternate, since the optimal U for V* is not necessarily U*.
+We must then continue to alternate, since the optimal $U$ for $V^{*}$ is not necessarily $U^{*}$.
 
-So we greedily iterate between fixing U and fixing V, until the values converge.
+So we greedily iterate between fixing $U$ and fixing $V$, until the values converge.
 
 **Example**
 
 Two users and three movies:
 
-Y = `[5 ? 7; 1 2 ?]`
+$Y = [5~?~7; 1~2~?]$
 
-User 1 has rated movies 1 and 3; user 2 has rated movies 1 and 2, the ratings of user 1 for movie 2, and user 2 for movie 3, are unknown.
+User $1$ has rated movies $1$ and $3$; user $2$ has rated movies $1$ and $2$, the ratings of user $1$ for movie $2$, and user $2$ for movie $3$, are unknown.
 
-Our goal is to find a vector u, which in this case since we make the assumption of it being rank 1:
-
-u = `[u1; u2]`
-
-and a vector v:
-
-v = `[v1; v2; v3]`
-
-to minimise this objective.
+Our goal is to find a vector $u$, which in this case since we make the assumption of it being rank $1$: $u = [u_1; u_2]$, and a vector $v$: $v = [v_1; v_2; v_3]$ to minimise this objective.
 
 **Algorithm**
 
-We begin by initialising vector v as:
+We begin by initialising vector $v$ as: $v = [2; 7; 8]$.
 
-v = `[2; 7; 8]`
+The next step is to look at matrix $X$, when we are computing the product between $u$ and $v^T$.
 
-The next step is to look at matrix X, when we are computing the product between u and v<sup>T</sup>.
+$X = uv^T = [u_1; u_2][2~7~8] = [2u_1~7u_1~8u_1; 2u_2~7u_2~8u_2]$
 
-X = uv<sup>T</sup> = ` [u1; u2]` `[2 7 8] ` = `[2u1 7u1 8u1; 2u2 7u2 8u2]`
+So, we want to find $u_1$ and $u_2$ in such a way that this matrix has values for known entries, which are close to what we have in $Y$.
 
-So, we want to find u1 and u2 in such a way that this matrix has values for known entries, which are close to what we have in Y.
+(Recall $Y = [5~?~7; 1~2~?]$.)
 
-(Recall Y = `[5 ? 7; 1 2 ?]`.)
+Note that we don't necessarily need to consider $u_1$ and $u_2$ jointly; they are separate users, so we can solve for the rows individually if we choose.
 
-Note that we don't necessarily need to consider u1 and u2 jointly; they are separate users, so we can solve for the rows individually if we choose.
+**Objective for $u_1$**
 
-**Objective for u<sub>1</sub>**
+We skip the middle entry since it is a $?$ in $Y$, we don't know the value:
 
-We skip the middle entry since it is a ? in Y, we don't know the value:
+$\frac{(5 - 2u_1)^2}{2} + \frac{(7 - 8u_1)^2}{2} + \frac{\lambda}{2} u_1^2$
 
-(5 - 2u1)<sup>2</sup>/2 + (7 - 8u1)<sup>2</sup>/2 + λ/2 u<sub>1</sub><sup>2</sup>
+Since we want to minimise, we take a derivative of this expression with respect to $u_1$:
 
-Since we want to minimise, we take a derivative of this expression with respect to u1:
+$\frac{∂}{∂u_1} [\frac{(5 - 2u_1)^2}{2} + \frac{(7 - 8u_1)^2}{2} + \frac{\lambda}{2} u_1^2] = (-66) + (68 + \lambda)u_1 = 0$
 
-∂/∂u<sub>1</sub> [(5 - 2u<sub>1</sub>)<sup>2</sup>/2 + (7 - 8u<sub>1</sub>)<sup>2</sup>/2 + λ/2 u<sub>1</sub><sup>2</sup>]
+Rewriting in terms of $u_1$, we get:
 
-= (-66) + (68 + λ)u<sub>1</sub> = 0
+$u_1 = \frac{66}{68 + \lambda}$
 
-Rewriting in terms of u<sub>1</sub>, we get:
+This is the $u_1$ that minimises this objective.
 
-u<sub>1</sub> = 66 / (68 + λ)
+For example, if $\lambda = 1$, then: $u_1 = \frac{66}{69}$.
 
-This is the u<sub>1</sub> that minimises this objective.
+**Objective for $u_2$**
 
-For example, if λ = 1, then:
+We then do the same calculation for $u_2$, and arrive at:
 
-u<sub>1</sub> = 66/69
+$u_2 = \frac{16}{53 + \lambda}$
 
-**Objective for u<sub>2</sub>**
+For example, if $\lambda = 1$, then: $u_2 = \frac{16}{54}$
 
-We then do the same calculation for u<sub>2</sub>, and arrive at:
+**Now alternate for the $v$'s**
 
-u<sub>2</sub> = 16 / (53 + λ)
+So, we started with a random initialisation of $v$, and computed $u$'s that would be optimal with respect to our objective.
 
-For example, if λ = 1, then:
+The next step is then to take the $u$'s we computed, and compute the $v$'s.
 
-u<sub>2</sub> = 16/54
+$uv^T = [\frac{66}{69}; \frac{16}{54}][v_1~v_2~v_3] = [\frac{66}{69}v_1~\frac{66}{69}v_2~\frac{66}{69}v_3; \frac{16}{54}v_1~\frac{16}{54}v_2~\frac{16}{54}v_3]$
 
-**Now alternate for the v's**
-
-So, we started with a random initialisation of v, and computed u's that would be optimal with respect to our objective.
-
-The next step is then to take the u's we computed, and compute the v's.
-
-uv<sup>T</sup> = `[66/69; 16/54]` `[v1 v2 v3]` = `[66/69v1 66/69v2 66/69v3; 16/54v1 16/54v2 16/54v3]`
-
-We now have a new estimate for our matrix X, so again will take this and compare it with matrix Y.
+We now have a new estimate for our matrix $X$, so again will take this and compare it with matrix $Y$.
 
 We continue this process until there is no change in the objective values.
 
@@ -108,4 +92,4 @@ Globally - no.
 
 **Rank**
 
-The examples we have examined here have been based on matrices of rank 1, but they would hold for ranks 2, 3, and k.
+The examples we have examined here have been based on matrices of rank $1$, but they would hold for ranks $2$, $3$, and $k$.

@@ -6,9 +6,9 @@ The problem can be defined in several ways, one of which is K-Nearest Neighbours
 
 Matrix factorisation, or collaborative filtering, is another.
 
-Imagine a large matrix, Y, with n possible users of the system, and m movies; it is an n x m matrix.
+Imagine a large matrix, $Y$, with n possible users of the system, and m movies; it is an $n \times m$ matrix.
 
-Then we may examine a particular element y<sub>ai</sub>, which denotes the a-th user's preference for the i-th film.
+Then we may examine a particular element y\_{ai}, which denotes the $a$-th user's preference for the $i$-th film.
 
 (This preference might be represented in different ways: some websites use five-star ratings, others use thumbs-up or thumbs-down, and so on.)
 
@@ -16,9 +16,9 @@ Then we may examine a particular element y<sub>ai</sub>, which denotes the a-th 
 
 The goal of the "Netflix challenge" (which first raised this machine learning problem) is to predict a user's preference for a film, based on prior choices made by the user.
 
-The Netflix challenge involved 0.5 million users (n = 500,000), and 18,000 movies (m = 18,000).
+The Netflix challenge involved 0.5 million users ($n = 500,000$), and 18,000 movies ($m = 18,000$).
 
-Most of the matrix Y is in fact empty, since any given user will have viewed only a small fraction of the 18,000 films.
+Most of the matrix $Y$ is in fact empty, since any given user will have viewed only a small fraction of the 18,000 films.
 
 On average, each film was rated by only 5,000 users, or around 1% of the total number of users.
 

@@ -4,33 +4,33 @@ We can represent Markov models as FNNs.
 
 To do this, we define an input to the FNN, a one-hot vector corresponding to the previous word, and introduce an input unit for each of the possible previous words.
 
-Since this is a one-hot vector, only one coordinate value is a 1, the rest are 0.
+Since this is a one-hot vector, only one coordinate value is a $1$, the rest are $0$.
 
-We denote this vector below as x.
+We denote this vector below as $x$.
 
-x = φ(w<sub>i-1</sub>)
+$x = \phi(w_{i-1})$
 
 We then map this input vector into a row of probabilities in the conditional probability table - what is the probability of a word, given the previous word.
 
 The value of each output unit, is the probability of the word appearing.
 
-The k-th output unit is the probability that the next work is k, given the previous word was w<sub>i-1</sub>:
+The $k$-th output unit is the probability that the next work is $k$, given the previous word was $w_{i-1}$:
 
-P<sub>k</sub> = P(w<sub>i</sub> = k | w<sub>i-1</sub>)
+$P_k = P(w_i = k | w_{i-1})$
 
-To perform the calculation, we have the parameter matrix W, so the aggregate input to the k-th output unit z<sub>k</sub> is the sum over the possible input units, their coordinates, and the values of the parameter matrix for the corresponding coordinates, plus an offset parameter.
+To perform the calculation, we have the parameter matrix $W$, so the aggregate input to the $k$-th output unit $z_k$ is the sum over the possible input units, their coordinates, and the values of the parameter matrix for the corresponding coordinates, plus an offset parameter.
 
-z<sub>k</sub> = Σ<sub>j</sub> x<sub>j</sub>Wx<sub>jk</sub> + W<sub>0k</sub>
+$z_k = \sum_{j} x_jWx_{jk} + W_{0k}$
 
-These aggregate input values are just real numbers, z<sub>k</sub> ∈ ℝ, they are not probabilities.
+These aggregate input values are just real numbers, $z_k ∈ ℝ$, they are not probabilities.
 
-Therefore, the non-linear transformation we need is that the P<sub>k</sub>'s are non-zero, and must sum to 1 over the possible next words.
+Therefore, the non-linear transformation we need is that the $P_k$'s are non-zero, and must sum to $1$ over the possible next words.
 
 A typical transformation to achieve this is softmax.
 
 We first exponentiate all of the input values, and then normalise them across the output units.
 
-P<sub>k</sub> = e<sup>z<sub>k</sub></sup> / Σ<sub>j</sub> e<sup>z<sub>j</sub></sup>
+$P_k = \frac{e_k^z}{\sum_{j} e_j^z}$
 
 **Note**
 
@@ -54,15 +54,15 @@ Trigram language model.
 
 We take two preceding words, and for any such combination, predict the probability of what the next word is.
 
-For v possible words, for each combination of preceding words there are |v|<sup>2</sup> of them, and for each of those combinations there is a probability value for each of the next words:
+For $v$ possible words, for each combination of preceding words there are $|v|^2$ of them, and for each of those combinations there is a probability value for each of the next words:
 
-|v|<sup>2</sup> \* |v|
+$|v|^2 \times |v|$
 
-So for the Markov model, the number of parameters is roughly O(|v|<sup>3</sup>), or the number of words in the trigram model to the power of 3.
+So for the Markov model, the number of parameters is roughly $O(|v|^3)$, or the number of words in the trigram model to the power of $3$.
 
 In comparison, using the FNN model that takes two preceding words as an input, the number of parameters is of dimension on the order of two times the number of words, times the number of output units:
 
-O(2|v|<sup>2</sup>)
+$O(2|v|^2)$
 
 So, we use far fewer parameters for the FNN than for the Markov model.
 

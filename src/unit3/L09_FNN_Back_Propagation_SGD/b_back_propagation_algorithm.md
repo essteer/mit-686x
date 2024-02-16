@@ -8,7 +8,7 @@ The representation aspect - learning the feature representation, as well as how 
 
 SGD can succeed at this task, provided a given level of overcapacity for the model.
 
-In applying SGD, our task it to evaluate for each example pair (x, y), to adjust the parameters of the model so as to nudge them in the reverse direction of the gradient.
+In applying SGD, our task it to evaluate for each example pair $(x, y)$, to adjust the parameters of the model so as to nudge them in the reverse direction of the gradient.
 
 We must measure loss, that measures by how much our predicted output differs from the desired target.
 
@@ -16,43 +16,41 @@ We take a derivative of that loss with respect to each of the parameters.
 
 Then, we apply a stochastic gradient descent algorithm by nudging those parameters in the reverse direction to the gradient.
 
-- dLoss( y, f( x; w ) ) / dw<sup>l</sup><sub>ij</sub>
+$\frac{dLoss( y, f( x; w ) )}{dw_{ij}^l}$
 
-The weights are update as follows:
-
-w<sup>l</sup><sub>ij</sub> ← w<sup>l</sup><sub>ij</sub> - η
+The weights are update as follows: $w_{ij}^l ← w_{ij}^l - η$
 
 **Example**
 
 Here we use the example of a very deep, chain-like NN, with just one unit per hidden layer:
 
-x ◯ w<sub>1</sub> ⟶ z<sub>1</sub> ◯ f<sub>1</sub> w<sub>2</sub> ⟶ z<sub>2</sub> ◯ f<sub>2</sub> ⟶ ◯
+$x ◯ w_1 ⟶ z_1 ◯ f_1 w_2 ⟶ z_2 ◯ f_2 ⟶ ◯$
 
-Where x ∈ ℝ, and this network continues on to an output f<sub>L</sub> ∈ ℝ:
+Where $x ∈ ℝ$, and this network continues on to an output $f_L ∈ ℝ$:
 
-w<sub>L</sub> ⟶ z<sub>L</sub> ◯ f<sub>L</sub> ⟶
+$w_L ⟶ z_L ◯ f_L ⟶$
 
-z<sub>1</sub> = x w<sub>1</sub>, an aggregate input of the signal from before, leaving out offset for simplicity.
+$z_1 = x w_1$, an aggregate input of the signal from before, leaving out offset for simplicity.
 
-f<sub>1</sub> = tanh(x w<sub>1</sub>), the activation function.
+$f_1 = tanh(x w_1)$, the activation function.
 
 and so on, to:
 
-f<sub>L</sub> = tanh( f<sub>L-1</sub> w<sub>L</sub> )
+$f_L = tanh( f_L-1 w_L )$
 
 (Typically the final unit could be linear, but we retain the same form here for simplicity.)
 
-Given y, we must evaluate the loss between the desired output, and the network prediction.
+Given $y$, we must evaluate the loss between the desired output, and the network prediction.
 
-Loss ( y, f<sub>L</sub> )
+$Loss ( y, f_L )$
 
-The network output is a function of all of the weights in the model, plus the input x.
+The network output is a function of all of the weights in the model, plus the input $x$.
 
 The loss could be squared loss, for a regression problem, or hinge loss for a classification, and so on.
 
 In order to get from where we observe the outcome, down to the parameters we are interested in modifying, we need to understand the individual mappings between the layers.
 
-How the previous layer output is transformed into the next output, using the parameters w<sub>L</sub>.
+How the previous layer output is transformed into the next output, using the parameters $w_L$.
 
 In order to do so, we need only understand how the output has changed as a function of the input, the derivative with respect to the input.
 
@@ -60,23 +58,17 @@ In order to do so, we need only understand how the output has changed as a funct
 
 We want to get:
 
-dLoss / dw<sub>1</sub> = df<sub>1</sub>/dw<sub>1</sub> dLoss / df<sub>1</sub>
+$\frac{dLoss}{dw_1} = \frac{df_1}{dw_1} \frac{dLoss}{df_1}$
 
-For df<sub>1</sub>/dw<sub>1</sub>, since the activation is a function of tanh(xw<sub>1</sub>), the derivative of tanh is 1 - tanh<sup>2</sup>, or (1 - f<sup>2</sup><sub>1</sub>)x.
+For $\frac{df_1}{dw_1}$, since the activation is a function of $tanh(xw_1)$, the derivative of tanh is $1 - tanh^2$, or $(1 - f_1^2)x$.
 
-dLoss / df<sub>1</sub>:
-
-dLoss / df<sub>1</sub> = df<sub>2</sub> / df<sub>1</sub> dLoss / df<sub>2</sub>
+$\frac{dLoss}{df_1} = \frac{df_2}{df_1} \frac{dLoss}{df_2}$
 
 **How we back propagate**
 
-We can take the derivative of the loss with respect to L:
+We can take the derivative of the loss with respect to $L$:
 
-dLoss (y, f<sub>L</sub>) / df<sub>L</sub>
-
-= (d 1/2 (y - f<sub>L</sub>)<sup>2</sup>) / df<sub>L</sub>
-
-= - (y - f<sub>L</sub>)
+$\frac{dLoss (y, f_L)}{df_L} = \frac{d \frac{1}{2} (y - f_L)^2}{df_L} = - (y - f_L)$
 
 (In the squared loss example.)
 

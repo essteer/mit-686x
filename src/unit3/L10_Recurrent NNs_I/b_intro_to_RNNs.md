@@ -8,19 +8,19 @@ This can be cast as a supervised learning problem.
 
 Historical data can be broken down into feature vectors and target values - known as a **sliding window**.
 
-φ(t) = [0.82, 0.80, 0.73, 0.72]<sup>T</sup>
+$\phi(t) = [0.82, 0.80, 0.73, 0.72]^T$
 
-y(t) = 0.89
+$y(t) = 0.89$
 
-Where the values in φ(t) correspond to y(t-1), y(t-2), and so on.
+Where the values in $\phi(t)$ correspond to $y(t-1), y(t-2)$, and so on.
 
-This feature vector, φ(t), is based on the previous values, and we use it to produce a prediction for the next value at time t.
+This feature vector, $\phi(t)$, is based on the previous values, and we use it to produce a prediction for the next value at time $t$.
 
 **Language modeling**
 
 Predicting what comes next in a sentence:
 
-"This course has been a tremendous..."
+"$This~course~has~been~a~tremendous...$"
 
 We translate the history of what has been seen into a feature vector, and try to use the feature vector to make a prediction.
 
@@ -28,12 +28,12 @@ We might look back, e.g., 2 words, and translate each of those into vectors, whi
 
 The words are one-hot encoded with sparse vectors:
 
-tremendous: [0 0 ... 1 0]
-a: [1 0 ... 0]
+$tremendous: [0~0~...~1~0]$  
+$a: [1~0~...~0]$
 
-We concatenate these word vectors into our feature vector φ(t), a long sparse feature vector we can now use to relate to possible outcomes - what comes next.
+We concatenate these word vectors into our feature vector $\phi(t)$, a long sparse feature vector we can now use to relate to possible outcomes - what comes next.
 
-We can also continue to work backwords and construct training examples by using e.g. "been" and "a" to train on predicting "tremendous".
+We can also continue to work backwords and construct training examples by using e.g. "$been$" and "$a$" to train on predicting "$tremendous$".
 
 **Issues with this approach**
 

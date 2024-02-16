@@ -2,29 +2,29 @@
 
 See notes for graphical representation.
 
-Take our basic model, with x<sub>1</sub>, x<sub>2</sub>, which each feed via two weights w<sub>11</sub> and w<sub>12</sub>, w<sub>21</sub> and w<sub>22</sub>, to two nodes z<sub>1</sub>, z<sub>2</sub> at layer 1 (tanh).
+Take our basic model, with $x_1, x_2$, which each feed via two weights $w_{11}$ and $w_{12}$, $w_{21}$ and $w_{22}$, to two nodes $z_1, z_2$ at layer $1$ (tanh).
 
-Layer 1 is a hidden layer.
+Layer $1$ is a hidden layer.
 
-Layer 1 outputs two functions f<sub>1</sub>, f<sub>2</sub> (one from each node) which both go to node z, which outputs function f.
+Layer $1$ outputs two functions $f_1, f_2$ (one from each node) which both go to node $z$, which outputs function $f$.
 
 For instance:
 
-z<sub>1</sub> = Σ<sup>2</sup><sub>j=1</sub> x<sub>j</sub>w<sub>j1</sub> + w<sub>01</sub>
+$z_1 = Σ_{j=1}^2 x_j w_{j1} + w_{01}$
 
-f<sub>1</sub> = f(z) = tanh(z<sub>1</sub>)
+$f_1 = f(z) = tanh(z_1)$
 
-We can envisage layers 0 and 1 as a box, with inputs x<sub>1</sub>, x<sub>2</sub>, a component w that is the weight, and outputs f<sub>1</sub>, f<sub>2</sub>.
+We can envisage layers $0$ and $1$ as a box, with inputs $x_1, x_2$, a component $w$ that is the weight, and outputs $f_1, f_2$.
 
 In this way we can think of them, and visualise them, as if they were linear classifiers.
 
 For instance:
 
-z<sub>1</sub> = w<sub>1</sub> (vector of [w<sub>11</sub>, w<sub>21</sub>]) • x + w<sub>01</sub>
+$z_1 = w_1$ (vector of $[w_{11}, w_{21}]$) $• x + w_{01}$
 
 We can understand this as a linear classifier, with a decision boundary and offset.
 
-The decision boundary corresponds to when the aggregate input to that unit = 0.
+The decision boundary corresponds to when the aggregate input to that unit = $0$.
 
 **Redundancy**
 

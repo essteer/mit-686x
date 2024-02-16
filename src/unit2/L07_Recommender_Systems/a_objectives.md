@@ -8,4 +8,4 @@ At the end of this lecture, you will be able to
 
 - understand the need to impose the low rank assumption in collaborative filtering
 
-- iteratively find values of U and V (given X = UV<sup>T</sup>) in collaborative filtering
+- iteratively find values of $U$ and $V$ (given $X = UV^T$) in collaborative filtering

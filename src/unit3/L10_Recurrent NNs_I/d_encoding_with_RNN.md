@@ -16,37 +16,37 @@ We can adjust the parameters to change the behaviour of this transformation.
 
 This type of transformation, that has an evolving state, is called a **Recurrent Neural Network**.
 
-- s<sub>t</sub> = tanh(W<sup>s,s</sup>s<sub>t-1</sub> + W<sup>s,x</sup>x<sub>t</sub>)
+$s_t = tanh(W^{s,s}s_{t-1} + W^{s,x}x_t)$
 
 Where:
 
-- s<sub>t</sub> = new context or state, an (m x 1) dimensional vector
+- $s_t =$ new context or state, an $m \times 1$ dimensional vector
 
-- s<sub>t-1</sub> = previous context or state, an (m x 1) dimensional vector
+- $s_{t-1} =$ previous context or state, an $m \times 1$ dimensional vector
 
-- W<sup>s,s</sup> = a transformation that tells us how the state would evolve in the absence of information, an (m x m) dimensional parameter matrix
+- $W^{s,s} =$ a transformation that tells us how the state would evolve in the absence of information, an $m \times m$ dimensional parameter matrix
 
-- x<sub>t</sub> = new information, a (d x 1) dimensional vector
+- $x_t =$ new information, a $d \times 1$ dimensional vector
 
-- W<sup>s,x</sup> = a transformation from the word x<sub>t</sub> to the state, an (m x d) dimensional parameter matrix
+- $W^{s,x} =$ a transformation from the word $x_t$ to the state, an $m \times d$ dimensional parameter matrix
 
-We therefore have an m-dimensional vector within the tanh function (the result of the addition of (m x 1) and (m x 1) vectors).
+We therefore have an $m$-dimensional vector within the tanh function (the result of the addition of $m \times 1$ and $m \times 1$ vectors).
 
 We apply the tanh transformation element-wise, to turn it into a new representation of a state.
 
-The two parameters W<sup>s,s</sup> and W<sup>s,x</sup> therefore determine the θ parameters in our box or function, representing the transition from the previous to the new state (or context).
+The two parameters $W^{s,s}$ and $W^{s,x}$ therefore determine the $θ$ parameters in our box or function, representing the transition from the previous to the new state (or context).
 
-We can adjust the θ parameters so that the function / box behaves as we want it to.
+We can adjust the $θ$ parameters so that the function / box behaves as we want it to.
 
 **Sentence example**
 
-"Efforts and courage are not..."
+"$Efforts~and~courage~are~not...$"
 
-We start with a null (empty) matrix, s<sub>0</sub>, which has not yet "seen" any words.
+We start with a null (empty) matrix, $s_0$, which has not yet "seen" any words.
 
-We get a new word ("Efforts"), x<sub>1</sub>, and apply the box / function to this single word based on the current state, to get a summary of what the model thinks the word "Efforts" is.
+We get a new word ("$Efforts$"), $x_1$, and apply the box / function to this single word based on the current state, to get a summary of what the model thinks the word "$Efforts$" is.
 
-This then outputs our vector s<sub>1</sub>, a summary of "Efforts", and the model continues on to x<sub>2</sub> ("and"), and on through the sentence.
+This then outputs our vector $s_1$, a summary of "$Efforts$", and the model continues on to $x_2$ ("$and$"), and on through the sentence.
 
 **Differences between the encoder and feed-forward NN**
 
