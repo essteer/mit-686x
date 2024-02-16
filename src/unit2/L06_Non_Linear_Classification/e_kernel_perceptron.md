@@ -13,7 +13,7 @@ After these updates, we can summarise what $θ$ is as a result.
 
 Every time we make a mistake, we add the label multiplied by the feature vector:
 
-$θ = \sum_{j=1}^{n} α_j y^{(i)} \phi(x^{(i)})$
+$θ = \sum_{j=1}^{n}{α_j y^{(i)} \phi(x^{(i)})}$
 
 We can summarise by taking a sum over the training examples, of how many times we performed an update on the $i$-th training example.
 
@@ -23,7 +23,7 @@ Every time we make a mistake, we add the corresponding label times the feature v
 
 We no longer look at the algorithm in terms of coordinates of $θ$, but in terms of the importance of training examples to the final predictor.
 
-$θ • \phi(x^{(i)}) = \sum_{j=1}^{n} α_j y^{(j)} \phi(x^{(j)}) • \phi(x^{(i)})$
+$θ • \phi(x^{(i)}) = \sum_{j=1}^{n}{α_j y^{(j)} \phi(x^{(j)}) • \phi(x^{(i)})}$
 
 Predictions can thereby be expressed simply in terms of the kernel produced by the $j$-th training example and the $i$-th training example.
 
@@ -38,13 +38,13 @@ for i in range(n):
         θ = θ + y[i] * φ(x[i])
 ```
 
-$θ • \phi(x^{(i)}) = \sum_{j=1}^{n} α_j y^{(j)} K(x^{(j)}, x^{(i)})$
+$θ • \phi(x^{(i)}) = \sum_{j=1}^{n}{α_j y^{(j)} K(x^{(j)}, x^{(i)})}$
 
 Just as $θ$ would be initialised to $0$, so all $α$ - one per training example - are set to $0$.
 
 We then ask whether the $i$-th label $y^{(i)}$, multiplied by the sum over the training examples of how many mistakes we have made on the $j$-th example, its label times the kernel evaluated between the $j$-th and $i$-th example.
 
-$y^{(i)} \sum_{j=1}^n α_j y^{(j)} K(x^{(j)}, x^{(i)}) <= 0$
+$y^{(i)} \sum_{j=1}^{n}{α_j y^{(j)} K(x^{(j)}, x^{(i)})} <= 0$
 
 If this expression is less than or equal to $0$, $<= 0$, then a mistake was made and an update will be performed.
 
