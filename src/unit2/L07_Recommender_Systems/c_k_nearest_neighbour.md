@@ -14,11 +14,11 @@ From this, we might infer a likelihood for $a$ to give film $01$ a low rating.
 
 In reality, we would not want to base the prediction on just one neighbour, but rather take an average from an aggregate of neighbours.
 
-$\hat{y}_{ai} =$ predicted $y$ for user $a$ and film $i$
+$\hat{y_{ai}} =$ predicted $y$ for user $a$ and film $i$
 
 We proceed through all users $b$, our $k$-nearest neighbours, who did watch film $i$.
 
-$\hat{y}_{ai} = \frac{\sum_{b} ∈ KNN (a, i) y_{bi}}{K}$
+$\hat{y_{ai}} = \frac{\sum_{b} ∈ KNN (a, i) y_{bi}}{K}$
 
 With $\sum_{b} ∈ KNN (a, i)$ we denote all users $b$ similar to $a$, who did watch film $i$.
 
@@ -37,11 +37,11 @@ Since users are represented by vectors, any method that measures similarity betw
 
 From the starting point of:
 
-$\hat{y}_{ai} = \frac{\sum_{b} ∈ KNN (a, i) y_{bi}}{K}$
+$\hat{y_{ai}} = \frac{\sum_{b} ∈ KNN (a, i) y_{bi}}{K}$
 
 we might want to not just take the score of the user, but weight the score based on how similar the user is to user $a$.
 
-$\hat{y}_{ai} = \frac{\sum_{b} ∈ KNN (a, i) sim(a, b) y_{bi}}{Σ_b ∈ KNN (a, i) |sim(a, b)|}$
+$\hat{y_{ai}} = \frac{\sum_{b} ∈ KNN (a, i) sim(a, b) y_{bi}}{\sum_{b} ∈ KNN (a, i) |sim(a, b)|}$
 
 There is also the problem of each user applying a different internal logic to their ratings: one user may give a $\frac{3}{5}$ to films they enjoy, and reserve $\frac{5}{5}$ for only those they regard as exceptional films, whereas another user might apply $\frac{5}{5}$ in general, and deduct stars for films they dislike.
 
