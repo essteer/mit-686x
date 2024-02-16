@@ -14,7 +14,7 @@ $x = [x_1, x_2] ∈ ℝ^2$
 
 Including second-order features, we expand to:
 
-$\phi(x) = [x_1, x_2, x_1^2, x_2^2, √2 x_1x_2] ∈ ℝ^5$
+$\phi(x) = [x_1, x_2, x_1^2, x_2^2, \sqrt{2} x_1x_2] ∈ ℝ^5$
 
 So our new feature-vector resides in five-dimensional space.
 

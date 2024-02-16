@@ -12,7 +12,7 @@ The goal of the support vector machine (SVM) is to maximise the margin of the de
 
 The margin is defined as follows: consider a dataset $D$, with points $x^{(i)}$ and $y^{(i)}$:
 
-- $D: { (x^{(i)}~and~y^{(i)}) }, i=1,⋯,n$
+- $D: { (x^{(i)}~ and ~y^{(i)}) }, i=1,⋯,n$
 
 We calculate the distance from point $i$ to the DB, $γ$:
 
@@ -92,7 +92,7 @@ Putting the pieces together, we arrive at our objective function for SVM:
 
 Loss term:
 
-- $\frac{1}{n} Σ_{i=1}^n L_h(\frac{γ}{γ_{ref}})$
+- $\frac{1}{n} \sum_{i=1}^{n} L_h(\frac{γ}{γ_{ref}})$
 
 ($\frac{1}{n}$ because we want the average over the data points.)
 
@@ -102,7 +102,7 @@ Regularisaton term:
 
 Together form the SVM objective function:
 
-$J = \frac{1}{n} Σ_{i=1}^n L_h(\frac{γ}{γ_{ref}}) + α (\frac{1}{γ_{ref}^2})$
+$J = \frac{1}{n} \sum_{i=1}^{n} L_h(\frac{γ}{γ_{ref}}) + α (\frac{1}{γ_{ref}^2})$
 
 Recall that we can define $γ_{ref}$ in terms of $θ$ and $θ_0$.
 

@@ -10,13 +10,13 @@ We continue to assume that $θ_0$ is equal to $0$.
 
 For every point in our training set, we want to compute the extent of the deviation (the loss), which we then want to sum and average - hence the $\frac{1}{n}$ in the below formulation:
 
-$R_n(θ) = \frac{1}{n} Σ_{i=1}^n$
+$R_n(θ) = \frac{1}{n} \sum_{i=1}^{n}$
 
 From there, we want to define loss - in this case, squared error.
 
-We compute the difference between the true value, $y^{(i)}$, and what we predicted with $θx^i$, square this, and divide by two.
+We compute the difference between the true value, $y^{(i)}$, and what we predicted with $θ x^i$, square this, and divide by two.
 
-$R_n(θ) = \frac{1}{n} Σ_{i=1}^n (y^{(i)} - \frac{θx^{(i)})^2}{2}$
+$R_n(θ) = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - \frac{θ x^{(i)})^2}{2}$
 
 **Why square the difference?**
 
@@ -30,7 +30,7 @@ The goal is not to optimise for the training set, it is to optimise for generali
 
 So, if we have n prime examples, we want to look at the empirical risk on our test data.
 
-$R_n' (θ) = \frac{1}{n'} Σ_{i=n+1}^{n+n'} \frac{(y^{(i)} - θx^i)^2}{2}$
+$R_{n^{\prime}} (θ) = \frac{1}{n^{\prime}} \sum_{i=n+1}^{n+n^{\prime}} \frac{(y^{(i)} - θx^i)^2}{2}$
 
 However, since we don't have access to the test data, the best we can do is look at the training objective, and try to minimise the error there while also attempting to ensure it can generalise.
 

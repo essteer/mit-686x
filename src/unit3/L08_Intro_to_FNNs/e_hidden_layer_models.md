@@ -2,7 +2,7 @@
 
 See notes for graphical representation.
 
-Take our basic model, with $x_1, x_2$, which each feed via two weights $w_{11}$ and $w_{12}$, $w_{21}$ and $w_{22}$, to two nodes $z_1, z_2$ at layer $1$ (tanh).
+Take our basic model, with $x_1, x_2$, which each feed via two weights $w_{11}$ and $w_{12}$, $w_{21}$ and $w_{22}$, to two nodes $z_1, z_2$ at layer $1$ ($tanh$).
 
 Layer $1$ is a hidden layer.
 
@@ -10,7 +10,7 @@ Layer $1$ outputs two functions $f_1, f_2$ (one from each node) which both go to
 
 For instance:
 
-$z_1 = Σ_{j=1}^2 x_j w_{j1} + w_{01}$
+$z_1 = \sum_{j=1}^{2} x_j w_{j1} + w_{01}$
 
 $f_1 = f(z) = tanh(z_1)$
 

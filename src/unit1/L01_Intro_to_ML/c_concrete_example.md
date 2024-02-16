@@ -9,7 +9,7 @@ An example of how to:
 
 We have a set of films already seen, and want to use our experience of those films to predict which films we will like out of a set of many unseen films.
 
-1. First, we must illustrate the task for the ML algorithm. In the case of films, we annotate each film to highlight our preferences, e.g., giving +1 or -1 to a set of four films we have seen.
+1. First, we must illustrate the task for the ML algorithm. In the case of films, we annotate each film to highlight our preferences, e.g., giving $+1$ or $-1$ to a set of four films we have seen.
 
 2. The task is then to recommend correctly out of n films, films that will be "liked".
 

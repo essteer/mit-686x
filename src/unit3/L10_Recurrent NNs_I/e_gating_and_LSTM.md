@@ -45,7 +45,7 @@ We take a combination of what we had previously, and the new prediction, and bal
 
 For example:
 
-- $(1 - g_t) = [0, 1, 0, ...]^T$
+- $1 - g_t = [0, 1, 0, ...]^T$
 - $g_t = [1, 0, 1, ...]^T$
 
 When $1 - g_t = 0$, it means we retain no information from the previous state.

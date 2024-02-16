@@ -14,23 +14,23 @@ To do this, we make the assumption that matrix $X$ is of low rank - recall from 
 
 For example, with a matrix of rank $1$:
 
-$[1~2~3; 5~10~15]$
+$[1 \; 2 \; 3; 5 \; 10 \; 15]$
 
 This matrix can be written as a multiplication of two vectors:
 
-$[1~2~3; 5~10~15] = [1; 5] [1~2~3]$
+$[1 \; 2 \; 3; 5 \; 10 \; 15] = [1; 5] [1 \; 2 \; 3]$
 
 Note that there are many ways to factorise, and this could also be written as:
 
-$[1~2~3; 5~10~15] = [10; 50][0.1~0.2~0.3]$
+$[1 \; 2 \; 3; 5 \; 10 \; 15] = [10; 50][0.1 \; 0.2 \; 0.3]$
 
 Though there are many ways to factorise, the important point is that you can factorise - since not all matrices can be written in this form - the vast majority of matrices do not have rank $1$.
 
 **Relation of factorisation to decrease of parameters**
 
-This matrix has $n \times m$ parameters: $[1~2~3; 5~10~15]$ with $O(n m)$.
+This matrix has $n \times m$ parameters: $[1 \; 2 \; 3; 5 \; 10 \; 15]$ with $O(n m)$.
 
-After factorisation, we have: $[1; 5][1~2~3]$ with $O(n + m)$.
+After factorisation, we have: $[1; 5][1 \; 2 \; 3]$ with $O(n + m)$.
 
 Thus the complexity is drastically reduced.
 
@@ -42,7 +42,7 @@ What do the vectors capture?
 
 $u = [1; 5]$
 
-$v = [1~2~3]$
+$v = [1 \; 2 \; 3]$
 
 $X = UV^T$
 
@@ -64,8 +64,8 @@ If we want to have a feature representation of a user, we don't have to focus on
 
 We can, for example, take rank $2$ (with arbitrary numbers):
 
-$U = [2~3; 1~5]$
-$V = [1~2; 4~5]$
+$U = [2 \; 3; 1 \; 5]$  
+$V = [1 \; 2; 4 \; 5]$
 
 The higher the rank, the more multifaceted representation of the user and the movie we can have.
 

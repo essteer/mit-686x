@@ -34,7 +34,7 @@ $J_{λ,n}(θ) = \frac{λ}{2∥θ∥^2} + R_n(θ)$
 
 Another way to write this is:
 
-$J_{λ,n}(θ) = \frac{λ}{2∥θ∥^2} + \frac{1}{n} Σ_{i=1}^n \frac{(y^{(i)} - θ•x^{(i)})^2}{2}$
+$J_{λ,n}(θ) = \frac{λ}{2∥θ∥^2} + \frac{1}{n} \sum_{i=1}^{n} \frac{(y^{(i)} - θ•x^{(i)})^2}{2}$
 
 A benefit of expressing it in this form, is that the gradient based approach and closed form solution can be easily adjusted to fit this expression.
 

@@ -10,7 +10,7 @@ There were n examples, and the goal of the classifier was to learn the mapping b
 
 $S_n = \{ ( x^{(i)}, y^{(i)}) | i=1, ⋯, n \}$
 
-$x^{(i)} ∈~ℝ^d, y^{(i)} ∈~\{ -1, +1 \}$
+$x^{(i)} ∈ ℝ^d, y^{(i)} ∈ \{ -1, +1 \}$
 
 Example use: decision over whether to buy or sell a stock. Perhaps the price of a stock is tracked every minute, regarding whether it rises or falls in price. The model has access to historic data in terms of d days of data, and uses this to recommend a buy or sell action (+1 or -1) based on the current situation.
 
@@ -40,7 +40,7 @@ We then add in linear weighting of the $x$ coordinates.
 
 This can be written explicitly as:
 
-$f(x; θ, θ_0) = Σ_{i=1}^d θ_ix_i + θ_0$
+$f(x; θ, θ_0) = \sum_{i=1}^{d} θ_i x_i + θ_0$
 
 So, we sum all of the coordinates from $1$ to $d$, weigh them by the corresponding parameters, and add an offset $θ_0$.
 

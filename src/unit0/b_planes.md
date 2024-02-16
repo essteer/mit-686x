@@ -2,7 +2,7 @@
 
 Planes and other low-dimensional subspaces of higher $n$-dimensional space.
 
-$x = [x1; x2; x3] ∈ ℝ^3$ (3x1 matrix)
+$x = [x1; x2; x3] ∈ ℝ^3$ ($3 \times 1$ matrix)
 
 We refer to $x$ as living in $ℝ^3$.
 
@@ -28,20 +28,20 @@ If we have a plane in e.g., in 3D, we define the plane as having a "**normal**":
 
 - We call the vector of the normal theta $θ$.
 
-Additionally, this plane has an offset $θ'$ from the origin, $0$.
+Additionally, this plane has an offset $θ^{\prime}$ from the origin, $0$.
 
 We want to find all lines, all points, which fall on this plane.
 
 If we take another point, $x$, it will only be on this plane if its vector is perpendicular to theta $θ$.
 
-$(x - x̂)•θ = 0$
-$x•θ - x̂•θ = 0$
+$(x - \hat{x})•θ = 0$
+$x•θ - \hat{x}•θ = 0$
 
-($(- x̂•θ)$ is always a constant)
+($(- \hat{x}•θ)$ is always a constant)
 
 We can define the plane as all of the points that satisfy:
 
-$x•θ + θ_0 = 0$ ($θ_0$ is an offset equivalent to $-x̂•θ$)
+$x•θ + θ_0 = 0$ ($θ_0$ is an offset equivalent to $-\hat{x}•θ$)
 
 This is the definition of the plane.
 

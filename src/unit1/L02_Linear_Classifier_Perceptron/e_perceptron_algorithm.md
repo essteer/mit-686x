@@ -2,19 +2,19 @@
 
 We defined training error for any classifier, as a fraction of training examples that are misclassified.
 
-$E_n(h) = \frac{1}{n} Σ_{i=1}^n [[h(x^{(i)}) ~!= y^{(i)}]]$
+$E_n(h) = \frac{1}{n} \sum_{i=1}^{n} [[h(x^{(i)}) \neq y^{(i)}]]$
 
 ### Training error for linear classifier through the origin
 
 For linear classifiers through the origin, we can write this slightly differently, since each classifier is characterised by a parameter vector θ, we can review simply whether the sign agrees with the linear prediction:
 
-- $E_n(θ) = \frac{1}{n} Σ_{i=1}^n [[y^{(i)} θ•x^{(i)} <= 0]]$
+- $E_n(θ) = \frac{1}{n} \sum_{i=1}^{n} [[y^{(i)} θ•x^{(i)} <= 0]]$
 - If this $<= 0$, then a linear classifier that is the sign of the dot product $θ•x^{(i)}$ would be different than the given label.
 - When it is exactly $0$, i.e. it lies precisely on the decision boundary, we count it as an error, since we cannot be confident which way to classify that point.
 
 ### Training error for general linear classifier
 
-$E_n(θ, θ_0) = \frac{1}{n} Σ_{i=1}^n [[y^{(i)} (θ•x^{(i)}+θ_0) <= 0]]$
+$E_n(θ, θ_0) = \frac{1}{n} \sum_{i=1}^{n} [[y^{(i)} (θ•x^{(i)}+θ_0) <= 0]]$
 
 It is an error, if it is $<=0$.
 
@@ -22,11 +22,11 @@ It is an error, if it is $<=0$.
 
 - procedure $PERCEPTRON(\{(x^{(i)},y^{(i)}), i=1,⋯,n\}, T)$
   - $θ = 0$ (vector)
-  - $for ~t=1, ⋯, T~ do$
-    - $for ~i=1, ⋯, n~ do$
-      - $if ~y^{(i)}(0) (θ•x^{(i)}) <= 0 ~then$
+  - for $t=1, ⋯, T$ do
+    - for $i=1, ⋯, n$ do
+      - if $y^{(i)}(0) (θ•x^{(i)}) <= 0$ then
       - $θ = θ + y^{(i)}x^{(i)}$
-  - $return ~θ$
+  - return $θ$
 
 This initial iteration of the perceptron algorithm takes in a training set, and finds the parameter vector $θ$.
 
@@ -72,12 +72,12 @@ Theoretically, if a linear classifier solution for the training set exists, the 
 
 - procedure $PERCEPTRON({(x^{(i)},y^{(i)}), i=1,⋯,n}, T)$
   - $θ = 0$ (vector), $θ_0$ (scalar)
-  - $for ~t=1, ⋯, T ~do$
-    - $for ~i=1, ⋯, n ~do$
-      - $if y^{(i)}(0) (θ•x^{(i)} + θ_0) <= 0 ~then$
+  - for $t=1, ⋯, T$ do
+    - for $i=1, ⋯, n$ do
+      - if $y^{(i)}(0) (θ•x^{(i)} + θ_0) <= 0$ then
         - $θ = θ + y^{(i)}x^{(i)}$
         - $θ_0 = θ_0 + y^{(i)}$
-  - $return ~θ, θ_0$
+  - return $θ, θ_0$
 
 If we take an arbitrary $x$, where $θ•x+θ_0$:
 

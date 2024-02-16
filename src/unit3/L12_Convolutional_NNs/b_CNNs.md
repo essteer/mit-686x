@@ -89,9 +89,9 @@ This is facilitated by pooling.
 
 It is simpler than convolution, but applied in a similar way.
 
-Now take, for example, a smaller 5x5 patch. In the resulting map, we store only the maximum value of those $25$ pixels.
+Now take, for example, a smaller $5 \times 5$ patch. In the resulting map, we store only the maximum value of those $25$ pixels.
 
-$f = max\{.....\}$
+$f = \max\{ \ldots \}$
 
 I.e. the maximum activation of what that feature was trying to detect.
 

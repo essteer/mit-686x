@@ -24,7 +24,7 @@ These together comprise the $R^d$ space.
 
 Training error, which we have access to:
 
-- $E_n(h) = \frac{1}{n} Σ_{i=1}^n [[h(x^{(i)}) ~!= y^{(i)}]]$
+- $E_n(h) = \frac{1}{n} \sum_{i=1}^{n} [[h(x^{(i)}) \neq y^{(i)}]]$
 
   - $= 1$ if error
   - $= 0$ otherwise

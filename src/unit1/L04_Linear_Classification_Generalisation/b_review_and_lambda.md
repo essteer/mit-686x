@@ -6,11 +6,11 @@ Machine learning problems are often cast as optimisation problems:
 
 - objective function = average loss + regularisation
 
-$J(θ, θ_0) = \frac{1}{n} Σ_{i=1}^n Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) + \frac{λ}{2}∥θ∥^2$
+$J(θ, θ_0) = \frac{1}{n} \sum_{i=1}^{n} Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) + \frac{λ}{2}∥θ∥^2$
 
 In the case of large margin linear classification (Support Vector Machine), our average loss is an average hinge loss of the linear predictor on those training examples:
 
-- $(y^{(i)}(θ•x^{(i)} + θ_0))$ = agreement
+- $y^{(i)}(θ•x^{(i)} + θ_0)$ = agreement
 
 When agreement between our function and the provided label $< 1$, we begin to incur loss. We seek to minimise the average of those losses.
 

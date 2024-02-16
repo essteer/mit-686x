@@ -2,7 +2,7 @@
 
 Computing the inner products of vectors can be cheap, even if the vectors are high-dimensional.
 
-$\phi(x) = [x_1, x_2, x_1^2, \sqrt{2} x_1x_2, x_2^2]^T$
+$\phi(x) = [x_1, x_2, x_1^2, \sqrt{2} x_1 x_2, x_2^2]^T$
 
 $\phi(x') = [x_1^{\prime}, x_2^{\prime}, x_1^{\prime 2}, \sqrt{2} x_1^{\prime} x_2^{\prime}, x_2^{\prime 2}]^T$
 

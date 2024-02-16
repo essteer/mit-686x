@@ -12,10 +12,10 @@ For the test set, when α is very small, as we increase α we increase the amoun
 
 However, beyond a certain point, we may place too much value on the regularisation term, and make the model so general that it can no longer classify any data set.
 
-We want to find an $α$, $α^*$, at which the objective function value is minimised, and the accuracy against the test data performance is maximised.
+We want to find an $α$, $α^{*}$, at which the objective function value is minimised, and the accuracy against the test data performance is maximised.
 
 This is the optimal α we want to use.
 
-The question is how to find $α^*$, with only training set data.
+The question is how to find $α^{*}$, with only training set data.
 
 The method used is **cross validation**.

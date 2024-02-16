@@ -13,7 +13,7 @@ Thus, we further assume a random noise variable $ε$ is added on top of $y$:
 
 $y = f(x) + ε$
 
-where $ε ~ N (0, σ^2)$
+where $ε ≈ N (0, σ^2)$
 
 We learned from the lecture that we can find $\hat{f}$ by minimizing the empirical risk on the training set. As we know the training set is a random observation of the underlying relationship and contains noise, different training set will give us different estimator $\hat{f}(x)$.
 

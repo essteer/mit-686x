@@ -2,9 +2,9 @@
 
 The empirical risk function is differentiable everywhere.
 
-$R_n(θ) = \frac{1}{n} Σ_{i=1}^n \frac{(y^{(i)} - θx^{(i)})^2}{2}$
+$R_n(θ) = \frac{1}{n} \sum_{i=1}^{n} \frac{(y^{(i)} - θx^{(i)})^2}{2}$
 
-$R_n' (θ) = \frac{1}{n'} Σ_{i=n+1}^{n+n'} \frac{(y^{(i)} - θx^i)^2}{2}$
+$R_{n^{\prime}} (θ) = \frac{1}{n^{\prime}} \sum_{i=n+1}^{n+n^{\prime}} \frac{(y^{(i)} - θx^i)^2}{2}$
 
 We randomly select one example, then look at the direction of the gradient.
 

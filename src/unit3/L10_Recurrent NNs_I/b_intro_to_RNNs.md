@@ -20,7 +20,7 @@ This feature vector, $\phi(t)$, is based on the previous values, and we use it t
 
 Predicting what comes next in a sentence:
 
-"$This~course~has~been~a~tremendous...$"
+"$This \; course \; has \; been \; a \; tremendous...$"
 
 We translate the history of what has been seen into a feature vector, and try to use the feature vector to make a prediction.
 
@@ -28,8 +28,8 @@ We might look back, e.g., 2 words, and translate each of those into vectors, whi
 
 The words are one-hot encoded with sparse vectors:
 
-$tremendous: [0~0~...~1~0]$  
-$a: [1~0~...~0]$
+$tremendous: [0 \; 0 \; ... \; 1 \; 0]$  
+$a: [1 \; 0 \; ... \; 0]$
 
 We concatenate these word vectors into our feature vector $\phi(t)$, a long sparse feature vector we can now use to relate to possible outcomes - what comes next.
 

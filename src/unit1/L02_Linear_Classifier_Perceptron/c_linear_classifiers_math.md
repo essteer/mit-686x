@@ -2,7 +2,7 @@
 
 In a 2-dimensional space, the **decision boundary** is a line that divides the space into two.
 
-For 1-dimension, the decision boundary would be a point; for 3-dimensions, a plane; and for n-dimensions, a hyperplane.
+For 1-dimension, the decision boundary would be a point; for 3-dimensions, a plane; and for $n$-dimensions, a hyperplane.
 
 For our 2-dimensional example, drawing different lines gives the set of linear classifiers over the plane.
 

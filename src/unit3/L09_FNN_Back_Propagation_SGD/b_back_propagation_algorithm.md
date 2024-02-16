@@ -1,6 +1,6 @@
 # Back Propagation Algorithm
 
-Feedforward Neural Networks with multiple hidden layers, are complex models that try capture the representation of the examples toward the output unit in such a way as to facilitate the prediction task.
+Fee\partial{for}ward Neural Networks with multiple hidden layers, are complex models that try capture the representation of the examples toward the output unit in such a way as to facilitate the prediction task.
 
 The representation aspect - learning the feature representation, as well as how to make use of it - makes the learning problem difficult.
 
@@ -16,7 +16,7 @@ We take a derivative of that loss with respect to each of the parameters.
 
 Then, we apply a stochastic gradient descent algorithm by nudging those parameters in the reverse direction to the gradient.
 
-$\frac{dLoss( y, f( x; w ) )}{dw_{ij}^l}$
+$\frac{\partial{Loss( y, f( x; w ) )}}{\partial{w_{ij}^l}}$
 
 The weights are update as follows: $w_{ij}^l ← w_{ij}^l - η$
 
@@ -58,17 +58,17 @@ In order to do so, we need only understand how the output has changed as a funct
 
 We want to get:
 
-$\frac{dLoss}{dw_1} = \frac{df_1}{dw_1} \frac{dLoss}{df_1}$
+$\frac{\partial{Loss}}{\partial{w_1}} = \frac{\partial{f_1}}{\partial{w_1}} \frac{\partial{Loss}}{\partial{f_1}}$
 
-For $\frac{df_1}{dw_1}$, since the activation is a function of $tanh(xw_1)$, the derivative of tanh is $1 - tanh^2$, or $(1 - f_1^2)x$.
+For $\frac{\partial{f_1}}{\partial{w_1}}$, since the activation is a function of $tanh(xw_1)$, the derivative of tanh is $1 - tanh^2$, or $(1 - f_1^2)x$.
 
-$\frac{dLoss}{df_1} = \frac{df_2}{df_1} \frac{dLoss}{df_2}$
+$\frac{\partial{Loss}}{\partial{f_1}} = \frac{\partial{f_2}}{\partial{f_1}} \frac{\partial{Loss}}{\partial{f_2}}$
 
 **How we back propagate**
 
 We can take the derivative of the loss with respect to $L$:
 
-$\frac{dLoss (y, f_L)}{df_L} = \frac{d \frac{1}{2} (y - f_L)^2}{df_L} = - (y - f_L)$
+$\frac{\partial{Loss (y, f_L)}}{\partial{f_L}} = \frac{d \frac{1}{2} (y - f_L)^2}{\partial{f_L}} = - (y - f_L)$
 
 (In the squared loss example.)
 

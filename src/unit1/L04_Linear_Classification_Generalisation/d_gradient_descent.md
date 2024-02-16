@@ -6,13 +6,13 @@ We try to change the parameter value $θ$, to get closer to the minimum of the f
 
 At any point, we can compute the slope of the function, given by:
 
-- $\frac{∂J(θ)}{∂(θ)}$ - i.e., the derivative of the objective function $J(θ)$ with respect to the parameter value $θ$.
+- $\frac{\partial{J(θ)}}{\partial{θ}}$ - i.e., the derivative of the objective function $J(θ)$ with respect to the parameter value $θ$.
 
 If that slope is positive, and we move in the same direction of the function, we will increase the function.
 
 If we move in the opposite direction of the function, we will decrease the function.
 
-So, our gradient descent update rule is that we take a new parameter value $θ$ in terms of the old $θ$, by moving in a negative direction of the derivative of the gradient of the function $\frac{∂J(θ)}{∂(θ)}$.
+So, our gradient descent update rule is that we take a new parameter value $θ$ in terms of the old $θ$, by moving in a negative direction of the derivative of the gradient of the function $\frac{\partial{J(θ)}}{\partial{θ}}$.
 
 **Step size / learning rate: $η$**
 
@@ -36,4 +36,4 @@ For all coordinates of $θ$, now as a vector, we are updating by taking the old 
 
 This gradient is simply a concatenation of individual derivatives with respect to the parameters, e.g.:
 
-- $∇J(θ) = [\frac{∂J(θ)}{∂(θ)_1}, ⋯, \frac{∂J(θ)}{∂(θ_d)}]$ (for $d$ coordinates in $θ$)
+- $∇J(θ) = [\frac{\partial{J(θ)}}{\partial{θ_1}}, ⋯, \frac{\partial{J(θ)}}{\partial{θ_d}}]$ (for $d$ coordinates in $θ$)

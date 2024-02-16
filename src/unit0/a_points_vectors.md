@@ -10,15 +10,15 @@ $x_i$ would be the ith coordinate in this vector. E.g., $x_i = x_2 = 2$.
 
 **Magnitude / norm**
 
-The magnitude of $x = sqrt(3^2 + 2^2 + 2^2)$
+The magnitude of $x = \sqrt{3^2 + 2^2 + 2^2}$
 
 Two definitions for a dot product, which are equivalent to each other and used interchangeably:
 
-**Algebraic definition**: $x•y = Σ_{i=1}^{n} x_i•y_i$, for example:
+**Algebraic definition**: $x•y = \sum_{i=1}^{n} x_i•y_i$, for example:
 
-$x = [3; 2; 2]$ (3x1 matrix)
+$x = [3; 2; 2]$ ($3 \times 1$ matrix)
 
-$y = [1; 1; 1]$ (3x1 matrix)
+$y = [1; 1; 1]$ ($3 \times 1$ matrix)
 
 $x•y = 3•1 + 2•1 + 2•1$
 

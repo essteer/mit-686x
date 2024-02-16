@@ -39,13 +39,13 @@ $θ•x + θ_0 = -1$
 
 We now have two MBs, one positive and one negative, and these are equidistant from the DB.
 
-We can then try to push these MBs apart, because the MBs are also defined by the $θ and θ_0$ parameters we want to optimise.
+We can then try to push these MBs apart, because the MBs are also defined by the $θ$ and $θ_0$ parameters we want to optimise.
 
 **Distance from MBs to the DB**
 
 We still need to understand the distance from the MBs to the DB, and how we can control the distance.
 
-Again, our DB is all x that satisfy $θ•x + θ_0 = 0$.
+Again, our DB is all $x$'s that satisfy $θ•x + θ_0 = 0$.
 
 We can divide the equation by the norm of $θ$, $∥θ∥$, and it still defines the same decision boundary:
 
@@ -60,7 +60,7 @@ As a result, **the norm of $θ$, $∥θ∥$, is a free parameter that we have no
 
 As we move the MBs away from the DB, the value of the linear function increases at a rate that is related to $∥θ∥$, the magnitude of the parameter vector $θ$.
 
-- The larger the value of $θ$ is, the faster the magnitude $∥θ∥$ reaches +1 for the positive MB (-1 for the negative MB).
+- The larger the value of $θ$ is, the faster the magnitude $∥θ∥$ reaches $+1$ for the positive MB ($-1$ for the negative MB).
 
 As a result, in terms of distance from the DB:
 
@@ -82,13 +82,13 @@ We can quantify the distance that it lies from the DB:
 
 - We know that the magnitude of the linear function itself, as we move away from the DB, increases at a rate related to the norm of $θ$.
 - Dividing this by the magnitude/norm, we get a measure of distance from the DB.
-- Since with the negative MB our linear function is negative, and we are multiplying it by a negative point ($y^{(i)}$), the result is ($-1 * -1$) a positive distance $\frac{1}{∥θ∥}$
+- Since with the negative MB our linear function is negative, and we are multiplying it by a negative point ($y^{(i)}$), the result is ($-1 \times -1$) a positive distance $\frac{1}{∥θ∥}$
 
-- I.e., when exactly on the negative MB, both $y^{(i)}$ and ($θ•x^{(i)} + θ_0$) in the numerator are equal to -1, so we have $-1 * -1 = +1$.
+- I.e., when exactly on the negative MB, both $y^{(i)}$ and ($θ•x^{(i)} + θ_0$) in the numerator are equal to -1, so we have $-1 \times -1 = 1$.
 
 $y_i(θ,θ_0)$ gives us the signed distance, because it measures the distance of a point from the DB, but also the side of the DB on which it lies:
 
 - if a point is on the correct side of the DB, it will be positive
-- if it lies on the negative side of the DB, and the distance will be \frac{-1}{∥θ∥}.
+- if it lies on the negative side of the DB, and the distance will be $\frac{-1}{∥θ∥}$.
 
-**The MBs are a distance of \frac{1}{∥θ∥} from the DB.**
+**The MBs are a distance of $\frac{1}{∥θ∥}$ from the DB.**

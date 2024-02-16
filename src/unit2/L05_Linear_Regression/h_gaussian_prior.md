@@ -6,16 +6,16 @@ Suppose we are fitting a linear regression model with n data points $(x_1, y_1),
 
 $y_i = θ•x_i + ε$
 
-where $ε ~ N (0, σ^2)$
+where $ε ≈ N (0, σ^2)$
 
 Then the likelihood of our observed data is
 
-$Π_{i=1}^n N (y_i|θ•x_i, σ^2)$
+$\Pi_{i=1}^{n} N (y_i|θ•x_i, σ^2)$
 
-Now, if we impose a Gaussian prior $N (θ|0,\hat{λ}-1)$, the likelihood will change to
+Now, if we impose a Gaussian prior $N (θ|0,\hat{\lambda}-1)$, the likelihood will change to
 
-$Π_{i=1}^n N (y_i|θ•x_i, σ^2) N (θ|0,\hat{λ}-1)$
+$\Pi_{i=1}^{n} N (y_i|θ•x_i, σ^2) N (θ|0,\hat{\lambda}-1)$
 
 Take the logarithim of the likelihood, we will end up with
 
-$Σ_{i=1}^n - \frac{1}{2σ^2}(y_i - θ•x_i)^2 - \frac{1}{2} λ∥θ∥^2 + constant$
+$\sum_{i=1}^{n} - \frac{1}{2σ^2}(y_i - θ•x_i)^2 - \frac{1}{2} \lambda∥θ∥^2 + constant$

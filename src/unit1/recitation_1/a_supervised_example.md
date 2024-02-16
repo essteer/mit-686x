@@ -42,7 +42,7 @@ If the goal was solely to find an approximation to $f_{data}$, then this approxi
 
 However, $f_{data}$ may differ from $f$, our true goal:
 
-- $f_{data} ≠ f$
+- $f_{data} \neq f$
 
 **Regularisation term**
 

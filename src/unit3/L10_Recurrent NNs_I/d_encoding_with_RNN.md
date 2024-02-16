@@ -40,7 +40,7 @@ We can adjust the $θ$ parameters so that the function / box behaves as we want 
 
 **Sentence example**
 
-"$Efforts~and~courage~are~not...$"
+"$Efforts \; and \; courage \; are \; not...$"
 
 We start with a null (empty) matrix, $s_0$, which has not yet "seen" any words.
 
