@@ -52,7 +52,7 @@ The probability of generating "course is great":
 - course is great -> course is UNK
 - \<beg\> course is UNK \<end\>
 
-$P(course|$\<beg\>$)P(is|course)P(UNK|is)P($\<end\>$|UNK) = 0.1 \times 0.7 \times 0.6 \times 0.2$
+$P(course|\lt beg \gt)P(is|course)P(UNK|is)P(\lt end \gt |UNK) = 0.1 \times 0.7 \times 0.6 \times 0.2$
 
 **Maximum likelihood estimation**
 
@@ -66,13 +66,13 @@ $s ∈ S, s = {w_1^s, w_2^s, ⋯, w_{|s|}^s}$
 
 For a particular sentence, $s$:
 
-$\Pi_{i=1}^{|s|} P(w_i^s | w_{i-1}^s)$
+$\prod_{i=1}^{|s|} P(w_i^s | w_{i-1}^s)$
 
 The product of these probabilities is what the Markov model defines as the probability of generating this sentence.
 
 To generate all sentences, we take the product of those individual sentence proabilities.
 
-$\Pi_{s∈S} [\Pi_{i=1}^{|s|} P(w_i^s | w_{i-1}^s)]$
+$\prod_{s∈S} [\Pi_{i=1}^{|s|} P(w_i^s | w_{i-1}^s)]$
 
 We may then take a log of this, so that the products become sums.
 

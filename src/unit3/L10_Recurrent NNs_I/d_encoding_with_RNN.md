@@ -40,13 +40,13 @@ We can adjust the $θ$ parameters so that the function / box behaves as we want 
 
 **Sentence example**
 
-"$Efforts \; and \; courage \; are \; not...$"
+"Efforts and courage are not..."
 
 We start with a null (empty) matrix, $s_0$, which has not yet "seen" any words.
 
-We get a new word ("$Efforts$"), $x_1$, and apply the box / function to this single word based on the current state, to get a summary of what the model thinks the word "$Efforts$" is.
+We get a new word ("Efforts"), $x_1$, and apply the box / function to this single word based on the current state, to get a summary of what the model thinks the word "Efforts" is.
 
-This then outputs our vector $s_1$, a summary of "$Efforts$", and the model continues on to $x_2$ ("$and$"), and on through the sentence.
+This then outputs our vector $s_1$, a summary of "Efforts", and the model continues on to $x_2$ ("and"), and on through the sentence.
 
 **Differences between the encoder and feed-forward NN**
 

@@ -10,11 +10,11 @@ where $ε ≈ N (0, σ^2)$
 
 Then the likelihood of our observed data is
 
-$\Pi_{i=1}^{n} N (y_i|θ•x_i, σ^2)$
+$\prod_{i=1}^{n} N (y_i|θ•x_i, σ^2)$
 
 Now, if we impose a Gaussian prior $N (θ|0,\hat{\lambda}-1)$, the likelihood will change to
 
-$\Pi_{i=1}^{n} N (y_i|θ•x_i, σ^2) N (θ|0,\hat{\lambda}-1)$
+$\prod_{i=1}^{n} N (y_i|θ•x_i, σ^2) N (θ|0,\hat{\lambda}-1)$
 
 Take the logarithim of the likelihood, we will end up with
 
