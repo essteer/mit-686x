@@ -7,10 +7,10 @@
 2. Iterate
 
    - 2(a) Given $z^{(1)}, ⋯, z^{(K)}$, assign $x$'s to the closest $z$
-   - $cost(z^{(1)}, ⋯, z^{(K)}) = \sum_{i=1}^n min_{j=1,⋯,K} ∥x^{(i)} - z^{(j)}∥^2$
+   - $cost(z^{(1)}, ⋯, z^{(K)}) = \sum_{i=1}^{n}{} min_{j=1,⋯,K} ∥x^{(i)} - z^{(j)}∥^2$
 
    - 2(b) Given $C_1, ⋯, C_K$, find the best representatives $z$
-   - $cost(C_1, ⋯, C_K) = min_{z^{(1)}⋯z^{(K)}} \sum_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
+   - $cost(C_1, ⋯, C_K) = min_{z^{(1)}⋯z^{(K)}} \sum_{j=1}^{K}{} \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
 
 **Gradient**
 
@@ -28,7 +28,7 @@ $\frac{\partial{}}{\partial z^{(j)}} \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2 = 
 
 Through the answer, we discover that the $z^{(j)}$ is the centroid of the group.
 
-$z^{(j)} = Σ \frac{x^{(i)}}{|C_j|}$
+$z^{(j)} = \sum{\frac{x^{(i)}}{|C_j|}}$
 
 Note that the computation evaluates to this in the case of square Euclidean distance - for other similarity measures, the result would not be the same.
 

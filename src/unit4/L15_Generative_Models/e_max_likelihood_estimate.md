@@ -5,7 +5,7 @@ $P(w|θ) = θ_w$
 - $θ_w \geq 0$
 - $\sum_{w∈W} θ_w = 1$
 
-$P(D|θ) = \prod_{i=1}^n θ_{w_i}$
+$P(D|θ) = \prod_{i=1}^{n}{θ_{w_i}}$
 
 How can we utilise our training data to find the best parameters?
 
@@ -15,7 +15,7 @@ We make the assumption that the best parameters are those that give the highest 
 
 We want to find the $θ$ which maximise this expression:
 
-$max_{θ}^{*} \: P(D|θ) = max_{θ}^{*} \: \prod_{w∈W} θ_w^{count(w)}$
+$max_{θ*} \: P(D|θ) = max_{θ*} \: \prod_{w∈W} θ_w^{count(w)}$
 
 Instead of working with this expression directly, we can maximise the log:
 

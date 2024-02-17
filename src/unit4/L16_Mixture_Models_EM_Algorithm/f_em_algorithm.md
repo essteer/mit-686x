@@ -50,19 +50,19 @@ So we want to re-estimate the $p_j$, the $\mu^{(j)}$, and the $\sigma_{j}^2$.
 
 Instead of using the $\delta$, we use probabilities, since those reflect our soft counts.
 
-$\hat{n}_{j}$ is the size of the cluster, for which we take the soft counts - how much the point belongs to this cluster - and then sum them.
+$\hat{n_{j}}$ is the size of the cluster, for which we take the soft counts - how much the point belongs to this cluster - and then sum them.
 
-$\hat{n}_{j} = \sigma_{i=1}^n p(j|i)$
+$\hat{n_{j}} = \sigma_{i=1}^{n} p(j|i)$
 
 We then need to compute the mixture weight of cluster $j$, for which we again take the size of the cluster (which is computed with soft counts) and divide it by the number of points.
 
-$\hat{p}_{j} = \frac{\hat{n}_{j}}{n}$
+$\hat{p_{j}} = \frac{\hat{n_{j}}}{n}$
 
 Now, instead of an indicator function (because in this case each point belongs to every cluster, just with different probabilities), we just weight each point in the sum according to its likelihood to belong to that cluster.
 
-$\hat{\mu}^{(j)} = \frac{1}{\hat{n}_{j}} \sigma_{i=1}^n p(j|i) • x^{(i)}$
+$\hat{\mu^{(j)}} = \frac{1}{\hat{n}_{j}} \sigma_{i=1}^n p(j|i) • x^{(i)}$
 
-$\hat{\sigma}_{j}^2 = \frac{1}{\hat{n}_{jd}} \sigma_{i=1}^n p(j|i) • ∥x^{(i)} - \mu^{(j)}∥^2$
+$\hat{\sigma_{j}^2} = \frac{1}{\hat{n}_{jd}} \sigma_{i=1}^n p(j|i) • ∥x^{(i)} - \mu^{(j)}∥^2$
 
 Once we have completed the M-step, the result is that we have all the parameters after the first step.
 
@@ -74,6 +74,6 @@ EM algorithm is guaranteed to converge locally, but the point of convergence wil
 
 A major weak-point of the algorithm is therefore that the user needs to know how to initialise it.
 
-To mitigate this, a reasonable initialisation could be found by running the K-means algorithm for the starting means, and perhaps use the global variance as the initial variance for each of the clusters, so that every cluster reaches all of the points.
+To mitigate this, a reasonable initialisation could be found by running the $K$-means algorithm for the starting means, and perhaps use the global variance as the initial variance for each of the clusters, so that every cluster reaches all of the points.
 
 In real-life applications, people typically look at a more simplified version of the problem to use it as the initialisation, and then run a more complex one.

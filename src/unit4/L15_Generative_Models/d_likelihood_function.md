@@ -9,13 +9,13 @@ Given the above formulation, how do we compute the likelihood of generating a do
 
 Assume we have our document, $D$, given particular $θ$'s:
 
-$P(D|θ) = \prod_{i=1}^{n} θ_{w_i}$
+$P(D|θ) = \prod_{i=1}^{n}{θ_{w_i}}$
 
 So, we take every word in our document, and multiply the probabilities together.
 
 We then amend this expression, to account for the fact that the same word may appear multiple times in the document, and so instead of multiplying the probability of the same word, say, $5$ times, instead make this probability in the 5th degree.
 
-$P(D|θ) = \prod_{i=1}^n θ_{w_i} = \prod_{w∈W} θ_w^{count(w)}$
+$P(D|θ) = \prod_{i=1}^{n}{θ_{w_i}} = \prod_{w∈W} θ_w^{count(w)}$
 
 Instead of taking the product of the probability of all of the words, we go over each word, take the probability and put it in $count(w)$ for each word in the document.
 

@@ -1,6 +1,6 @@
 # K-Means Algorithm: The Big Picture
 
-$cost(C_1, ⋯, C_K, ⋯, z^{(1)}, z^{(K)}) = \sum_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
+$cost(C_1, ⋯, C_K, ⋯, z^{(1)}, z^{(K)}) = \sum_{j=1}^{K} \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
 
 We have the cost, and we need to find a way to find the best partitioning, and the best representatives.
 
@@ -25,7 +25,7 @@ After the representatives are reassigned, we may redraw the partitions, and then
 2. Iterate
 
    - 2(a) Given $z^{(1)}, ⋯, z^{(K)}$, assign $x$'s to the closest $z$
-   - $cost(z^{(1)} ⋯, z^{(K)}) = \sum_{i=1}^n min_{j=1,⋯,K} ∥x^{(i)} - z^{(j)}∥^2$
+   - $cost(z^{(1)} ⋯, z^{(K)}) = \sum_{i=1}^{n}{} min_{j=1,⋯,K} ∥x^{(i)} - z^{(j)}∥^2$
 
    - 2(b) Given $C_1, ⋯, C_K$, find the best representatives $z$
-   - $cost(C_1, ⋯, C_K) = min_{z^{(1)}, ⋯, z^{(K)}} \sum_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
+   - $cost(C_1, ⋯, C_K) = min_{z^{(1)}, ⋯, z^{(K)}} \sum_{j=1}^{K}{} \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$

@@ -27,6 +27,6 @@ $K$-Means:
 
 $K$-Medoids:
 
-- $z^{(j)} ∈ \lbracex^{(1)}, ⋯, x^n \rbrace \: such \: that \: \sum_{x^{(i)}∈C_j} dist(x^{(i)}, z^{(j)}) \: is \: minimal$
+- $z^{(j)} ∈ \lbrace x^{(1)}, ⋯, x^n \rbrace \: such \: that \: \sum_{x^{(i)}∈C_j} dist(x^{(i)}, z^{(j)}) \: is \: minimal$
 
 For $K$-Medoids at step 2(b), because each point must be compared with the other in the cluster, the complexity becomes $O(n^2•K•d)$.
