@@ -1,6 +1,6 @@
 # Estimating the Parameters in the Observed Case
 
-p(S<sub>n</sub>|θ) = Π<sub>i=1</sub><sup>n</sup>Σ<sub>j=1</sub><sup>K</sup> p<sub>j</sub> N(x, μ<sup>(j)</sup>, σ<sup>2</sup><sub>j</sub>_I_)
+$p(S_n|θ) = \prod_{i=1}^n \sum_{j=1}^K p_j N(x, \mu^{(j)}, \sigma_{j}^2 I)$
 
 The next question we must address is how we can find all of the parameters we are interested in - the mixture weights, mean and variance for each mixture component.
 
@@ -10,31 +10,31 @@ The notation is more complex than it could be, but this is to facilitate direct 
 
 **Observed case**
 
-The first piece of notation tells us that this is an indicator function, which would be equal to 1 when we know that point x<sup>(i)</sup> is assigned to mixture component j, and zero otherwise.
+The first piece of notation tells us that this is an indicator function, which would be equal to $1$ when we know that point $x^{(i)}$ is assigned to mixture component $j$, and zero otherwise.
 
-δ(j|i) = {1, x<sup>(i)</sup> is assigned to j; 0, otherwise}
+$\delta(j|i) = \lbrace 1, x^{(i)} \: is \: assigned \: to \: j; 0, otherwise \rbrace$
 
-Since this is the observed case, for every point i, there will be just one j to which it belongs.
+Since this is the observed case, for every point $i$, there will be just one $j$ to which it belongs.
 
 We then use this notation to rewrite the likelihood expression at the top of this page.
 
-Recall we are trying to find p, μ, and σ<sup>2</sup>.
+Recall we are trying to find $p$, $\mu$, and $\sigma^2$.
 
 We take the likelihood expression and log it so that it becomes a sum.
 
-Σ<sub>i=1</sub><sup>n</sup>
+$\sigma_{i=1}^n$
 
 Then, we go through each point and look at which cluster it belongs to:
 
-Σ<sub>i=1</sub><sup>n</sup> [ Σ<sub>j=1</sub><sup>K</sup> ]
+$\sigma_{i=1}^n [ \sigma_{j=1}^K ]$
 
 Within that cluster, we take only points that are hard-assigned to that cluster:
 
-Σ<sub>i=1</sub><sup>n</sup> [ Σ<sub>j=1</sub><sup>K</sup> δ(j|i) log p<sub>j</sub> N(x<sup>(i)</sup>, μ<sup>(j)</sup>, σ<sup>2</sup><sub>j</sub>_I_) ]
+$\sigma_{i=1}^n [ \sigma_{j=1}^K \delta(j|i) \: log \: p_j N(x^{(i)}, \mu^{(j)}, \sigma_{j}^2 I) ]$
 
 We then change the summation, since we can change the computation to instead of going through points and then clusters, we independently do the computation for each individual cluster.
 
-= Σ<sub>j=1</sub><sup>K</sup> [ Σ<sub>i=1</sub><sup>n</sup> log p<sub>j</sub> N(x<sup>(i)</sup>, μ<sup>(j)</sup>, σ<sup>2</sup><sub>j</sub>_I_) ]
+$= \sigma_{j=1}^K [ \sigma_{i=1}^n \: log \: p_j N(x^{(i)}, \mu^{(j)}, \sigma_{j}^2 I) ]$
 
 Whenever we try to find the parameters that optimise for each mixture component, we can do this computation for each cluster independently.
 
@@ -44,28 +44,28 @@ Due to the fact that the points are observed, we already know to which cluster t
 
 First, compute how many members belong to each cluster using the delta notation:
 
-n^<sub>j</sub> is the number of points that belong to cluster j.
+$\hat{n}_{j}$ is the number of points that belong to cluster $j$.
 
-n^<sub>j</sub> = Σ<sub>i=1</sub><sup>n</sup> δ(j|i)
+$\hat{n}_{j} = \sigma_{i=1}^n \delta(j|i)$
 
-For all the points that belong to cluster j, and only for those points, this would be equal to 1.
+For all the points that belong to cluster $j$, and only for those points, this would be equal to $1$.
 
-We can then compute the parameter for the mixture weights of cluster j using MLE:
+We can then compute the parameter for the mixture weights of cluster $j$ using MLE:
 
-p^<sub>j</sub> = n^<sub>j</sub> / n
+$\hat{p}_{j} = \frac{\hat{n}_{j}}{n}$
 
-The result is intuitive: p^<sub>j</sub> is the number of points in the cluster j, divided by the total number of points. This is the weight for the mixture component j.
+The result is intuitive: $\hat{p}_{j}$ is the number of points in the cluster $j$, divided by the total number of points. This is the weight for the mixture component $j$.
 
-Similarly, we can compute the mean of cluster j; differentiating the likelihood expression with respect to μ would find a similar shape as with the case of individual Gaussians - we sum up all of the points and divide by the size of the cluster.
+Similarly, we can compute the mean of cluster $j$; differentiating the likelihood expression with respect to $\mu$ would find a similar shape as with the case of individual Gaussians - we sum up all of the points and divide by the size of the cluster.
 
-In this particular case, we get the sum of all the points that belong to this cluster, going through all of the points from 1 to n, and divided by the size of the cluster:
+In this particular case, we get the sum of all the points that belong to this cluster, going through all of the points from $1$ to $n$, and divided by the size of the cluster:
 
-μ^<sup>(j)</sup> = 1/n^<sub>j</sub> Σ<sub>i=1</sub><sup>n</sup> δ(j|i) • x<sup>(i)</sup>
+$\hat{\mu}^{(j)} = \frac{1}{\hat{n}_{j}} \sigma_{i=1}^n \delta(j|i) • x^{(i)}$
 
-This would be our MLE for the centre of the component j.
+This would be our MLE for the centre of the component $\lbrace j \rbrace$.
 
 We then need to compute the variance.
 
-σ<sup>2</sup><sub>j</sub>^ = 1/n^<sub>j</sub>d Σ<sub>i=1</sub><sup>n</sup> δ(j|i) • ∥x<sup>(i)</sup> - μ<sup>(j)</sup>∥<sup>2</sup>
+$\hat{\sigma}_{j}^2 = \frac{1}{\hat{n}_{jd}} \sigma_{i=1}^n \delta(j|i) • ∥x^{(i)} - \mu^{(j)}∥^2$
 
 Once again, the indicator function serves the purpose of ensuring that the point being selected really belongs to this specific cluster.

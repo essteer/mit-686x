@@ -2,15 +2,15 @@
 
 **K-means clustering algorithm**
 
-1. Randomly select z<sup>(1)</sup> ⋯ z<sup>(K)</sup>
+1. Randomly select $z^{(1)}, ⋯, z^{(K)}$
 
 2. Iterate
 
-   - 2(a) Given z<sup>(1)</sup> ⋯ z<sup>(K)</sup>, assign x's to the closest z
-   - cost(z<sup>(1)</sup> ⋯, z<sup>(K)</sup>) = Σ<sub>i=1</sub><sup>n</sup> min<sub>j=1⋯K</sub> ∥x<sup>(i)</sup> - z<sup>(j)</sup>∥<sup>2</sup>
+   - 2(a) Given $z^{(1)}, ⋯, z^{(K)}$, assign $x$'s to the closest $z$
+   - $cost(z^{(1)}, ⋯, z^{(K)}) = \sum_{i=1}^n min_{j=1,⋯,K} ∥x^{(i)} - z^{(j)}∥^2$
 
-   - 2(b) Given C<sub>1</sub> ⋯ C<sub>K</sub>, find the best representatives z
-   - cost(C<sub>1</sub>, ⋯, C<sub>K</sub>) = min<sub>z<sup>(1)</sup>⋯z<sup>(K)</sup></sub> Σ<sub>j=1</sub><sup>K</sup> Σ<sub>i∈C<sub>j</sub></sub> ∥x<sup>(i)</sup> - z<sup>(j)</sup>∥<sup>2</sup>
+   - 2(b) Given $C_1, ⋯, C_K$, find the best representatives $z$
+   - $cost(C_1, ⋯, C_K) = min_{z^{(1)}⋯z^{(K)}} \sum_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
 
 **Gradient**
 
@@ -18,17 +18,17 @@ We need to take the gradient at 2(b), in order to determine what should be compu
 
 Notice that every cluster selects its representative independently.
 
-So we want to look at a specific cluster, such as cluster j C<sub>j</sub>, and find the representative that will minimise the sum.
+So we want to look at a specific cluster, such as cluster $j$ $C_j$, and find the representative that will minimise the sum.
 
-Σ<sub>i∈C<sub>j</sub></sub> ∥x<sup>(i)</sup> - z<sup>(j)</sup>∥<sup>2</sup>
+$\sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
 
-We want to find the z<sub>j</sub> that will minimise the sum, so we take the derivative with respect to z, make it equal to 0, and it will tell us about the z.
+We want to find the $z_j$ that will minimise the sum, so we take the derivative with respect to $z$, make it equal to $0$, and it will tell us about the $z$.
 
-d/dz<sup>(j)</sup> Σ<sub>i∈C<sub>j</sub></sub> ∥x<sup>(i)</sup> - z<sup>(j)</sup>∥<sup>2</sup> = 0
+$\frac{\partial{}}{\partial z^{(j)}} \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2 = 0$
 
-Through the answer, we discover that the z<sup>(j)</sup> is the centroid of the group.
+Through the answer, we discover that the $z^{(j)}$ is the centroid of the group.
 
-z<sup>(j)</sup> = Σ x<sup>(i)</sup> / |C<sub>j</sub>|
+$z^{(j)} = Σ \frac{x^{(i)}}{|C_j|}$
 
 Note that the computation evaluates to this in the case of square Euclidean distance - for other similarity measures, the result would not be the same.
 

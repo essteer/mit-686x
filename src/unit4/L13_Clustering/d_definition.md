@@ -6,29 +6,29 @@ Here we look at two forms of clustering, through partitioning and representative
 
 The first way of thinking about clustering, is thinking about it as partitioning.
 
-Our clustering input is a set of feature vectors and K, the number of clusters (e.g., the number of colours in an image compression):
+Our clustering input is a set of feature vectors and $K$, the number of clusters (e.g., the number of colours in an image compression):
 
-S<sub>n</sub> = { x<sup>(i)</sup> | i = 1, ⋯, n }, K
+$S_n = \lbrace x^{(i)} | i = 1, ⋯, n \rbrace, K$
 
 The clustering output is partitions, where each partition records the index of the elements that belong to that cluster:
 
-C<sub>1</sub> ⋯ C<sub>K</sub>
+$C_1, ⋯, C_K$
 
 Taking a union of the partitions would get all elements of the training set.
 
-∪C<sub>j</sub> = { 1 ⋯ n }
+$∪C_j = \lbrace 1, ⋯, n \rbrace$
 
 This union does not record the elements themselves, but the indices of the elements.
 
-When we look at C<sub>i</sub> and C<sub>j</sub>, for a different i and j:
+When we look at $C_i$ and $C_j$, for a different $i$ and $j$:
 
-C<sub>i</sub> ∩ C<sub>j</sub> = ∅ (i ≠ j)
+$C_i ∩ C_j = ∅ (i ≠ j)$
 
 So, in aggregate our clustering input and output are:
 
-Input: S<sub>n</sub> = { x<sup>(i)</sup> | i = 1, ⋯, n }, K
+Input: $S_n = \lbrace x^{(i)} | i = 1, ⋯, n \rbrace, K$
 
-Output: C<sub>1</sub> ⋯ C<sub>K</sub>; ∪C<sub>j</sub> = { 1 ⋯ n }, C<sub>i</sub> ∩ C<sub>j</sub> = ∅ (i ≠ j)
+Output: $C_1 ⋯ C_K; ∪C_j = \lbrace 1, ⋯, n \rbrace, C_i ∩ C_j = ∅ (i ≠ j)$
 
 This is "hard" clustering, where every element belongs to just one partition.
 
@@ -40,7 +40,7 @@ Another important way to consider clustering, is to think of clustering in terms
 
 Representatives would be vectors that include every single partition:
 
-z<sup>(1)</sup> ⋯ z<sup>(K)</sup>
+$z^{(1)}, ⋯, z^{(K)}$
 
 Back to the Google News example, the cluster would be the stories selected to represent a particular news article.
 

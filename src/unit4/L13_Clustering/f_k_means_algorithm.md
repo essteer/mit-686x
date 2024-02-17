@@ -1,10 +1,10 @@
 # K-Means Algorithm: The Big Picture
 
-cost(C<sub>1</sub>, ⋯, C<sub>K</sub>, ⋯, z<sup>(1)</sup>, z<sup>(K)</sup>) = Σ<sub>j=1</sub><sup>K</sup> Σ<sub>i∈C<sub>j</sub></sub> ∥x<sup>( i )</sup> - z<sup>( j )</sup>∥<sup>2</sup>
+$cost(C_1, ⋯, C_K, ⋯, z^{(1)}, z^{(K)}) = \sum_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
 
 We have the cost, and we need to find a way to find the best partitioning, and the best representatives.
 
-If we have a number of points, how many distinct partitions of size K can we produce?
+If we have a number of points, how many distinct partitions of size $K$ can we produce?
 
 This is exponential in the number of points, so we can't go one partition at a time, check the cost, then go on to the next one. The search space of partitions is too large, so we need an algorithm to tell us how to get to the right partition.
 
@@ -20,12 +20,12 @@ After the representatives are reassigned, we may redraw the partitions, and then
 
 **K-means clustering algorithm**
 
-1. Randomly select z<sup>(1)</sup> ⋯ z<sup>(K)</sup>
+1. Randomly select $z^{(1)} ⋯ z^{(K)}$
 
 2. Iterate
 
-   - 2(a) Given z<sup>(1)</sup> ⋯ z<sup>(K)</sup>, assign x's to the closest z
-   - cost(z<sup>(1)</sup> ⋯, z<sup>(K)</sup>) = Σ<sub>i=1</sub><sup>n</sup> min<sub>j=1⋯K</sub> ∥x<sup>(i)</sup> - z<sup>(j)</sup>∥<sup>2</sup>
+   - 2(a) Given $z^{(1)}, ⋯, z^{(K)}$, assign $x$'s to the closest $z$
+   - $cost(z^{(1)} ⋯, z^{(K)}) = \sum_{i=1}^n min_{j=1,⋯,K} ∥x^{(i)} - z^{(j)}∥^2$
 
-   - 2(b) Given C<sub>1</sub> ⋯ C<sub>K</sub>, find the best representatives z
-   - cost(C<sub>1</sub>, ⋯, C<sub>K</sub>) = min<sub>z<sup>(1)</sup>⋯z<sup>(K)</sup></sub> Σ<sub>j=1</sub><sup>K</sup> Σ<sub>i∈C<sub>j</sub></sub> ∥x<sup>(i)</sup> - z<sup>(j)</sup>∥<sup>2</sup>
+   - 2(b) Given $C_1, ⋯, C_K$, find the best representatives $z$
+   - $cost(C_1, ⋯, C_K) = min_{z^{(1)}, ⋯, z^{(K)}} \sum_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$

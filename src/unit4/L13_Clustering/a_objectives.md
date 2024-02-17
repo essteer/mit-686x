@@ -4,4 +4,4 @@
 
 - Understand clustering cost with different similarity measures
 
-- Understand the K-means algorithm
+- Understand the $K$-means algorithm

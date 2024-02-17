@@ -6,7 +6,7 @@ Cost functions are used to determine which clustering has the lowest cost.
 
 We assume that the cost will be the sum of the cost of the individual clusters:
 
-cost(C<sub>1</sub>, ⋯, C<sub>K</sub>) = Σ<sub>j=1</sub><sup>K</sup> cost (C<sub>j</sub>)
+$cost(C_1, ⋯, C_K) = \sum_{j=1}^K cost(C_j)$
 
 This is intuitive, since the best clustering should have the lowest aggregate cost across the clusters.
 
@@ -27,7 +27,7 @@ Therefore whenever a cluster is given, a representative must also be given in or
 
 This is expressed as:
 
-cost(C, z) = Σ<sub>i∈C</sub> dist(x<sup>( i )</sup>, z)
+$cost(C, z) = \sum_{i∈C} dist(x^{(i)}, z)$
 
 The specific distance measurement used could be cosine similarity or Euclidean square distance, for example.
 
@@ -35,11 +35,11 @@ The specific distance measurement used could be cosine similarity or Euclidean s
 
 Takes two vectors, and looks at the angle between those two vectors.
 
-cos ( x<sup>( i )</sup>, x<sup>( j )</sup>) = (x<sup>( i )</sup> • x<sup>( j )</sup>) / (∥x<sup>( i )</sup>∥ • ∥x<sup>( j )</sup>∥)
+$cos(x^{(i)}, x^{(j)}) = \frac{x^{(i)} • x^{(j)}}{∥x^{(i)}∥ • ∥x^{(j)}∥}$
 
 **Euclidean square distance**
 
-dist( x<sup>( i )</sup>, x<sup>( j )</sup> ) = ∥x<sup>( i )</sup> - x<sup>( j )</sup>∥<sup>2</sup>
+$dist(x^{(i)}, x^{(j)}) = ∥x^{(i)} - x^{(j)}∥^2$
 
 **Comparison**
 
@@ -57,4 +57,4 @@ To get the cost, we need the representatives as well as the partitions.
 
 We use Euclidean square distance to go over every cluster, from cluster 1 to cluster K, and within each cluster we take the points that belong to that clusts, and compute the Euclidean square distance between those points and the representative of that cluster.
 
-cost(C<sub>1</sub>, ⋯, C<sub>K</sub>, ⋯, z<sup>(1)</sup>, z<sup>(K)</sup>) = Σ<sub>j=1</sub><sup>K</sup> Σ<sub>i∈C<sub>j</sub></sub> ∥x<sup>( i )</sup> - z<sup>( j )</sup>∥<sup>2</sup>
+$cost(C_1, ⋯, C_K, ⋯, z^{(1)}, z^{(K)}) = \sum_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$

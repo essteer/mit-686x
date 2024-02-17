@@ -33,13 +33,13 @@ $P(w_1, ⋯, w_6) = P(w_1 | w_0) ⋯ P(w_6 | w_5)$
 
 Where $w_0 =$ \<beg\> and $w_6 =$ \<end\>
 
-| wi-1    | ML  | course | is  | UNK | \<end\> |
-| ------- | --- | ------ | --- | --- | ------- |
-| \<beg\> | 0.7 | 0.1    | 0.1 | 0.1 | 0.0     |
-| ML      | 0.1 | 0.5    | 0.2 | 0.1 | 0.1     |
-| course  | 0.0 | 0.0    | 0.7 | 0.1 | 0.2     |
-| is      | 0.1 | 0.3    | 0.0 | 0.6 | 0.0     |
-| UNK     | 0.1 | 0.2    | 0.2 | 0.3 | 0.2     |
+| $w_{i-1}$ | ML  | course | is  | UNK | \<end\> |
+| --------- | --- | ------ | --- | --- | ------- |
+| \<beg\>   | 0.7 | 0.1    | 0.1 | 0.1 | 0.0     |
+| ML        | 0.1 | 0.5    | 0.2 | 0.1 | 0.1     |
+| course    | 0.0 | 0.0    | 0.7 | 0.1 | 0.2     |
+| is        | 0.1 | 0.3    | 0.0 | 0.6 | 0.0     |
+| UNK       | 0.1 | 0.2    | 0.2 | 0.3 | 0.2     |
 
 Each symbol (except \<beg\>) in the sequence is predicted using the same conditional probability table until an \<end\> symbol is seen.
 

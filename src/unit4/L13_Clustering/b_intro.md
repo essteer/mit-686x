@@ -6,11 +6,11 @@ We still make use of training sets, but unlike in supervised learning, we will n
 
 Classification for supervised learning:
 
-S<sub>n</sub> = { (x<sup>(i)</sup>, y<sup>(i)</sup>) | i = 1, ⋯, n }
+$S_n = \lbrace (x^{(i)}, y^{(i)}) | i = 1, ⋯, n \rbrace$
 
 CLustering (unsupervised learning):
 
-S<sub>n</sub> = { x<sup>(i)</sup> | i = 1, ⋯, n }
+$S_n = \lbrace x^{(i)} | i = 1, ⋯, n \rbrace$
 
 In this situation, we may have clouds of data points, but no knowledge of their labels. However, the groups or clusters themselves may be indicative of underlying classifications.
 
