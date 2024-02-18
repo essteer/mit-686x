@@ -60,11 +60,11 @@ For example:
 
 Returning to our objective function without the offset parameter, and with the regularisation term within the average loss summation:
 
-$J(θ) = \frac{1}{n} \sum_{i=1}^{n^{*}}  [Loss_{h}^{*} (y^{(i)}(θ•x^{(i)})) + \frac{\lambda}{2} ∥θ∥^2]$
+$J(θ) = \frac{1}{n} \sum_{i=1}^{n^{\ast}} [Loss_{h}^{\ast} (y^{(i)}(θ•x^{(i)})) + \frac{\lambda}{2} ∥θ∥^2]$
 
 Our update with SGD is to sample $i$ at random, then take the old parameter value $θ$ and nudge it in the direction of the gradient with respect to the parameters of the hinge loss of that particular training example plus their regularisation:
 
-- $θ ← θ - η∇ \times θ [Loss_h^*(y^{(i)}θ•x^{(i)}) + \frac{\lambda}{2}∥θ∥^2]$
+- $θ ← θ - η∇ \times θ [Loss_h^{\ast} (y^{(i)}θ•x^{(i)}) + \frac{\lambda}{2}∥θ∥^2]$
 
 To see what this amounts to, take the gradient with respect to both of the terms here:
 

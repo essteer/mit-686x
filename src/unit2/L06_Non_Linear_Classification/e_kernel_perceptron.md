@@ -44,9 +44,9 @@ Just as $θ$ would be initialised to $0$, so all $α$ - one per training example
 
 We then ask whether the $i$-th label $y^{(i)}$, multiplied by the sum over the training examples of how many mistakes we have made on the $j$-th example, its label times the kernel evaluated between the $j$-th and $i$-th example.
 
-$y^{(i)} \sum_{j=1}^{n}{α_j y^{(j)} K(x^{(j)}, x^{(i)})} <= 0$
+$y^{(i)} \sum_{j=1}^{n}{α_j y^{(j)} K(x^{(j)}, x^{(i)})} \leq 0$
 
-If this expression is less than or equal to $0$, $<= 0$, then a mistake was made and an update will be performed.
+If this expression is less than or equal to $0$, $\leq 0$, then a mistake was made and an update will be performed.
 
 $0 ← θ + y^{(i)} \phi(x^{(i)})$
 

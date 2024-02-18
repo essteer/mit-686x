@@ -6,7 +6,7 @@ $θ•x + θ_0 = 0$
 
 The **margin boundary** is the set of points $x$ which satisfy:
 
-$θ•x + θ_0 = ±1$.
+$θ•x + θ_0 = \pm 1$.
 
 So, the distance from the decision boundary to the margin boundary is:
 

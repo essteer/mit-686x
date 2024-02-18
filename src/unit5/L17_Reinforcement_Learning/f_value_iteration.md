@@ -2,11 +2,11 @@
 
 Value iteration algorithm enables us to solve MDP, given the quadruple of state, action, transition, and reward.
 
-We now elaborate on $V^{*}(s)$ seen earlier, to speak in terms of the expected value after $K$ steps.
+We now elaborate on $V^{\ast}(s)$ seen earlier, to speak in terms of the expected value after $K$ steps.
 
-$V^{*}_K(s)$ = expected reward from state $s$ after $K$ steps.
+$V^{\ast}_K(s)$ = expected reward from state $s$ after $K$ steps.
 
-The connection between this $V^{*}_K$ and the original $V^{*}$, is that when $K$ goes to infinity, we would say that $V^{*}_K$ would converge to the true value of the state.
+The connection between this $V^{\ast}_K$ and the original $V^{\ast}$, is that when $K$ goes to infinity, we would say that $V^{\ast}_K$ would converge to the true value of the state.
 
 So, the recursive algorithm will at each point continue increasing number $K$ until we converge to the true value of the state.
 
@@ -14,7 +14,7 @@ So, the recursive algorithm will at each point continue increasing number $K$ un
 
 During the first step of the algorithm, we initialise all of the values as:
 
-$V^{*}_0(s) = 0$.
+$V^{\ast}_0(s) = 0$.
 
 We can think of information from the states where we get high reward as slowly propagating around the board.
 
@@ -24,11 +24,11 @@ The first time we will look just in one step, then two steps, and so on, and con
 
 Our next step would be to continue to iterate until:
 
-$V_k^{*}(s) ≈ V_{K+1}^{*}(s) ∀ s$
+$V_k^{\ast}(s) ≈ V_{K+1}^{\ast}(s) ∀ s$
 
 So, we continue the process until the values of the states do not change after every iteration.
 
-We define the value of our state at the point $V_{K+1}^{*}(s)$ in terms of the values of the states through the previous iterations.
+We define the value of our state at the point $V_{K+1}^{\ast}(s)$ in terms of the values of the states through the previous iterations.
 
 We computed the optimal values for the $K$ steps, and now aggregate this information to get the value for the $K+1$ step.
 
@@ -36,7 +36,7 @@ Whenever we're going to look at the value of the neighbouring states, we can tak
 
 The value that we get after $K+1$ steps, is the value we'll collect from an extra step, plus the values of the neighbouring steps.
 
-$V_{K+1}^{*}(s) = max_a [\sum_{s^{\prime}} T(s,a,s^{\prime}) (R(s,a,s^{\prime}) + \gamma V_K^{*}(s^{\prime}))]$
+$V_{K+1}^{\ast}(s) = \max_{a} [\sum_{s^{\prime}} T(s,a,s^{\prime}) (R(s,a,s^{\prime}) + \gamma V_K^{\ast}(s^{\prime}))]$
 
 **Illustration**
 
@@ -96,7 +96,7 @@ $s5$ remains as $+1$, because once the reward is collected, it cannot be had aga
 | ---- | ---- | ---- | ----------- | ---- |
 | $0$  | $0$  | $0$  | $1 \over 2$ | $+1$ |
 
-At $s4$, the $\gamma$ term of our function is activated, $\gamma V_{K}^{*}(s^{\prime})$, because $V_K$, which is the $V_{1}^{*}$ of the previous state, is $+1$, and we multiply this by $\gamma$, which is $1 \over 2$.
+At $s4$, the $\gamma$ term of our function is activated, $\gamma V_{K}^{\ast}(s^{\prime})$, because $V_K$, which is the $V_{1}^{\ast}$ of the previous state, is $+1$, and we multiply this by $\gamma$, which is $1 \over 2$.
 
 The state for $s4$ is therefore $1 \times {1 \over 2} = {1 \over 2}$.
 
@@ -106,15 +106,15 @@ We can continue on to the next step, and see how the value will propagate throug
 
 We now take an even simpler world, with a single state $s$, and a single action $a$.
 
-$V_{K+1}^{*}(s) = R(s) + \gamma V_{K}^{*}(s)$
+$V_{K+1}^{\ast}(s) = R(s) + \gamma V_{K}^{\ast}(s)$
 
 Once we are in the converged state $s$, then nothing will change after our next step.
 
-$V^{*}(s) = R(s) + \gamma V^{*}(s)$
+$V^{\ast}(s) = R(s) + \gamma V^{\ast}(s)$
 
 So now we subtract the converged value, from the value in the $K+1$ iteration.
 
-$V^{*}(s) - V_{K+1}^{*}(s) = \gamma (V^{*}(s) - V_{K}^{*}(s))$
+$V^{\ast}(s) - V_{K+1}^{\ast}(s) = \gamma (V^{\ast}(s) - V_{K}^{\ast}(s))$
 
 The left-hand side is the difference between the converged state and the value at step $K+1$.
 
@@ -134,6 +134,6 @@ For every state $s$, and every action $a$, we compute the $Q$ value.
 
 Once all $Q$'s are computed, then the action to take is just the argmax:
 
-$\pi^{*}(s) = argmax_a Q^{*}(s,a)$
+$\pi^{\ast}(s) = \argmax_{a} Q^{\ast}(s,a)$
 
 So, after the algorithm has converged, we can compute the $Q$ values, and then compute the policy $\pi$.

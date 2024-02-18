@@ -21,15 +21,15 @@ The algorithm propagates information derived about the rewards to the rest of th
 
 MDP: $\lt S, A, T, R \gt$
 
-$\pi*(s) = argmax_a Q^{*}(s,a)$
+$\pi*(s) = \argmax_{a} Q^{\ast}(s,a)$
 
 We don't know which state we will end up, even for a given action due to the non-deterministic feature of the world, and so we must compute probabilities with $T$.
 
 Then, we want to express the relationship using $Q$ instead of $V$, and do so as follows:
 
-$Q^{*}(s,a) = \sum_{s^{\prime}} T(s,a,s^{\prime}) (R(s,a,s^{\prime}) + \gamma max_a^{\prime}Q(s^{\prime},a^{\prime}))$
+$Q^{\ast}(s,a) = \sum_{s^{\prime}} T(s,a,s^{\prime}) (R(s,a,s^{\prime}) + \gamma max_a^{\prime}Q(s^{\prime},a^{\prime}))$
 
-From this, if we take the maximum ($a^{\prime}$) over all possible actions that could be taken, this actually gives us the value of the state. (Note that $max_{a^{\prime}}Q(s^{\prime},a^{\prime})$ is equivalent to $V^{*}(s^{\prime})$.)
+From this, if we take the maximum ($a^{\prime}$) over all possible actions that could be taken, this actually gives us the value of the state. (Note that $\max_{a^{\prime}}Q(s^{\prime},a^{\prime})$ is equivalent to $V^{\ast}(s^{\prime})$.)
 
 Since we don't know in which state $s^{\prime}$ we will end up, we average across all possible states, multiplied by our likelihood weighting that we will end up in a particular $s^{\prime}$.
 

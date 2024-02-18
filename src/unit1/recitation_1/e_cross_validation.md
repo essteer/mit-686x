@@ -1,6 +1,6 @@
 # Cross Validation
 
-Cross validation is the means through which we select the optimal value for hyperparameter $α$, $α^{*}$, using only training data.
+Cross validation is the means through which we select the optimal value for hyperparameter $α$, $α^{\ast}$, using only training data.
 
 The idea of cross validation is that, when we have a training data set, consisting of $x_{data}$ and $y_{data}$, we can reserve part of the training data set as a validation set.
 
@@ -62,6 +62,6 @@ This gives us an overarching function:
 
 consisting of the accuracy score for each $α$.
 
-**$α^{*}$**
+**$α^{\ast}$**
 
-Our goal is then to find the $argmax$ for $S(α)$, and that resulting $α^{*}$ is the $α$ we choose to actual train our model using our training dataset, so that we can expect to have the best performance on unseen data.
+Our goal is then to find the $argmax$ for $S(α)$, and that resulting $α^{\ast}$ is the $α$ we choose to actual train our model using our training dataset, so that we can expect to have the best performance on unseen data.

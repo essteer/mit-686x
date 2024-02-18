@@ -4,7 +4,7 @@ For most machine learning algorithms, there is no closed form solution, but in t
 
 $R_n(θ) = \frac{1}{n} \sum_{i=1}^{n} \frac{(y^{(i)} - θ•x^{(i)})^2}{2}$
 
-$∇_θ R_{n}(θ)_{| θ = \hat{θ}} = \frac{1}{n} \sum_{i=1}^{n} ∇_θ \frac{(y^{(i)} - θ•x^{(i)})^2}{2} _{|θ=\hat{θ}}$
+$\nabla_{θ} R_{n} (θ)_{| θ = \hat{θ}} = \frac{1}{n} \sum_{i=1}^{n} \nabla_{θ} {\frac{(y^{(i)} - θ•x^{(i)})^2}{2}}_{|θ=\hat{θ}}$
 
 $= - \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - θ•x^{(i)})x^{(i)}$
 

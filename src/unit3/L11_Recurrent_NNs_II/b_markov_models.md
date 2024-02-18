@@ -18,30 +18,30 @@ The Markov model gives a distribution on what comes next, based on $k$-steps bac
 Let $w ∈ V$ (a word in a limited Vocabulary) denote the set of possible words and symbols that includes:
 
 - an $UNK$ symbol for any unknown word (out of Vocabulary), a catch-all
-- \<beg\> symbol for specifying the start of a sentence
-- \<end\> symbol for specifying the end of the sentence
+- $\lt beg \gt$ symbol for specifying the start of a sentence
+- $\lt end \gt$ symbol for specifying the end of the sentence
 
-- \<beg\> The lecture leaves me UNK \<end\>
+- $\lt beg \gt$ The lecture leaves me UNK $\lt end \gt$
 
 Consisting of $w_0, w_1, w_2, w_3, w_4, w_5, w_6$.
 
-Once the \<end\> symbol is predicted by the model, it stops generating words.
+Once the $\lt end \gt$ symbol is predicted by the model, it stops generating words.
 
 The first order Markov model defines a conditional probability of what comes next, based, only on the previous word.
 
 $P(w_1, ⋯, w_6) = P(w_1 | w_0) ⋯ P(w_6 | w_5)$
 
-Where $w_0 =$ \<beg\> and $w_6 =$ \<end\>
+Where $w_0 = \lt beg \gt$ and $w_6 = \lt end \gt$
 
-| $w_{i-1}$ | ML  | course | is  | UNK | \<end\> |
-| --------- | --- | ------ | --- | --- | ------- |
-| \<beg\>   | 0.7 | 0.1    | 0.1 | 0.1 | 0.0     |
-| ML        | 0.1 | 0.5    | 0.2 | 0.1 | 0.1     |
-| course    | 0.0 | 0.0    | 0.7 | 0.1 | 0.2     |
-| is        | 0.1 | 0.3    | 0.0 | 0.6 | 0.0     |
-| UNK       | 0.1 | 0.2    | 0.2 | 0.3 | 0.2     |
+| $w_{i-1}$     | ML  | course | is  | UNK | $\lt end \gt$ |
+| ------------- | --- | ------ | --- | --- | ------------- |
+| $\lt beg \gt$ | 0.7 | 0.1    | 0.1 | 0.1 | 0.0           |
+| ML            | 0.1 | 0.5    | 0.2 | 0.1 | 0.1           |
+| course        | 0.0 | 0.0    | 0.7 | 0.1 | 0.2           |
+| is            | 0.1 | 0.3    | 0.0 | 0.6 | 0.0           |
+| UNK           | 0.1 | 0.2    | 0.2 | 0.3 | 0.2           |
 
-Each symbol (except \<beg\>) in the sequence is predicted using the same conditional probability table until an \<end\> symbol is seen.
+Each symbol (except $\lt beg \gt$ ) in the sequence is predicted using the same conditional probability table until an $\lt end \gt$ symbol is seen.
 
 Note that the probabilities in the rows sum to $1$, since they are a distribution.
 
@@ -50,7 +50,7 @@ Note that the probabilities in the rows sum to $1$, since they are a distributio
 The probability of generating "course is great":
 
 - course is great -> course is UNK
-- \<beg\> course is UNK \<end\>
+- $\lt beg \gt$ course is UNK $\lt end \gt$
 
 $P(course|\lt beg \gt)P(is|course)P(UNK|is)P(\lt end \gt |UNK) = 0.1 \times 0.7 \times 0.6 \times 0.2$
 

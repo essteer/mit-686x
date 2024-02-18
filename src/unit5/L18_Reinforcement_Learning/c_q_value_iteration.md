@@ -76,13 +76,13 @@ So we take this ERA, and utilise it to compute differently our estimates for $Q$
 
 **Recomputing Qs with ERA**
 
-$Q_{i}(s,a) = \alpha \: sample + (1 - \alpha) \: Q_{i}(s,a)$
+$Q_{i}(s,a) = \alpha sample + (1 - \alpha) \: Q_{i}(s,a)$
 
 Where the $Q_{i}(s,a)$ on the right-hand side is our previous estimate of the value $Q$ for state $s$ and action $a$.
 
 We multiply by $(1 - \alpha)$, and then the sample will be one of those.
 
-$sample = R(s,a,s^{\prime}) + \gamma max_{a^{\prime}} Q_i(s^{\prime},a^{\prime})$
+$sample = R(s,a,s^{\prime}) + \gamma \max_{a^{\prime}} Q_i(s^{\prime},a^{\prime})$
 
 **Algorithm**
 
@@ -96,13 +96,13 @@ Where convergence refers to a substantially small difference between the values 
 The iterative steps are as follows:
 
 2a. Collect sample: $s,a,s^{\prime}, R(s,a,s^{\prime})$
-2b. $Q_{i+1}(s,a) = \alpha • (R(s,a,s^{\prime}) + \gamma \: max_a^{\prime} \: Q_{i}(s,a)) + (1-\alpha) \: Q_{i}(s,a)$
+2b. $Q_{i+1}(s,a) = \alpha • (R(s,a,s^{\prime}) + \gamma \max_{a^{\prime}} \: Q_{i}(s,a)) + (1-\alpha) \: Q_{i}(s,a)$
 
 This formula is complete, but we can also rewrite it into a form more familiar to other algorithms studied previously.
 
 **Algorithm - alternative form for 2b**
 
-2b. $Q_{i+1}(s,a) = Q_{i}(s,a) + \alpha • (R(s,a,s^{\prime}) + \gamma \: max_{a^{\prime}} \: Q_{i}(s,a) - Q_{i}(s,a))$
+2b. $Q_{i+1}(s,a) = Q_{i}(s,a) + \alpha • (R(s,a,s^{\prime}) + \gamma \max_{a^{\prime}} \: Q_{i}(s,a) - Q_{i}(s,a))$
 
 So we have separated our the terms that are and are not guided by $\alpha$.
 

@@ -26,7 +26,7 @@ We also know that if a point lies exactly on the MB, e.g. a positive example on 
 
 We can then define the loss in terms of how much our preference to keep the points outside of the MBs is violated:
 
-- $Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) = 0$ if $z >= 1$
+- $Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) = 0$ if $z \geq 1$
 
 We then penalise any values that penetrate into the MBs.
 

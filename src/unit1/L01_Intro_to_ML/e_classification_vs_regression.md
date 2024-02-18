@@ -6,7 +6,7 @@ I.e., we specify a feature vector, and what we want it to be associated with (th
 
 **Multi-way classification**
 
-$h([news \; article ]) = politics ⟶ h: χ ⟶ \{ sports, politics, other \}$
+$h([news \; article ]) = politics ⟶ h: χ ⟶ \lbrace sports, politics, other \rbrace$
 
 **Regression**
 
@@ -14,7 +14,7 @@ $h([ house ]) = \$1,345,222 ⟶ h: χ ⟶ ℝ$
 
 **Structured prediction**
 
-$h([ image ]) = [ description ] ⟶ h: χ ⟶ \{[ English \: sentences ]\}$
+$h([ image ]) = [ description ] ⟶ h: χ ⟶ \lbrace [ English \: sentences ] \rbrace$
 
 ## Types of machine learning
 

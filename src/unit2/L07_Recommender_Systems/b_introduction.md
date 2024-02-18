@@ -8,7 +8,7 @@ Matrix factorisation, or collaborative filtering, is another.
 
 Imagine a large matrix, $Y$, with n possible users of the system, and m movies; it is an $n \times m$ matrix.
 
-Then we may examine a particular element y\_{ai}, which denotes the $a$-th user's preference for the $i$-th film.
+Then we may examine a particular element $y_{ai}$, which denotes the $a$-th user's preference for the $i$-th film.
 
 (This preference might be represented in different ways: some websites use five-star ratings, others use thumbs-up or thumbs-down, and so on.)
 

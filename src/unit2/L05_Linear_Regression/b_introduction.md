@@ -8,9 +8,9 @@ The examples were feature vectors associated with labels.
 
 There were n examples, and the goal of the classifier was to learn the mapping between the feature vectors.
 
-$S_n = \{ ( x^{(i)}, y^{(i)}) | i=1, ⋯, n \}$
+$S_n = \lbrace ( x^{(i)}, y^{(i)}) | i=1, ⋯, n \rbrace$
 
-$x^{(i)} ∈ ℝ^d, y^{(i)} ∈ \{ -1, +1 \}$
+$x^{(i)} ∈ ℝ^d, y^{(i)} ∈ \lbrace -1, +1 \rbrace$
 
 Example use: decision over whether to buy or sell a stock. Perhaps the price of a stock is tracked every minute, regarding whether it rises or falls in price. The model has access to historic data in terms of d days of data, and uses this to recommend a buy or sell action (+1 or -1) based on the current situation.
 

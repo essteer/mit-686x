@@ -17,9 +17,9 @@ Due to having two variables, the estimation becomes more complex than in the nai
 
 **Alternation**
 
-To find the optimal values of $U$ and $V$, we first fix e.g. $V$ and find the optimal $U^{*}$, then fix that $U^{*}$ and find the optimal $V^{*}$.
+To find the optimal values of $U$ and $V$, we first fix e.g. $V$ and find the optimal $U^{\ast}$, then fix that $U^{\ast}$ and find the optimal $V^{\ast}$.
 
-We must then continue to alternate, since the optimal $U$ for $V^{*}$ is not necessarily $U^{*}$.
+We must then continue to alternate, since the optimal $U$ for $V^{\ast}$ is not necessarily $U^{\ast}$.
 
 So we greedily iterate between fixing $U$ and fixing $V$, until the values converge.
 
@@ -27,7 +27,7 @@ So we greedily iterate between fixing $U$ and fixing $V$, until the values conve
 
 Two users and three movies:
 
-$Y = [5 \; ? \; 7; 1 \; 2 \; ?]$
+$Y = [5, ?, 7; 1, 2, ?]$
 
 User $1$ has rated movies $1$ and $3$; user $2$ has rated movies $1$ and $2$, the ratings of user $1$ for movie $2$, and user $2$ for movie $3$, are unknown.
 
@@ -39,11 +39,11 @@ We begin by initialising vector $v$ as: $v = [2; 7; 8]$.
 
 The next step is to look at matrix $X$, when we are computing the product between $u$ and $v^T$.
 
-$X = uv^T = [u_1; u_2][2 \; 7 \; 8] = [2u_1 \; 7u_1 \; 8u_1; 2u_2 \; 7u_2 \; 8u_2]$
+$X = uv^T = [u_1; u_2][2, 7, 8] = [2u_1, 7u_1, 8u_1; 2u_2, 7u_2, 8u_2]$
 
 So, we want to find $u_1$ and $u_2$ in such a way that this matrix has values for known entries, which are close to what we have in $Y$.
 
-(Recall $Y = [5 \; ? \; 7; 1 \; 2 \; ?]$.)
+(Recall $Y = [5, ?, 7; 1, 2, ?]$.)
 
 Note that we don't necessarily need to consider $u_1$ and $u_2$ jointly; they are separate users, so we can solve for the rows individually if we choose.
 
@@ -79,7 +79,7 @@ So, we started with a random initialisation of $v$, and computed $u$'s that woul
 
 The next step is then to take the $u$'s we computed, and compute the $v$'s.
 
-$uv^T = [\frac{66}{69}; \frac{16}{54}][v_1 \; v_2 \; v_3] = [\frac{66}{69}v_1 \; \frac{66}{69}v_2 \; \frac{66}{69}v_3; \frac{16}{54}v_1 \; \frac{16}{54}v_2 \; \frac{16}{54}v_3]$
+$uv^T = [\frac{66}{69}; \frac{16}{54}][v_1, v_2, v_3] = [\frac{66}{69}v_1, \frac{66}{69}v_2, \frac{66}{69}v_3; \frac{16}{54}v_1, \frac{16}{54}v_2, \frac{16}{54}v_3]$
 
 We now have a new estimate for our matrix $X$, so again will take this and compare it with matrix $Y$.
 

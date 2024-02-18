@@ -2,7 +2,7 @@
 
 Planes and other low-dimensional subspaces of higher $n$-dimensional space.
 
-$x = [x1; x2; x3] ∈ ℝ^3$ ($3 \times 1$ matrix)
+$x = [x_1; x_2; x_3] ∈ ℝ^3$ ($3 \times 1$ matrix)
 
 We refer to $x$ as living in $ℝ^3$.
 

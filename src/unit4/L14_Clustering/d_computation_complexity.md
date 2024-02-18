@@ -11,7 +11,7 @@ For an iteration of each algorithm at step 2(a), we can see the complexity $O(n�
 In step 2(a) - which is the same in $K$-Means and $K$-Medoids:
 
 - 2(a) for $i=1, ⋯, n$
-- $C_j = \lbrace \: i \: | \: such \: that \: z^{(j)} \: is \: closest \: to \: x^{(i)} \rbrace$
+- $C_j = \lbrace i | such ~ that ~ z^{(j)} ~ closest ~ to ~ x^{(i)} \rbrace$
 
 We need to go through each point and find the closest representative.
 
@@ -27,6 +27,6 @@ $K$-Means:
 
 $K$-Medoids:
 
-- $z^{(j)} ∈ \lbrace x^{(1)}, ⋯, x^n \rbrace \: such \: that \: \sum_{x^{(i)}∈C_j} dist(x^{(i)}, z^{(j)}) \: is \: minimal$
+- $z^{(j)} ∈ \lbrace x^{(1)}, ⋯, x^n \rbrace$ such that $\sum_{x^{(i)}∈C_j} dist(x^{(i)}, z^{(j)})$ is minimal
 
 For $K$-Medoids at step 2(b), because each point must be compared with the other in the cluster, the complexity becomes $O(n^2•K•d)$.

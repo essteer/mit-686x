@@ -16,7 +16,7 @@ $\hat{y} = sign(\theta • \phi(X))$
 
 This can be rewritten with each $x_{(i)}$ of $X$ (from $x_1$ to $x_d$) as a node for each of the input vector coordinates.
 
-$X$ is mapped to the feature representation $\phi(X)$, which can also be written as nodes - and may contain many more nodes than $X$ (from $\phi(x_1)$ to $\phi (x_D)$), for instance in the case of polynomial expansion.
+$X$ is mapped to the feature representation $\phi(X)$, which can also be written as nodes - and may contain many more nodes than $X$ (from $\phi(x_1)$ to $\phi(x_D)$), for instance in the case of polynomial expansion.
 
 We can then take a linear combination of these coordinate values to produce the classification decision.
 

@@ -33,7 +33,7 @@ $a: [1, 0, ..., 0]$
 
 We concatenate these word vectors into our feature vector $\phi(t)$, a long sparse feature vector we can now use to relate to possible outcomes - what comes next.
 
-We can also continue to work backwords and construct training examples by using e.g. "$been$" and "$a$" to train on predicting "$tremendous$".
+We can also continue to work backwords and construct training examples by using e.g. $been$ and $a$ to train on predicting $tremendous$.
 
 **Issues with this approach**
 

@@ -33,7 +33,7 @@ Thereby rewriting $γ_{ref}$ in terms of something we know, i.e., $θ$.
 
 We can now plug our value of $γ_{ref}$ into the objective function, and simplify.
 
-$J = \frac{1}{n} \sum_{i=1}^{n} L_h(y^{(i)} (θ•x^{(i)} + θ_0)) + α∥θ∥^2$
+$J = \frac{1}{n} \sum_{i=1}^{n} L_h(y^{(i)} (θ•x^{(i)} + θ_0)) + α ∥θ∥^2$
 
 So we have our loss term, which is a function of $θ$, $θ_0$, $x_{data}$, and $y_{data}$:
 

@@ -8,15 +8,15 @@ $E_n(h) = \frac{1}{n} \sum_{i=1}^{n} [[h(x^{(i)}) \neq y^{(i)}]]$
 
 For linear classifiers through the origin, we can write this slightly differently, since each classifier is characterised by a parameter vector θ, we can review simply whether the sign agrees with the linear prediction:
 
-- $E_n(θ) = \frac{1}{n} \sum_{i=1}^{n} [[y^{(i)} θ•x^{(i)} <= 0]]$
-- If this $<= 0$, then a linear classifier that is the sign of the dot product $θ•x^{(i)}$ would be different than the given label.
+- $E_n(θ) = \frac{1}{n} \sum_{i=1}^{n} [[y^{(i)} θ•x^{(i)} \leq 0]]$
+- If this $\leq 0$, then a linear classifier that is the sign of the dot product $θ•x^{(i)}$ would be different than the given label.
 - When it is exactly $0$, i.e. it lies precisely on the decision boundary, we count it as an error, since we cannot be confident which way to classify that point.
 
 ### Training error for general linear classifier
 
-$E_n(θ, θ_0) = \frac{1}{n} \sum_{i=1}^{n} [[y^{(i)} (θ•x^{(i)}+θ_0) <= 0]]$
+$E_n(θ, θ_0) = \frac{1}{n} \sum_{i=1}^{n} [[y^{(i)} (θ•x^{(i)}+θ_0) \leq 0]]$
 
-It is an error, if it is $<=0$.
+It is an error, if it is $\leq 0$.
 
 ### Perceptron learning algorithm - initial version
 
@@ -24,7 +24,7 @@ It is an error, if it is $<=0$.
   - $θ = 0$ (vector)
   - for $t=1, ⋯, T$ do
     - for $i=1, ⋯, n$ do
-      - if $y^{(i)}(0) (θ•x^{(i)}) <= 0$ then
+      - if $y^{(i)}(0) (θ•x^{(i)}) \leq 0$ then
       - $θ = θ + y^{(i)}x^{(i)}$
   - return $θ$
 
@@ -32,7 +32,7 @@ This initial iteration of the perceptron algorithm takes in a training set, and 
 
 $θ = 0$ (vector)
 
-If $y^{(i)}(θ•x^{(i)}) <= 0$,
+If $y^{(i)}(θ•x^{(i)}) \leq 0$,
 then $θ = θ + y^{(i)}x^{(i)}$.
 
 I.e., if there are any classifiers through the origin that correctly separate the data, the algorithm will find a solution.
@@ -74,7 +74,7 @@ Theoretically, if a linear classifier solution for the training set exists, the 
   - $θ = 0$ (vector), $θ_0$ (scalar)
   - for $t=1, ⋯, T$ do
     - for $i=1, ⋯, n$ do
-      - if $y^{(i)}(0) (θ•x^{(i)} + θ_0) <= 0$ then
+      - if $y^{(i)}(0) (θ•x^{(i)} + θ_0) \leq 0$ then
         - $θ = θ + y^{(i)}x^{(i)}$
         - $θ_0 = θ_0 + y^{(i)}$
   - return $θ, θ_0$
