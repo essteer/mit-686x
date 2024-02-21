@@ -6,7 +6,7 @@ Cost functions are used to determine which clustering has the lowest cost.
 
 We assume that the cost will be the sum of the cost of the individual clusters:
 
-$cost(C_1, ⋯, C_K) = \sum_{j=1}^{K}{cost(C_j)}$
+$cost(C_1, ⋯, C_K) = \sum\nolimits_{j=1}^{K}{cost(C_j)}$
 
 This is intuitive, since the best clustering should have the lowest aggregate cost across the clusters.
 
@@ -57,4 +57,4 @@ To get the cost, we need the representatives as well as the partitions.
 
 We use Euclidean square distance to go over every cluster, from cluster $1$ to cluster $K$, and within each cluster we take the points that belong to that clusts, and compute the Euclidean square distance between those points and the representative of that cluster.
 
-$cost(C_1, ⋯, C_K, ⋯, z^{(1)}, z^{(K)}) = \sum_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
+$cost(C_1, ⋯, C_K, ⋯, z^{(1)}, z^{(K)}) = \sum\nolimits_{j=1}^K \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$

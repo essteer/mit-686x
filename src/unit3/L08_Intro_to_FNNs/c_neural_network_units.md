@@ -10,7 +10,7 @@ Each input node has an associated weight, $w_{(i)}$ (we use $w$'s here rather th
 
 So, we have a weight associated with each input coordinate, and we take a weighted combination of those input signals, denoted as $z$:
 
-- $z = \sum_{i=1}^{d} x_{(i)} w_{(i)} + w_0$
+- $z = \sum\nolimits_{i=1}^{d} x_{(i)} w_{(i)} + w_0$
 
 Once we have that aggregate input, we pass it through some non-linear function $f(z)$, which is often known as an activation function, transfer function, or simply an output of the neuron.
 

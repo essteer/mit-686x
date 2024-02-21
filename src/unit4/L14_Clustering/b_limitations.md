@@ -4,7 +4,7 @@ Recall the $K$-means algorithm:
 
 Our cost function is given by:
 
-$cost(C_1, ⋯, C_K) = min_{z^{(1)},⋯,z^{(K)}} \sum_{j=1}^{K}{} \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
+$cost(C_1, ⋯, C_K) = min_{z^{(1)},⋯,z^{(K)}} \sum\nolimits_{j=1}^{K}{} \sum_{i∈C_j} ∥x^{(i)} - z^{(j)}∥^2$
 
 The algorithm proceeds through the following steps:
 

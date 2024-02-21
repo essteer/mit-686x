@@ -20,7 +20,7 @@ There is a lot of dependency, because in a general case we do not know from whic
 
 We have a set of points $S_n$:
 
-$p(S_n|θ) = \prod_{i=1}^{n}{} \sigma_{j=1}^K p_j N(x, \mu^{(j)}, \sigma_{j}^2)$
+$p(S_n|θ) = \prod\nolimits_{i=1}^{n}{} \sigma_{j=1}^K p_j N(x, \mu^{(j)}, \sigma_{j}^2)$
 
 Given this expression, we then take the derivative with respect to our parameters, set it equal to zero and find the parameters.
 

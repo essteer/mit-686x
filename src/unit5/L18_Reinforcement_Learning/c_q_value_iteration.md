@@ -28,11 +28,11 @@ So it is exactly the same, we will just end up in a different state.
 
 We have collected $K$ samples, and can just take an average over these samples to get our $Q(s,a)$.
 
-$Q(s,a) = \frac{1}{K} \sum_{i=1}^{K} sample_i$
+$Q(s,a) = \frac{1}{K} \sum\nolimits_{i=1}^{K} sample_i$
 
 In recursive form, this becomes:
 
-$Q(s,a) = \frac{1}{K} \sum_{i=1}^{K} (R(s,a,s^{\prime}) + \gamma \: max_{a^{\prime}} Q(s_i^{\prime},a^{\prime}))$
+$Q(s,a) = \frac{1}{K} \sum\nolimits_{i=1}^{K} (R(s,a,s^{\prime}) + \gamma \: max_{a^{\prime}} Q(s_i^{\prime},a^{\prime}))$
 
 **Simple example**
 
@@ -62,11 +62,11 @@ We will introduce the formula for ERA below, and then proceed to rewrite $Q$ to 
 
 **Exponential running average**
 
-$\bar{x}_n = \frac{x_n + (1 - \alpha) x_{n-1} + (1-\alpha)^2 x_{n-2} + ⋯}{1 + (1-\alpha) + (1-\alpha)^2 + ⋯}$
+${\bar{x}}_{n} = \frac{x_n + (1 - \alpha) x_{n-1} + (1-\alpha)^2 x_{n-2} + ⋯}{1 + (1-\alpha) + (1-\alpha)^2 + ⋯}$
 
 Rewritten recursively:
 
-$\bar{x}_n = \alpha x_n + (1 - \alpha) x_{n-1}$
+${\bar{x}}_{n} = \alpha x_n + (1 - \alpha) x_{n-1}$
 
 This says that the current exponential average, is the weighting of the current sample, plus the weighting of the previous ERA.
 

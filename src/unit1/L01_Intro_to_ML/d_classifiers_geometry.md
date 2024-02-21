@@ -71,7 +71,7 @@ $[[h(x^{(i)})  \neq y^{(i)}]] = 1$ if error, else $0$.
 
 We want the error over the whole training set, so we sum this error over all training examples:
 
-$Σ_{i=1}^n [[h(x^{(i)})  \neq y^{(i)}]]$, and take a fraction $\frac{1}{n}$ of this.
+$\sum\nolimits_{i=1}^{n} [[h(x^{(i)})  \neq y^{(i)}]]$, and take a fraction $\frac{1}{n}$ of this.
 
 Example: for a training set of $6$, if $3$ are labeled correctly and $3$ are labeled incorrectly, we have $E_6(h) = \frac{3 \times 1 + 3 \times 0}{6} = \frac{3}{6} = 0.5$.
 

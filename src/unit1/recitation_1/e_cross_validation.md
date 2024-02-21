@@ -50,7 +50,7 @@ We repeat this for a total of 5 iterations, to reach $n=5$.
 
 We now have 5 accuracy values for $α_1$, against each of the 5 segments.
 
-- $s(α_1) = \frac{1}{n} \sum_{i=1}^{n} s_n(α_1)$
+- $s(α_1) = \frac{1}{n} \sum\nolimits_{i=1}^{n} s_n(α_1)$
 
 This gives a sense of how well our model will suit unseen testing data, if we set our value of $α$ to $α_1$.
 

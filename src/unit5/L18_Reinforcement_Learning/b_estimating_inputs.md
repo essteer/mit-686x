@@ -8,7 +8,7 @@ $\hat{T} = \frac{count(s,a,s^{\prime})}{\sum_{s^{\prime}}(s,a,s^{\prime})}$
 
 This would obtain an estimation, and a similar effort could be made for the rewards. In real life rewards may vary for the same state, or there may be no reward at all, so we may decide to take an average of the rewards we do receive:
 
-$\hat{R} = \frac{\sum_{t=1}^{count(s,a,s^{\prime})} R_{t}(s,a,s^{\prime})}{count(s,a,s^{\prime})}$
+$\hat{R} = \frac{\sum\nolimits_{t=1}^{count(s,a,s^{\prime})} R_{t}(s,a,s^{\prime})}{count(s,a,s^{\prime})}$
 
 The main problem with this approach is that in the real world, every step we take puts us in a new step, and we are then going to go somewhere else - but unless we get to a specific state $s$, we cannot collect information about that state $s$.
 
@@ -68,7 +68,7 @@ Here, instead of explicitly encapsulating it as 90%, for the model-free method w
 
 Each time we get a sample, we compute $f(x)$, sum from $1$ to $K$, and divide all by $K$.
 
-$E[f(x)] ≈ \frac{1}{K} \sum_{i=1}^{K}{f(x_i)}$
+$E[f(x)] ≈ \frac{1}{K} \sum\nolimits_{i=1}^{K}{f(x_i)}$
 
 Values of $x$ which were much more prevalent appear a lot, and contribute via the number of times they appear; those which are less prevalent, appear less.
 

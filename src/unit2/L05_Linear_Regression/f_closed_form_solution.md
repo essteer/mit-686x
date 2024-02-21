@@ -2,31 +2,31 @@
 
 For most machine learning algorithms, there is no closed form solution, but in the case of our linear regression with empirical risk function, there is.
 
-$R_n(θ) = \frac{1}{n} \sum_{i=1}^{n} \frac{(y^{(i)} - θ•x^{(i)})^2}{2}$
+$R_n(θ) = \frac{1}{n} \sum\nolimits_{i=1}^{n} \frac{(y^{(i)} - θ•x^{(i)})^2}{2}$
 
-$\nabla_{θ} R_{n} (θ)_{| θ = \hat{θ}} = \frac{1}{n} \sum_{i=1}^{n} \nabla_{θ} {\frac{(y^{(i)} - θ•x^{(i)})^2}{2}}_{|θ=\hat{θ}}$
+$\nabla_{θ} R_{n} (θ)_{| θ = \hat{θ}} = \frac{1}{n} \sum\nolimits_{i=1}^{n} \nabla_{θ} {\frac{(y^{(i)} - θ•x^{(i)})^2}{2}}_{|θ=\hat{θ}}$
 
-$= - \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - θ•x^{(i)})x^{(i)}$
+$= - \frac{1}{n} \sum\nolimits_{i=1}^{n} (y^{(i)} - θ•x^{(i)})x^{(i)}$
 
 We then take the sum, and break it into two parts:
 
-$= - \frac{1}{n} \sum_{i=1}^{n} y^{(i)}x^{(i)}$
+$= - \frac{1}{n} \sum\nolimits_{i=1}^{n} y^{(i)}x^{(i)}$
 
 This is a vector of dimensionality $d$, which we denote as $b$
 
-$- \frac{1}{n} \sum_{i=1}^{n} \hat{θ}•x^{(i)}x^{(i)}$
+$- \frac{1}{n} \sum\nolimits_{i=1}^{n} \hat{θ}•x^{(i)}x^{(i)}$
 
 Since the result of a dot product is a number, we can move this around as:
 
-$\frac{1}{n} \sum_{i=1}^{n} x^{(i)} \hat{θ}•x^{(i)}$
+$\frac{1}{n} \sum\nolimits_{i=1}^{n} x^{(i)} \hat{θ}•x^{(i)}$
 
 Putting it together:
 
-$= - b + \frac{1}{n} \sum_{i=1}^{n} x^{(i)} \hat{θ}•x^{(i)}$
+$= - b + \frac{1}{n} \sum\nolimits_{i=1}^{n} x^{(i)} \hat{θ}•x^{(i)}$
 
 Because $\hat{θ}•x^{(i)}$ is a scalar, when we take a transpose of it, it is equal to itself.
 
-$= - b + \frac{1}{n} \sum_{i=1}^{n} x^{(i)} (x^{(i)})^T\hat{θ}$
+$= - b + \frac{1}{n} \sum\nolimits_{i=1}^{n} x^{(i)} (x^{(i)})^T\hat{θ}$
 
 Since each $x$ is a vector of dimension $d$, we get a matrix of dimension $d \times d$, which we denote as $A$:
 

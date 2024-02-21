@@ -134,6 +134,6 @@ For every state $s$, and every action $a$, we compute the $Q$ value.
 
 Once all $Q$'s are computed, then the action to take is just the argmax:
 
-$\pi^{\ast}(s) = \argmax_{a} Q^{\ast}(s,a)$
+$\pi^{\ast}(s) = argmax_{a} Q^{\ast}(s,a)$
 
 So, after the algorithm has converged, we can compute the $Q$ values, and then compute the policy $\pi$.

@@ -41,7 +41,7 @@ $\hat{y}_{ai} =$ $\frac{\sum_{b}{∈ KNN (a, i) y_{bi}}}{K}$
 
 we might want to not just take the score of the user, but weight the score based on how similar the user is to user $a$.
 
-$\hat{y}_{ai} =$ $\frac{\sum_{b}{∈ KNN (a, i) sim(a, b) y_{bi}}}{\sum_{b}{∈ KNN (a, i) |sim(a, b)|}}$
+${\hat{y}}_{ai} = \frac{\sum\nolimits_{b}{∈ KNN (a, i) sim(a, b) y_{bi}}}{\sum\nolimits_{b}{∈ KNN (a, i) |sim(a, b)|}}$
 
 There is also the problem of each user applying a different internal logic to their ratings: one user may give a $\frac{3}{5}$ to films they enjoy, and reserve $\frac{5}{5}$ for only those they regard as exceptional films, whereas another user might apply $\frac{5}{5}$ in general, and deduct stars for films they dislike.
 

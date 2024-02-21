@@ -40,7 +40,7 @@ We then add in linear weighting of the $x$ coordinates.
 
 This can be written explicitly as:
 
-$f(x; θ, θ_0) = \sum_{i=1}^{d} θ_i x_i + θ_0$
+$f(x; θ, θ_0) = \\sum\nolimits_{i=1}^{d} θ_i x_i + θ_0$
 
 So, we sum all of the coordinates from $1$ to $d$, weigh them by the corresponding parameters, and add an offset $θ_0$.
 

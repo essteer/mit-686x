@@ -9,7 +9,7 @@ Now for the objective, we compare the values that are present in matrix $Y$ with
 - Instead of writing the estimation as $X_{ai}$, we directly express it in terms of $u_a v_i$.
 - The regularisation term also controls directly in terms of $u_a$ and $v_i$, instead of $X_{ai}$.
 
-$J(u, v) = \sum_{(a,i)∈D} (Y_{ai} - u_av_i)^2 + \frac{\lambda}{2} \sum_{a=1}^{n} u_a^2 + \frac{\lambda}{2} \sum_{i=1}^{m} v_i^2$
+$J(u, v) = \sum_{(a,i)∈D} (Y_{ai} - u_av_i)^2 + \frac{\lambda}{2} \sum\nolimits_{a=1}^{n} u_a^2 + \frac{\lambda}{2} \sum\nolimits_{i=1}^{m} v_i^2$
 
 Note that we are estimating a function that depends on two elements: on $u$'s, and on $v$'s.
 

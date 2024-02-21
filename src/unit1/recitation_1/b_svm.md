@@ -92,7 +92,7 @@ Putting the pieces together, we arrive at our objective function for SVM:
 
 Loss term:
 
-- $\frac{1}{n} \sum_{i=1}^{n} L_h(\frac{\gamma}{\gamma_{ref}})$
+- $\frac{1}{n} \sum\nolimits_{i=1}^{n} L_h(\frac{\gamma}{\gamma_{ref}})$
 
 ($\frac{1}{n}$ because we want the average over the data points.)
 
@@ -102,7 +102,7 @@ Regularisaton term:
 
 Together form the SVM objective function:
 
-$J = \frac{1}{n} \sum_{i=1}^{n} L_h(\frac{\gamma}{\gamma_{ref}}) + α (\frac{1}{\gamma_{ref}^2})$
+$J = \frac{1}{n} \sum\nolimits_{i=1}^{n} L_h(\frac{\gamma}{\gamma_{ref}}) + α (\frac{1}{\gamma_{ref}^2})$
 
 Recall that we can define $\gamma_{ref}$ in terms of $θ$ and $θ_0$.
 

@@ -5,7 +5,7 @@ $P(w|θ) = θ_w$
 - $θ_w \geq 0$
 - $\sum_{w∈W} θ_w = 1$
 
-$P(D|θ) = \prod_{i=1}^{n}{θ_{w_i}}$
+$P(D|θ) = \prod\nolimits_{i=1}^{n}{θ_{w_i}}$
 
 How can we utilise our training data to find the best parameters?
 

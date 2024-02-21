@@ -16,7 +16,7 @@ $\hat{y} - y_i$
 
 Our loss function will be simply the vertical distance between $\hat{y}_i$ and $y_i$:
 
-$L(x_iy_iθ) = \frac{1}{n} \sum_{i=1}^{n} |\hat{y} - y| = \frac{1}{n} \sum{|\theta_1x + \theta_2 - y|}$
+$L(x_iy_iθ) = \frac{1}{n} \sum\nolimits_{i=1}^{n} |\hat{y} - y| = \frac{1}{n} \sum{|\theta_1x + \theta_2 - y|}$
 
 We want to minimise the loss function; at that point, our model best describes the data.
 

@@ -1,6 +1,6 @@
 # Regularisation and Generalisation
 
-$J(θ, θ_0) = \frac{1}{n} \sum_{i=1}^{n} Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) + \frac{λ}{2}∥θ∥^2$
+$J(θ, θ_0) = \frac{1}{n} \sum\nolimits_{i=1}^{n} Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) + \frac{λ}{2}∥θ∥^2$
 
 As we emphasise the margins through $λ$, we are less and less able to fit the training examples, and so losses increase.
 
@@ -10,7 +10,7 @@ We can plot this as a function of $λ$, or for conceptual simplicity, $\frac{1}{
 
 We divide the objective function with $\frac{1}{λ}$:
 
-- $\frac{1}{λ} J(θ, θ_0) = \frac{1}{λn} \sum_{i=1}^{n} Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) + 2∥θ∥^2$
+- $\frac{1}{λ} J(θ, θ_0) = \frac{1}{λn} \sum\nolimits_{i=1}^{n} Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) + 2∥θ∥^2$
 - We call this $C$:
   - as $C$ is large, we emphasise losses
   - as $C$ is small, we emphasise simpler solutions with large margins

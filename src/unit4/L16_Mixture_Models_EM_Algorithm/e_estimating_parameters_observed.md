@@ -1,6 +1,6 @@
 # Estimating the Parameters in the Observed Case
 
-$p(S_n|θ) = \prod_{i=1}^{n}{} \sum_{j=1}^{K}{} p_j N(x, \mu^{(j)}, \sigma_{j}^2 I)$
+$p(S_n|θ) = \prod\nolimits_{i=1}^{n} \sum\nolimits_{j=1}^{K} p_j N(x, \mu^{(j)}, \sigma_{j}^2 I)$
 
 The next question we must address is how we can find all of the parameters we are interested in - the mixture weights, mean and variance for each mixture component.
 
@@ -44,15 +44,15 @@ Due to the fact that the points are observed, we already know to which cluster t
 
 First, compute how many members belong to each cluster using the delta notation:
 
-$\hat{n}_{j}$ is the number of points that belong to cluster $j$.
+${\hat{n}}_{j}$ is the number of points that belong to cluster $j$.
 
-$\hat{n}_{j}$ $=$ $\sigma_{i=1}^{n} \delta (j|i)$
+${\hat{n}}_{j} = \sigma_{i=1}^{n} \delta (j|i)$
 
 For all the points that belong to cluster $j$, and only for those points, this would be equal to $1$.
 
 We can then compute the parameter for the mixture weights of cluster $j$ using MLE:
 
-$\hat{p}_{j}$ $=$ $\frac{\hat{n}_{j}}{n}$
+${\hat{p}}_{j} = \frac{{\hat{n}}_{j}}{n}$
 
 The result is intuitive: $\hat{p}_{j}$ is the number of points in the cluster $j$, divided by the total number of points. This is the weight for the mixture component $j$.
 
@@ -60,12 +60,12 @@ Similarly, we can compute the mean of cluster $j$; differentiating the likelihoo
 
 In this particular case, we get the sum of all the points that belong to this cluster, going through all of the points from $1$ to $n$, and divided by the size of the cluster:
 
-$\hat{\mu}^{(j)}$ $=$ $\frac{1}{\hat{n}_{j}} \sigma_{i=1}^{n} δ (j|i) • x^{(i)}$
+${\hat{\mu}}^{(j)} = \frac{1}{{\hat{n}}_{j}} \sigma_{i=1}^{n} δ (j|i) • x^{(i)}$
 
 This would be our MLE for the centre of the component $\lbrace j \rbrace$.
 
 We then need to compute the variance.
 
-$\hat{\sigma}_{j}^2$ $=$ $\frac{1}{\hat{n}_{jd}} \sigma_{i=1}^n \delta (j|i) • ∥x^{(i)} - \mu^{(j)}∥^2$
+${\hat{\sigma}}_{j}^2 = \frac{1}{{\hat{n}}_{jd}} \sigma_{i=1}^n \delta (j|i) • ∥x^{(i)} - \mu^{(j)}∥^2$
 
 Once again, the indicator function serves the purpose of ensuring that the point being selected really belongs to this specific cluster.

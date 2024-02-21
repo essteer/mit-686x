@@ -2,19 +2,19 @@
 
 We defined training error for any classifier, as a fraction of training examples that are misclassified.
 
-$E_n(h) = \frac{1}{n} \sum_{i=1}^{n} [[h(x^{(i)}) \neq y^{(i)}]]$
+$E_n(h) = \frac{1}{n} \sum\nolimits_{i=1}^{n} [[h(x^{(i)}) \neq y^{(i)}]]$
 
 ### Training error for linear classifier through the origin
 
 For linear classifiers through the origin, we can write this slightly differently, since each classifier is characterised by a parameter vector θ, we can review simply whether the sign agrees with the linear prediction:
 
-- $E_n(θ) = \frac{1}{n} \sum_{i=1}^{n} [[y^{(i)} θ•x^{(i)} \leq 0]]$
+- $E_n(θ) = \frac{1}{n} \sum\nolimits_{i=1}^{n} [[y^{(i)} θ•x^{(i)} \leq 0]]$
 - If this $\leq 0$, then a linear classifier that is the sign of the dot product $θ•x^{(i)}$ would be different than the given label.
 - When it is exactly $0$, i.e. it lies precisely on the decision boundary, we count it as an error, since we cannot be confident which way to classify that point.
 
 ### Training error for general linear classifier
 
-$E_n(θ, θ_0) = \frac{1}{n} \sum_{i=1}^{n} [[y^{(i)} (θ•x^{(i)}+θ_0) \leq 0]]$
+$E_n(θ, θ_0) = \frac{1}{n} \sum\nolimits_{i=1}^{n} [[y^{(i)} (θ•x^{(i)}+θ_0) \leq 0]]$
 
 It is an error, if it is $\leq 0$.
 

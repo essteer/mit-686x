@@ -14,7 +14,7 @@ The magnitude of $x = \sqrt{3^2 + 2^2 + 2^2}$
 
 Two definitions for a dot product, which are equivalent to each other and used interchangeably:
 
-**Algebraic definition**: $x•y = \sum_{i=1}^{n} x_i•y_i$, for example:
+**Algebraic definition**: $x•y = \sum\nolimits_{i=1}^{n} x_i•y_i$, for example:
 
 $x = [3; 2; 2]$ ($3 \times 1$ matrix)
 

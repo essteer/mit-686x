@@ -10,7 +10,7 @@ Layer $1$ outputs two functions $f_1, f_2$ (one from each node) which both go to
 
 For instance:
 
-$z_1 = \sum_{j=1}^{2} x_j w_{j1} + w_{01}$
+$z_1 = \sum\nolimits_{j=1}^{2} x_j w_{j1} + w_{01}$
 
 $f_1 = f(z) = tanh(z_1)$
 

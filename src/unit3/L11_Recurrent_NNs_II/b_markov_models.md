@@ -66,7 +66,7 @@ $s ∈ S, s = {w_1^s, w_2^s, ⋯, w_{|s|}^s}$
 
 For a particular sentence, $s$:
 
-$\prod_{i=1}^{|s|} P(w_i^s | w_{i-1}^s)$
+$\prod\nolimits_{i=1}^{|s|} P(w_i^s | w_{i-1}^s)$
 
 The product of these probabilities is what the Markov model defines as the probability of generating this sentence.
 

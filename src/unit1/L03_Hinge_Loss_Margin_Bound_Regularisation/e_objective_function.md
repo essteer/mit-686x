@@ -4,7 +4,7 @@ Combining the hinge loss and regularisation terms (see d_hinge_loss.md), we arri
 
 **Objective function**
 
-$J(θ, θ_0) = \frac{1}{n} \sum_{i=1}^{n} Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) + \frac{λ}{2}∥θ∥^2$
+$J(θ, θ_0) = \frac{1}{n} \sum\nolimits_{i=1}^{n} Loss_h(y^{(i)}(θ•x^{(i)} + θ_0)) + \frac{λ}{2}∥θ∥^2$
 
 The two parts are:
 

@@ -54,14 +54,14 @@ Here we introduce $\gamma$, where $0 \leq \gamma \lt 1$, as a means to discount 
 
 We can close this expression as follows:
 
-$U([s_0, s_1, ⋯]) = R(s_0) + \gamma R(s_1) + \gamma^2 R(s_2) ⋯ = \sum_{t=0}^{\infty} \gamma^t R(s_t)$
+$U([s_0, s_1, ⋯]) = R(s_0) + \gamma R(s_1) + \gamma^2 R(s_2) ⋯ = \sum\nolimits_{t=0}^{\infty} \gamma^t R(s_t)$
 
 We then can substitute all of the rewards with the maximum reward.
 
-$\leq R_{max} \sum_{t=0}^{\infty} \gamma^t$
+$\leq R_{max} \sum\nolimits_{t=0}^{\infty} \gamma^t$
 
 This expression is equal to $\frac{1}{1 - \gamma}$:
 
-$\leq R_{max} \sum_{t=0}^{\infty} \gamma^t = \frac{R_{max}}{1 - \gamma}$
+$\leq R_{max} \sum\nolimits_{t=0}^{\infty} \gamma^t = \frac{R_{max}}{1 - \gamma}$
 
 This is our bound, and it is essential to enable the algorithm to converge.

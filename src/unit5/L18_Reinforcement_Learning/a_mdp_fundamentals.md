@@ -21,7 +21,7 @@ The algorithm propagates information derived about the rewards to the rest of th
 
 MDP: $\lt S, A, T, R \gt$
 
-$\pi*(s) = \argmax_{a} Q^{\ast}(s,a)$
+$\pi*(s) = argmax_{a} Q^{\ast}(s,a)$
 
 We don't know which state we will end up, even for a given action due to the non-deterministic feature of the world, and so we must compute probabilities with $T$.
 
