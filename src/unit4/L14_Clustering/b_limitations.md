@@ -13,7 +13,7 @@ The algorithm proceeds through the following steps:
 2. Iterate until no change in cost
 
    - 2(a) for $i = 1, ⋯, n$
-   - $C_j = \{\: i \:| such \: that \: z^{(j)} \: is \: closest \: to \: x^{(i)} \}$
+   - $C_j = \lbrace i |$ such that $z^{(j)}$ is closest to $x^{(i)} \rbrace$
 
    - 2(b) for $j = 1, ⋯, K$
    - $z^{(j)} = \sum{\frac{x^{(i)}}{|C_j|}}$

@@ -52,17 +52,17 @@ Instead of using the $\delta$, we use probabilities, since those reflect our sof
 
 $\hat{n}_{j}$ is the size of the cluster, for which we take the soft counts - how much the point belongs to this cluster - and then sum them.
 
-$\hat{n}_{j} = \sigma_{i=1}^{n} p(j|i)$
+$\hat{n}_{j} = \sigma_{i=1}^n p(j|i)$
 
 We then need to compute the mixture weight of cluster $j$, for which we again take the size of the cluster (which is computed with soft counts) and divide it by the number of points.
 
-$\hat{p}_{j} = \frac{\hat{n}_{j}}{n}$
+$\hat{p}_{j} = \frac{ \hat{n}_{j} }{n}$
 
 Now, instead of an indicator function (because in this case each point belongs to every cluster, just with different probabilities), we just weight each point in the sum according to its likelihood to belong to that cluster.
 
-$\hat{\mu}^{(j)}$ $=$ $\frac{1}{\hat{n}_{j}} \sigma_{i=1}^n p(j|i) • x^{(i)}$
+$\hat{\mu}^{(j)} = \frac{1}{\hat{n}_{j}} \sigma_{i=1}^n p(j|i) • x^{(i)}$
 
-$\hat{\sigma}_{j}^{2}$ $=$ $\frac{1}{\hat{n}_{jd}} \sigma_{i=1}^n p(j|i) • ∥x^{(i)} - \mu^{(j)}∥^2$
+$\hat{\sigma}_{j}^{2} = \frac{1}{\hat{n}_{jd}} \sigma_{i=1}^n p(j|i) • ∥x^{(i)} - \mu^{(j)}∥^2$
 
 Once we have completed the M-step, the result is that we have all the parameters after the first step.
 

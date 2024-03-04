@@ -11,7 +11,7 @@ For an iteration of each algorithm at step 2(a), we can see the complexity $O(nâ
 In step 2(a) - which is the same in $K$-Means and $K$-Medoids:
 
 - 2(a) for $i=1, â‹¯, n$
-- $C_j = \lbrace i | such ~ that ~ z^{(j)} ~ closest ~ to ~ x^{(i)} \rbrace$
+- $C_j = \lbrace i |$ such that $z^{(j)}$ is closest to $x^{(i)} \rbrace$
 
 We need to go through each point and find the closest representative.
 

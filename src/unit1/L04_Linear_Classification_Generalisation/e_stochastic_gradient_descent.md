@@ -10,7 +10,7 @@ $J(θ, θ_0) = \frac{1}{n} \sum\nolimits_{i=1}^{n} [Loss_h(y^{(i)}(θ•x^{(i)} 
 
 We can then further simplify the expression by omitting the offset parameter, $θ_0$:
 
-$J(θ) = \frac{1}{n} \sum_{i=1}^n [Loss_h(y^{(i)}(θ•x^{(i)})) + \frac{\lambda}{2}∥θ∥^2]$
+$J(θ) = \frac{1}{n} \sum\nolimits_{i=1}^{n} [Loss_h(y^{(i)}(θ•x^{(i)})) + \frac{\lambda}{2}∥θ∥^2]$
 
 We now have an average of simpler objective functions:
 

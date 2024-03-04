@@ -62,11 +62,11 @@ We will introduce the formula for ERA below, and then proceed to rewrite $Q$ to 
 
 **Exponential running average**
 
-${\bar{x}}_{n} = \frac{x_n + (1 - \alpha) x_{n-1} + (1-\alpha)^2 x_{n-2} + ⋯}{1 + (1-\alpha) + (1-\alpha)^2 + ⋯}$
+$\bar{x}_{n} = \frac{x_n + (1 - \alpha) x_{n-1} + (1-\alpha)^2 x_{n-2} + ⋯}{1 + (1-\alpha) + (1-\alpha)^2 + ⋯}$
 
 Rewritten recursively:
 
-${\bar{x}}_{n} = \alpha x_n + (1 - \alpha) x_{n-1}$
+$\bar{x}_{n} = \alpha x_n + (1 - \alpha) x_{n-1}$
 
 This says that the current exponential average, is the weighting of the current sample, plus the weighting of the previous ERA.
 

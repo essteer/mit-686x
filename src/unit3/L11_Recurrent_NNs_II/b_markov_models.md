@@ -72,7 +72,7 @@ The product of these probabilities is what the Markov model defines as the proba
 
 To generate all sentences, we take the product of those individual sentence proabilities.
 
-$\prod_{s∈S} [\Pi_{i=1}^{|s|} P(w_i^s | w_{i-1}^s)]$
+$\prod\nolimits_{s∈S} [ \prod\nolimits_{i=1}^{|s|} P(w_i^s | w_{i-1}^s) ]$
 
 We may then take a log of this, so that the products become sums.
 

@@ -30,7 +30,7 @@ The goal is not to optimise for the training set, it is to optimise for generali
 
 So, if we have n prime examples, we want to look at the empirical risk on our test data.
 
-$R_{n^{\prime}} (θ) = \sum\nolimits_{i=1}^{n^{\prime}} \sum_{i=n+1}^{n+n^{\prime}} \frac{(y^{(i)} - θx^i)^2}{2}$
+$R_{n^{\prime}} (θ) = \sum\nolimits_{i=1}^{n^{\prime}} \sum\nolimits_{i=n+1}^{n+n^{\prime}} \frac{(y^{(i)} - θx^i)^2}{2}$
 
 However, since we don't have access to the test data, the best we can do is look at the training objective, and try to minimise the error there while also attempting to ensure it can generalise.
 

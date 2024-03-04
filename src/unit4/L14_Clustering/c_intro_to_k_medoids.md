@@ -16,11 +16,11 @@ The first step to change is, rather than randomly selecting the best $z$, random
 2. Iterate until there is no change in cost
 
    - 2(a) for $i = 1, ⋯, n$
-   - $C_j = \lbrace  \: i \: | \: such \: that \: z^{(j)} \: is \: closest \: to \: x^{(i)} \rbrace$
+   - $C_j = \lbrace  i |$ such that $z^{(j)}$ is closest to $x^{(i)} \rbrace$
 
    Note that step 2(a) remains unchanged.
 
    - 2(b) for $j=1, ⋯, K$
-   - $z^{(j)} ∈ \lbrace x^{(1)}, ⋯, x^n \rbrace \: such \: that \: \sum_{x^{(i)}∈C_j} dist(x^{(i)}, z^{(j)})$ is minimal
+   - $z^{(j)} ∈ \lbrace x^{(1)}, ⋯, x^n \rbrace$ such that $\sum\nolimits_{x^{(i)}∈C_j} dist(x^{(i)}, z^{(j)})$ is minimal
 
    I.e., such that the sum of distances from all of the other points in that cluster to the chosen representative point, is minimal.
